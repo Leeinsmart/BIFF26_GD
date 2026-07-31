@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>《幸福快樂的日子》BIFF 2026 參展指南</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FAF9F5">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* 固定淺色主題：所有裝置一致，不跟隨系統設定 */
+:root{
+  --paper:#FAF9F5;
+  --card:#FFFFFF;
+  --ink:#23272B;
+  --muted:#7A8088;
+  --line:#E7E5DE;
+  --accent:#D6122B;
+  --accent-ink:#AF0E22;
+  --accent-soft:#FCE8EB;
+  --ok:#00B368;      --ok-soft:#DFF7EA;
+  --wait:#E09E00;    --wait-soft:#FFF2CE;
+  --info:#3D7BF5;    --info-soft:#E7EFFF;
+  --pr:#8A5CF5;      --pr-soft:#F0EAFF;
+  --urgent:#F02D68;  --urgent-soft:#FFE4EC;
+  --sans:"PingFang TC","Hiragino Sans TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;
+  --mono:var(--sans);
+  --serif:var(--sans);
+}
+:root{color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none !important} }
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); line-height:1.7; font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:900px; margin:0 auto; padding:0 20px 80px}
+
+/* ---------- hero ---------- */
+.hero{padding:36px 0 26px; border-bottom:4px solid var(--ink)}
+.eyebrow{
+  display:inline-block; letter-spacing:.14em; font-size:12.5px; font-weight:700;
+  color:var(--accent); text-transform:uppercase; margin-bottom:14px;
+}
+h1{font-size:clamp(34px,6vw,52px); line-height:1.15; margin:0 0 6px; font-weight:800; letter-spacing:.01em; text-wrap:balance}
+.hero .en{font-family:var(--sans); font-size:clamp(17px,2.6vw,22px); color:var(--muted); margin:0 0 18px}
+.hero .en b{color:var(--accent); font-style:normal; font-weight:700}
+.facts{display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin-top:2px}
+.fact{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px 14px}
+.fact .k{font-size:11.5px; letter-spacing:.12em; color:var(--muted); text-transform:uppercase}
+.fact .v{font-weight:700; font-variant-numeric:tabular-nums}
+
+/* ---------- alert ---------- */
+.alert{
+  margin:16px 0 0; padding:14px 18px; border-left:4px solid var(--urgent);
+  background:var(--urgent-soft); border-radius:0 6px 6px 0;
+}
+.alert b{color:var(--urgent)}
+.alert #status-title{display:block; margin-bottom:6px; font-size:16px}
+.alert ol,.alert ul{margin:6px 0 8px; padding-left:22px}
+.alert li{margin:3px 0}
+.alert .srcrow{display:block; margin-top:6px}
+.alert .small{font-size:13.5px; line-height:1.65; color:var(--muted); margin-top:4px}
+
+/* ---------- nav ---------- */
+nav{
+  position:fixed; top:0; left:0; right:0; z-index:10; background:var(--paper);
+  border-bottom:1px solid var(--line);
+  padding:0 max(20px, calc((100% - 900px)/2 + 20px));
+  display:flex; align-items:center; white-space:nowrap;
+}
+.navlinks{
+  display:flex; gap:4px; flex:1 1 auto; min-width:0;
+  overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none;
+}
+.navlinks::-webkit-scrollbar{display:none}
+.menubtn{
+  display:none; align-items:center; gap:6px; background:var(--card); color:var(--ink);
+  border:1px solid var(--line); border-radius:8px; padding:7px 12px; font-size:14px;
+  font-weight:700; font-family:var(--sans); cursor:pointer; flex:none;
+}
+.menubtn:focus-visible{outline:2px solid var(--accent); outline-offset:-1px}
+nav.menu-open .menubtn{color:var(--accent); border-color:var(--accent)}
+body{padding-top:var(--navh,48px)}
+section,header.hero{scroll-margin-top:calc(var(--navh,48px) + 8px)}
+@media (max-width:640px){
+  nav{padding:6px 10px; gap:8px}
+  .menubtn{display:inline-flex}
+  .navlinks{
+    display:none; position:fixed; top:var(--navh,52px); left:0; right:0;
+    flex-direction:column; gap:0; background:var(--card);
+    border-bottom:1px solid var(--line); box-shadow:0 14px 30px rgba(35,39,43,.14);
+    max-height:70vh; overflow:auto;
+  }
+  nav.menu-open .navlinks{display:flex}
+  .navlinks a{padding:13px 18px; font-size:15px; border-bottom:1px solid var(--line)}
+  .navlinks a:last-child{border-bottom:none}
+  .searchwrap{flex:1 1 auto; margin-left:0; padding:0}
+  .searchwrap input{width:100%}
+  body{padding-top:56px}
+}
+nav a{
+  display:block; padding:12px 12px; color:var(--muted); text-decoration:none;
+  font-size:14px; font-weight:600; border-bottom:3px solid transparent;
+}
+nav a:hover,nav a:focus-visible{color:var(--accent); border-bottom-color:var(--accent); outline:none}
+
+/* ---------- legend ---------- */
+.legend{display:flex; flex-wrap:wrap; gap:8px 16px; margin:14px 0 0; font-size:13.5px; color:var(--muted); align-items:center}
+.chip{
+  display:inline-block; padding:1px 9px; border-radius:99px; font-size:12px; font-weight:700;
+  vertical-align:1px; white-space:nowrap;
+}
+.chip.doc{background:var(--ok-soft); color:var(--ok)}
+.chip.ask{background:var(--wait-soft); color:var(--wait)}
+.chip.bg{background:var(--info-soft); color:var(--info)}
+.chip.hot{background:var(--urgent-soft); color:var(--urgent)}
+
+.owners{display:flex; justify-content:flex-end; gap:4px; align-items:center; white-space:nowrap}
+.owner{font-size:12px; white-space:nowrap}
+.owner.marketing{color:var(--accent); background:var(--accent-soft)}
+.owner.pr{color:var(--pr); background:var(--pr-soft)}
+.owner.producer{color:var(--info); background:var(--info-soft)}
+.owner.social{color:var(--ok); background:var(--ok-soft)}
+.owner.director{color:var(--wait); background:var(--wait-soft)}
+.owner.all{color:var(--ink); background:var(--line)}
+
+/* ---------- sections ---------- */
+section{padding-top:48px}
+h2{
+  font-size:24px; line-height:1.3; margin:0 0 6px; font-weight:800; letter-spacing:.01em;
+  display:flex; align-items:baseline; gap:12px;
+}
+h2 .no{font-family:var(--mono); font-size:24px; font-weight:800; color:var(--accent); letter-spacing:0; font-variant-numeric:tabular-nums}
+.sub{color:var(--muted); font-size:14px; line-height:1.65; margin:0 0 18px}
+
+/* ---------- timeline ---------- */
+.tl{list-style:none; margin:0; padding:0; border-top:1px solid var(--line)}
+.tl li{
+  display:grid; grid-template-columns:118px 1fr auto; gap:6px 16px; align-items:baseline;
+  padding:10px 4px; border-bottom:1px solid var(--line);
+}
+.tl .d{font-family:var(--mono); font-size:13.5px; color:var(--muted); font-variant-numeric:tabular-nums}
+.tl .t{font-size:15px; line-height:1.65}
+.tl .t small{display:block; color:var(--muted); font-size:13.5px; line-height:1.6}
+.tl li.done .t,.tl li.done .d{text-decoration:line-through; opacity:.55}
+.tl li.hot{background:var(--urgent-soft)}
+.tl li.hot .d{color:var(--urgent); font-weight:700}
+.tl input[type=checkbox]{accent-color:var(--accent); width:16px; height:16px; margin-right:10px; vertical-align:-2px}
+@media (max-width:560px){
+  .tl li{grid-template-columns:1fr auto; gap:3px 10px; padding:9px 2px; align-items:center}
+  .tl .d{grid-row:1; grid-column:1}
+  .owners{grid-row:1; grid-column:2; justify-content:flex-end; margin:0}
+  .tl .t{grid-column:1 / -1; line-height:1.6}
+  .tl .t .src{font-size:11px; padding:0 6px; margin-left:4px}
+  .tl .t small{margin:2px 0 0 26px}
+}
+
+/* ---------- schedule table ---------- */
+.tblwrap{overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:var(--card)}
+.tshell{position:relative}
+.tshell::before,.tshell::after{
+  content:""; position:absolute; top:1px; bottom:1px; width:30px; z-index:2;
+  pointer-events:none; opacity:0; transition:opacity .25s;
+}
+.tshell::after{right:1px; border-radius:0 8px 8px 0; background:linear-gradient(to left, rgba(35,39,43,.16), transparent)}
+.tshell::before{left:1px; border-radius:8px 0 0 8px; background:linear-gradient(to right, rgba(35,39,43,.16), transparent)}
+.tshell.more-right::after{opacity:1}
+.tshell.more-left::before{opacity:1}
+.scrollhint{
+  position:absolute; right:10px; top:50%; z-index:3; pointer-events:none;
+  background:var(--accent); color:#FFFFFF; font-size:12px; font-weight:700;
+  padding:4px 12px; border-radius:99px; box-shadow:0 2px 12px rgba(214,18,43,.35);
+  animation:hintnudge 1.4s ease-in-out infinite; white-space:nowrap;
+}
+@keyframes hintnudge{0%,100%{transform:translate(0,-50%)}50%{transform:translate(-7px,-50%)}}
+@media (prefers-reduced-motion: reduce){.scrollhint{animation:none; transform:translateY(-50%)}}
+table{border-collapse:collapse; width:100%; min-width:620px; font-size:14.5px}
+th{
+  text-align:left; font-size:12px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--muted); padding:10px 14px; border-bottom:2px solid var(--line); font-weight:700;
+}
+td{padding:10px 14px; border-bottom:1px solid var(--line); vertical-align:top; line-height:1.6}
+tr:last-child td{border-bottom:none}
+td.num,.mono{font-family:var(--mono); font-variant-numeric:tabular-nums; font-size:13.5px}
+tr.key{background:var(--accent-soft)}
+tr.key td:first-child{border-left:3px solid var(--accent)}
+tr.grp td{background:var(--paper); font-weight:700; font-size:13px; color:var(--accent-ink)}
+
+/* ---------- accordion ---------- */
+details{
+  background:var(--card); border:1px solid var(--line); border-radius:10px;
+  margin:0 0 12px; overflow:hidden;
+}
+details[open]{border-color:var(--accent)}
+summary{
+  cursor:pointer; padding:16px 18px; font-weight:700; font-size:17px;
+  display:flex; align-items:center; gap:12px; list-style:none;
+}
+summary::-webkit-details-marker{display:none}
+summary:focus-visible{outline:2px solid var(--accent); outline-offset:-2px}
+summary .qn{
+  font-family:var(--mono); font-size:12.5px; color:var(--accent); flex:none;
+  border:1px solid var(--accent); border-radius:99px; padding:1px 8px;
+}
+summary .arrow{margin-left:auto; color:var(--muted); transition:transform .15s; flex:none}
+details[open] summary .arrow{transform:rotate(90deg)}
+.body{padding:2px 20px 18px; border-top:1px solid var(--line); font-size:15px; line-height:1.7}
+.body h4{margin:18px 0 8px; font-size:15px; letter-spacing:.04em; color:var(--accent-ink)}
+.body ul{margin:6px 0 12px; padding-left:20px}
+.body li{margin:5px 0}
+.body li small,.body p small{color:var(--muted)}
+.body p{margin:10px 0}
+.note{
+  background:var(--info-soft); border-radius:8px; padding:10px 14px; font-size:13.5px;
+  line-height:1.65; color:var(--muted); margin:12px 0 4px;
+}
+.note b{color:var(--info)}
+.callout{
+  background:var(--accent-soft); border-radius:8px; padding:10px 14px; font-size:14px; margin:12px 0 4px;
+}
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:10px 0}
+@media (max-width:640px){ .grid2{grid-template-columns:1fr} }
+.panel{border:1px solid var(--line); border-radius:8px; padding:12px 16px; background:var(--paper)}
+.panel h5{margin:0 0 8px; font-size:15px}
+.panel ul{margin:0; padding-left:18px; font-size:14.5px; line-height:1.65}
+.panel li{margin:4px 0}
+
+/* ---------- contact ---------- */
+.contact td:first-child{font-weight:600; white-space:nowrap}
+a{color:var(--accent-ink)}
+
+footer{margin-top:56px; padding-top:18px; border-top:1px solid var(--line); font-size:13px; color:var(--muted)}
+
+/* ---------- citations ---------- */
+.src{
+  display:inline-block; font-size:11.5px; color:var(--muted); text-decoration:none;
+  border:1px solid var(--line); border-radius:99px; padding:0 8px; margin-left:6px;
+  white-space:nowrap; vertical-align:1px;
+}
+.src:hover,.src:focus-visible{color:var(--accent); border-color:var(--accent); outline:none}
+[id]{scroll-margin-top:calc(var(--navh,48px) + 10px)}
+.flash{animation:flashbg 1.8s ease-out 1}
+@keyframes flashbg{0%,55%{background:var(--wait-soft)}100%{background:transparent}}
+@media (prefers-reduced-motion: reduce){.flash{animation:none; background:var(--wait-soft)}}
+
+/* ---------- document library ---------- */
+.docpage{border-top:1px dashed var(--line); padding:12px 0 4px; font-size:14px}
+.docpage:first-of-type{border-top:none}
+.pgno{font-size:11.5px; letter-spacing:.12em; color:var(--accent); font-weight:700; margin:4px 0 6px}
+.docpage p{margin:8px 0}
+.docpage ul{margin:6px 0 10px; padding-left:20px}
+.docpage li{margin:3px 0}
+.docmeta{font-size:12.5px; color:var(--muted); font-weight:400; margin-left:auto; padding-right:10px}
+summary .docmeta{flex:none}
+@media (max-width:640px){
+  .doc summary{flex-wrap:wrap; gap:2px 8px; padding:14px 16px}
+  .doc summary .docmeta{flex-basis:100%; order:3; margin:0; padding:0; font-size:11.5px}
+}
+
+/* ---------- search ---------- */
+.searchwrap{margin-left:auto; display:flex; align-items:center; padding:6px 0 6px 10px}
+.searchwrap input{
+  width:190px; font-size:16px; padding:4px 12px; border:1px solid var(--line);
+  border-radius:99px; background:var(--card); color:var(--ink); font-family:var(--sans);
+}
+.searchwrap input:focus{outline:2px solid var(--accent); outline-offset:-1px}
+@media (max-width:640px){
+  .searchwrap{width:100%; padding:2px 0 8px}
+  .searchwrap input{width:100%}
+}
+#results{
+  position:fixed; top:var(--navh,48px); left:0; right:0; z-index:9; display:none;
+  background:var(--card); border-bottom:2px solid var(--accent);
+  box-shadow:0 12px 28px rgba(35,39,43,.12); max-height:62vh; overflow:auto;
+  padding:4px max(20px, calc((100% - 900px)/2 + 20px)) 8px;
+}
+#results.on{display:block}
+#results .rescount{font-size:12px; color:var(--muted); padding:8px 8px 2px}
+.res{
+  display:block; width:100%; text-align:left; background:none; border:none; cursor:pointer;
+  padding:10px 8px; border-bottom:1px solid var(--line); font-size:14px; color:var(--ink);
+  font-family:var(--sans); line-height:1.6;
+}
+.res:last-child{border-bottom:none}
+.res:hover,.res:focus-visible{background:var(--paper); outline:none}
+.res .where{font-size:11.5px; color:var(--accent); font-weight:700; letter-spacing:.05em; margin-bottom:2px}
+.res mark{background:var(--wait-soft); color:inherit; padding:0 1px}
+
+/* ---------- copy toast ---------- */
+#toast{
+  position:fixed; left:50%; bottom:28px; transform:translateX(-50%) translateY(20px);
+  background:var(--ink); color:var(--paper); font-size:14px; font-weight:600;
+  padding:10px 20px; border-radius:99px; opacity:0; pointer-events:none;
+  transition:opacity .2s, transform .2s; z-index:20; max-width:90vw;
+}
+#toast.on{opacity:1; transform:translateX(-50%) translateY(0)}
+a[href^="mailto:"]{cursor:copy}
+.copycode{
+  font-family:var(--mono); font-weight:700; font-size:13.5px; color:var(--ink);
+  background:var(--wait-soft); border:1px dashed var(--wait); border-radius:6px;
+  padding:2px 10px; cursor:copy; display:inline-block;
+}
+.copycode:hover,.copycode:focus-visible{border-style:solid; outline:none}
+.gobtn{
+  display:inline-block; background:var(--accent); color:#FFFFFF; font-weight:700;
+  font-size:13.5px; padding:6px 16px; border-radius:99px; text-decoration:none;
+  margin:2px 8px 2px 0;
+}
+.gobtn:hover,.gobtn:focus-visible{background:var(--accent-ink); outline:none}
+/* ---------- mobile spacing tighten ---------- */
+@media (max-width:640px){
+  .hero{padding:16px 0 18px}
+  .eyebrow{margin-bottom:8px; font-size:11.5px}
+  h1{margin-bottom:4px}
+  .hero .en{margin-bottom:12px}
+  .facts{grid-template-columns:1fr 1fr; gap:8px}
+  .fact{padding:8px 12px}
+  .fact:last-child{grid-column:1 / -1}
+  .alert{margin-top:14px; padding:12px 14px}
+  .legend{margin-top:12px; gap:6px 14px}
+  section{padding-top:32px}
+  .sub{margin-bottom:12px}
+  h2{margin-bottom:2px}
+  .wrap{padding-bottom:48px}
+  footer{margin-top:36px}
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <span class="eyebrow">第 31 屆釜山國際影展 · Official Selection 正式入選</span>
+  <h1>幸福快樂的日子<br>BIFF 2026 參展指南</h1>
+  <p class="en">Happily Ever After · 31st Busan International Film Festival</p>
+  <div class="facts">
+    <div class="fact"><div class="k">影展日期</div><div class="v">2026.10.6 – 10.15</div></div>
+    <div class="fact"><div class="k">地點</div><div class="v">韓國釜山（電影殿堂）</div></div>
+    <div class="fact"><div class="k">片長 / 語言</div><div class="v">95 分鐘 · 國語</div></div>
+    <div class="fact"><div class="k">首要期限</div><div class="v">8/11 報名表＋素材</div></div>
+    <div class="fact"><div class="k">大會窗口</div><div class="v">Sujin Kim（Program Team）</div></div>
+  </div>
+
+  <div class="alert" id="status-alert">
+    <b id="status-title">目前進度：林翰已回信大會，等新期限確認；素材照 8/11 推進。</b><span id="status-copy"><ol><li>Sujin 信中希望 <b>8/3</b> 前交報名表與字幕素材，附件清單期限則寫 <b>8/11</b>——林翰 7/31 已回信以 8/11 為目標，並為定剪 screener＋對白本<b>爭取更晚期限</b>，等大會回覆</li><li>線上報名表連結與存取碼已到手，<b>由林翰負責填</b>；其他部分後續再分工</li><li>行銷 <b>8/11 前</b>備妥：劇照 3–5 張＋宣傳片段（可以選擇少給）</li><li><b>9 月初大會記者會公布片單前，不得對外透露入選</b>（embargo）</li></ol></span><span class="srcrow"><a class="src" href="#doc-email-e1">出處：信件 ✉1</a><a class="src" href="#doc-email-e3">✉3</a><a class="src" href="#doc-checklist-p1">素材清單原文</a><a class="src" href="#doc-line-l1">LINE 紀錄</a></span>
+    <div class="small" id="status-detail">大會期限未註明時區，保守以韓國時間計（快台灣 1 小時）。</div>
+  </div>
+
+  <div class="legend">
+    <span>本頁資訊分三級：</span>
+    <span><span class="chip doc">文件明載</span> 大會信件與文件白紙黑字</span>
+    <span><span class="chip ask">已去信詢問</span> 林翰 7/31 已發問，待大會回覆</span>
+    <span><span class="chip bg">補充背景</span> 非大會文件，供參考、建議查證</span>
+  </div>
+</header>
+
+<nav>
+  <button class="menubtn" id="menubtn" type="button" aria-expanded="false" aria-controls="navlinks">☰ 選單</button>
+  <div class="navlinks" id="navlinks">
+    <a href="#timeline">時程</a>
+    <a href="#form">報名表</a>
+    <a href="#materials">素材清單</a>
+    <a href="#asks">待確認</a>
+    <a href="#roles">分工</a>
+    <a href="#contacts">窗口</a>
+    <a href="#docs">原文文件</a>
+  </div>
+  <div class="searchwrap"><input id="q" type="search" placeholder="搜尋指南＋原文文件…" aria-label="全站搜尋"></div>
+</nav>
+<div id="results" role="listbox"></div>
+
+<section id="timeline">
+  <h2><span class="no">01</span>關鍵時程</h2>
+  <p class="sub">所有期限集中在這張表，照日期排。勾選進度只存在自己的裝置，不會同步給其他人。</p>
+  <ul class="tl">
+    <li data-k="b1" class="done-fact"><span class="d">7/30（四）✓</span><span class="t"><label><input type="checkbox">收到 Sujin 資料需求信：報名表連結＋存取碼、字幕素材需求、embargo 提醒</label><a class="src" href="#doc-email-e1">出處：信件 ✉1</a></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
+    <li data-k="b2" class="done-fact"><span class="d">7/31（五）✓</span><span class="t"><label><input type="checkbox">林翰回信：多數素材以 8/11 為目標、為 screener＋對白本爭取延期、確認 timecode 標準</label><a class="src" href="#doc-email-e3">出處：信件 ✉3</a></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
+    <li data-k="b3" class="hot"><span class="d">8/3（一）</span><span class="t"><label><input type="checkbox">Sujin 信中原請的交件日——大會未書面同意新期限前，以此日<b>跟催 Sujin 回覆</b></label><a class="src" href="#doc-email-e1">出處：信件 ✉1</a><small>林翰已在 7/31 信中請求更多時間；Sujin 信裡也寫「需要更多時間請提前告知」，但同意與否仍要她白紙黑字。</small></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
+    <li data-k="b4" class="hot"><span class="d">8/11（二）</span><span class="t"><label><input type="checkbox"><b>線上報名表</b>五步驟填完、按 Submit/Complete 送出（林翰主填）</label><a class="src" href="#doc-checklist-p1">出處：素材清單</a><a class="src" href="#doc-form-s1">表單原文</a><small>Step 4 要上傳劇照與兩份對白本——行銷與後期的素材要先到位，見<a href="#form">報名表拆解</a>。</small></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
+    <li data-k="b5" class="hot"><span class="d">8/11（二）</span><span class="t"><label><input type="checkbox"><b>宣傳素材交齊</b>：英文大綱、導演簡歷（45 字以上）、作品年表、導演照、劇照 3–5 張、宣傳片段（選交）</label><a class="src" href="#doc-checklist-p1">出處：素材清單</a><small>劇照與片段「可以選擇不多給」是林翰在 LINE 的原話；規格見<a href="#materials">素材清單</a>。</small></span><span class="owners"><span class="chip owner marketing">行銷</span></span></li>
+    <li data-k="b6" class="hot"><span class="d">8/11（二）</span><span class="t"><label><input type="checkbox"><b>字幕素材</b>：燒英字定剪 screener＋英文/原文對白本（大會做韓文字幕用）——<b>延期申請中，結果未定</b></label><a class="src" href="#doc-checklist-p1">出處：素材清單</a><a class="src" href="#doc-email-e3">✉3</a><small>獲書面延期前，這格期限仍算 8/11。</small></span><span class="owners"><span class="chip owner pr">後期</span></span></li>
+    <li data-k="b7"><span class="d">9/4（五）</span><span class="t"><label><input type="checkbox"><b>放映拷貝</b>（燒英字）交付；放映格式清單寫明「請事先詢問」</label><a class="src" href="#doc-checklist-p1">出處：素材清單</a></span><span class="owners"><span class="chip owner pr">後期</span></span></li>
+    <li data-k="b8"><span class="d">9 月初</span><span class="t"><label><input type="checkbox">大會記者會公布全片單——<b>公布前一律不得對外透露入選</b>，公布後才能開宣傳</label><a class="src" href="#doc-email-e1">出處：信件 ✉1</a><small>確切日期未定，Leo 的追問還沒去信大會，見<a href="#asks">待確認</a>。</small></span><span class="owners"><span class="chip owner marketing">行銷</span></span></li>
+    <li data-k="b9"><span class="d">9 月初後</span><span class="t"><label><input type="checkbox">台灣宣傳日程與素材選擇啟動（以大會公布日回推）</label><a class="src" href="#doc-line-l1">出處：LINE 紀錄</a></span><span class="owners"><span class="chip owner marketing">行銷</span></span></li>
+    <li data-k="b10"><span class="d">10/6 – 10/15</span><span class="t"><label><input type="checkbox">第 31 屆釜山影展；來賓與演員行程等大會開啟後續討論（林翰預告很快會談到）</label><a class="src" href="#doc-email-e1">出處：信件 ✉1</a><a class="src" href="#doc-line-l1">LINE</a></span><span class="owners"><span class="chip owner all">全員</span></span></li>
+  </ul>
+</section>
+
+<section id="form">
+  <h2><span class="no">02</span>線上報名表拆解</h2>
+  <p class="sub">五個步驟，林翰主填。表內資料會直接用於大會出版物、官網與官方社群——填進去的就是對外版本。逐步 Save/Next 可分次完成，<b>按 Step 5 的 Submit/Complete 才算送出</b>。</p>
+
+  <div class="callout"><b>直接開啟：</b><a class="gobtn" href="https://guest.biff.kr/submission/selection/main_eng.asp?film_number=178539307526181" target="_blank" rel="noopener">開啟線上報名表（已含影片編號）</a><a class="gobtn" href="https://guest.biff.kr/submission/selection/sample/sample01_eng.html" target="_blank" rel="noopener">開啟官方範例</a>存取碼 <button type="button" class="copycode" data-copy="1167">1167（點擊複製）</button><a class="src" href="#doc-email-e1">出處：信件 ✉1</a></div>
+  <p class="note">表單為最新版 Chrome 最佳化；須由「適當的申請人」填寫（出品公司或其授權公司）；技術問題直接寄 <a href="mailto:filmguest@biff.kr">filmguest@biff.kr</a>。送出後任何變動都要直接回報 Program Team。<a class="src" href="#doc-email-e1">✉1</a><a class="src" href="#doc-form-s5">表單 Step 5</a></p>
+
+  <details>
+    <summary><span class="qn">Step 1</span>影片資訊 Film Info<span class="arrow">›</span></summary>
+    <div class="body">
+      <h4>基本資料</h4>
+      <ul>
+        <li>英文片名、原文片名、<b>韓文用羅馬拼音</b>（照發音拼寫，ISO 基本拉丁字母）</li>
+        <li>完成日期（月／年，指影片實際完成的時間）<small>——本片還在後期，這欄怎麼填要跟後期對齊</small></li>
+        <li>語言、字幕語言、製作國（可加多國）、片長、類別（劇情／紀錄／動畫／其他）</li>
+        <li><b>AI 參與</b>：無／部分／全部——有 AI 生成畫面就要勾</li>
+        <li><b>Premiere 欄</b>：World / International / Asian / Korean 四選一<span class="chip bg">補充背景</span><small>TIFF 9/17 世界首映在先，BIFF（10 月）推定填 <b>Asian Premiere</b>（亞洲首次公開放映）；填表前與 Fred 確認中間無其他亞洲放映，見<a href="#asks">待確認</a>。</small></li>
+        <li>影展紀錄：BIFF 之前已放映或將放映的影展都要列——<b>要列 TIFF 2026</b>；得獎／補助如有也填</li>
+        <li><b>短版大綱：45 字（words）以內</b>；長版大綱另填——<b>兩者長度必須不同</b>，完全一樣會被要求重交</li>
+      </ul>
+      <h4>導演欄</h4>
+      <ul>
+        <li>姓名拼寫規則：<b>姓氏全大寫、名字首字母大寫</b>（表單會擋，例：Fiona ROAN）</li>
+        <li>國籍、性別、Email、電話</li>
+        <li><b>導演照</b>：jpg、300dpi 以上、<b>高於 1080×1440 像素</b>、單檔 10MB 內；有版權要標版權人、<b>不加©符號</b></li>
+        <li><b>簡歷：45 字（words）以上</b>；作品年表逐年列</li>
+      </ul>
+      <h4>技術規格</h4>
+      <ul>
+        <li>放映格式：<b>無加密 DCP 最優先</b>；加密 DCP 要另寄 DKDM 給大會 Print Coordinator</li>
+        <li>2D/3D、彩色/黑白、2K/4K、FPS——<b>DCP 只收 24 或 25 fps</b>，其他格率無法放映</li>
+        <li>DCP 硬碟：3.5" HDD 或 USB 介面外接盒＋外接電源；MBR 分割表；NTFS／EXT2／EXT3</li>
+        <li>字幕以燒入為佳；XML 字幕的字型檔須小於 640KB；聲音建議 5.1 聲道</li>
+      </ul>
+      <h4>四個授權決策（勾了就是同意）</h4>
+      <ul>
+        <li><b>宣傳片段</b>：上傳或給連結＋密碼；<b>不給的話 BIFF 會自行從乾淨版 screener 剪 1–2 分鐘</b>——想控制對外露出什麼，就自己給<a class="src" href="#doc-line-l1">LINE</a></li>
+        <li><b>Festival Preview Service</b>：影展開跑前，供事先登記核可的媒體受限試看全片（確切期間以正式表單原文為準）</li>
+        <li><b>Festival Video Library</b>：影展期間限場內供專業人士看片、不得複製外借；<b>影展後 screener 永久存於釜山電影資料館（Cinematheque Busan）純典藏</b></li>
+        <li><b>ACFM 線上市場放映</b>：亞洲內容暨電影市場展 10/6–31 線上放映，僅限 2026 Market Badge 持有者——<b>牽涉銷售策略，勾之前先跟 Fred 對齊</b></li>
+      </ul>
+      <h4>申請人與同意條款</h4>
+      <ul>
+        <li>申請人資料（姓名、身分、公司、地址、Email、電話）；申請人＝出品公司或其書面授權的公司</li>
+        <li>同意條款含：遵守 FIAPF 國際影展規範、<b>承諾不撤片</b></li>
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary><span class="qn">Step 2</span>演職員 Credits<span class="arrow">›</span></summary>
+    <div class="body">
+      <p><b>這一步填的內容會直接登上 BIFF 官網。</b><a class="src" href="#doc-form-s2">表單原文</a></p>
+      <ul>
+        <li>卡司：姓名＋角色，逐一 Add</li>
+        <li>主創：導演、編劇、美術、剪接、聲音（下拉選單）</li>
+        <li>姓名拼寫同 Step 1：<b>姓氏全大寫、名字首字母大寫</b></li>
+        <li>出品公司：公司名、地址、聯絡人、Email、電話、傳真</li>
+        <li><b>World Sales 公司</b>與<b>韓國發行商</b>欄位——資料要向 Fred 確認，見<a href="#asks">待確認</a></li>
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary><span class="qn">Step 3</span>拷貝資訊 Print Info<span class="arrow">›</span></summary>
+    <div class="body">
+      <ul>
+        <li><b>Print Owner（拷貝權利方）必填</b>：公司、地址、聯絡人、Email</li>
+        <li>Print Sender／Print Address：<b>只有實體運送才必填</b>；可勾「同上」或「To be determined」先過關</li>
+      </ul>
+      <p class="note"><b>建議：</b>正式拷貝是數位交付還是實體寄送，等後期與大會確認規格後再定；此步先填 Owner、其餘勾 TBD，之後再回報 Program Team 更新。<a class="src" href="#doc-form-s3">表單原文</a></p>
+    </div>
+  </details>
+
+  <details>
+    <summary><span class="qn">Step 4</span>必附附件 Compulsory Attachment<span class="arrow">›</span></summary>
+    <div class="body">
+      <h4>劇照（主圖 #1＋劇照 #2–#5）</h4>
+      <ul>
+        <li>jpg 格式；<b>檔名只能用 ISO 基本拉丁字母、不得有特殊符號</b></li>
+        <li><b>不收電影海報、不收直式圖</b>；網站顯示時長寬比可能微調</li>
+        <li>300dpi 以上且<b>高於 2100×1050 像素</b>；單檔 10MB 內</li>
+        <li>有版權要標版權人（<b>會顯示在官網</b>）、不加©符號；超過 5 張或上傳有問題直接聯絡 Program Team</li>
+      </ul>
+      <h4>對白本</h4>
+      <ul>
+        <li><b>英文對白本＋原文（中文）對白本，兩份都必附</b>——大會做韓文字幕的依據；中文片屬於原文對白本的強制名單</li>
+      </ul>
+      <p class="note"><b>卡點：</b>對白本正在爭取延期，但它是報名表的<b>必填附件</b>——若延期獲准，8/11 送表時這步怎麼處理（先送其他部分？補件？）要問 Sujin，見<a href="#asks">待確認</a>。<a class="src" href="#doc-form-s4">表單原文</a></p>
+    </div>
+  </details>
+
+  <details>
+    <summary><span class="qn">Step 5</span>送出 Complete<span class="arrow">›</span></summary>
+    <div class="body">
+      <ul>
+        <li>按 <b>Submit/Complete</b> 才算完成註冊</li>
+        <li>送出的資料用於大會出版物、官網、官方社群——<b>送出前全員最後校一次對外文字</b></li>
+        <li>送出後任何變動，必須直接回報 Program Team</li>
+      </ul>
+      <p><a class="src" href="#doc-form-s5">表單原文</a></p>
+    </div>
+  </details>
+</section>
+
+<section id="materials">
+  <h2><span class="no">03</span>素材清單與規格</h2>
+  <p class="sub">Materials Check-up List 白紙黑字的期限與規格。多數素材 TIFF 註冊時已備過一輪，可沿用，但要按 BIFF 的解析度與格式重新檢查。<a class="src" href="#doc-checklist-p1">出處：素材清單</a></p>
+  <div class="tblwrap">
+    <table>
+      <thead><tr><th>項目</th><th>數量</th><th>期限</th><th>備註</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td colspan="4">宣傳素材 Publicity Materials —— 8/11</td></tr>
+        <tr><td>線上報名表</td><td class="num">1</td><td class="num">8/11</td><td>個別連結與存取碼已提供，見<a href="#form">報名表拆解</a></td></tr>
+        <tr><td>英文大綱</td><td class="num">1</td><td class="num">8/11</td><td>報名表另分短版（45 字內）與長版，兩者長度須不同</td></tr>
+        <tr><td>導演簡歷</td><td class="num">1</td><td class="num">8/11</td><td><b>45 字（words）以上</b></td></tr>
+        <tr><td>導演作品年表</td><td class="num">1</td><td class="num">8/11</td><td></td></tr>
+        <tr><td>導演照</td><td class="num">1</td><td class="num">8/11</td><td>清單：每張至少 1MB、300dpi 以上；表單另要求高於 1080×1440 像素、jpg</td></tr>
+        <tr class="key"><td>劇照（高解析）</td><td class="num">3–5</td><td class="num">8/11</td><td>300dpi 以上、高於 2100×1050、jpg、檔名純拉丁字母；<b>不收海報與直式圖</b>；行銷選圖（可少給）</td></tr>
+        <tr class="key"><td>宣傳片段</td><td class="num">1</td><td class="num">8/11</td><td><b>選交</b>：1–2 分鐘、1920×1080、MP4/MOV、無字幕乾淨版；會逾期要先告知；不給則大會自剪</td></tr>
+        <tr class="grp"><td colspan="4">字幕素材 Subtitling Materials —— 8/11（延期申請中）</td></tr>
+        <tr class="key"><td>定剪 screener（燒英字）</td><td class="num">1</td><td class="num">8/11 *</td><td><b>必須與放映版本一致</b>；用可下載連結交付（Vimeo／Google Drive／WeTransfer）</td></tr>
+        <tr><td>對白本（英文）</td><td class="num">1</td><td class="num">8/11 *</td><td rowspan="2">兩份都是大會做韓文字幕的必要文件；中文片必交原文版</td></tr>
+        <tr><td>對白本（原文中文）</td><td class="num">1</td><td class="num">8/11 *</td></tr>
+        <tr class="grp"><td colspan="4">放映拷貝 Screening Print —— 9/4</td></tr>
+        <tr><td>放映拷貝（燒英字）</td><td class="num">1</td><td class="num">9/4</td><td>放映格式「請事先詢問」；DCP 規格見<a href="#form">報名表 Step 1</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note"><b>* 延期中：</b>林翰 7/31 已去信為 screener＋對白本爭取更晚期限，並確認 screener 是否須與最終 DCP 同 timecode（至少 picture lock）——<b>大會書面同意前，期限仍算 8/11</b>。<a class="src" href="#doc-email-e3">出處：信件 ✉3</a></p>
+  <p class="note"><b>規格數字有兩套：</b>清單寫「每張至少 1MB、300dpi」，表單寫導演照高於 1080×1440、劇照高於 2100×1050——<b>兩套都滿足最保險</b>。另外 Sujin 信中提到的 Technical Specification Guideline 附件不在目前資料夾，要向林翰取得，後期交片要用。<a class="src" href="#doc-email-e1">✉1</a></p>
+</section>
+
+<section id="asks">
+  <h2><span class="no">04</span>待確認清單</h2>
+  <p class="sub">分三組：已去信等回覆、還沒去信要有人問、團隊內部要對齊。</p>
+
+  <div class="grid2">
+    <div class="panel">
+      <h5>已去信，等 Sujin 回覆 <span class="chip ask">已去信詢問</span></h5>
+      <ul>
+        <li>screener＋對白本的<b>新期限</b>（林翰 7/31 提出）<a class="src" href="#doc-email-e3">✉3</a></li>
+        <li>screener 是否須與最終 DCP <b>同 timecode</b>（至少 picture lock）<a class="src" href="#doc-email-e3">✉3</a></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h5>還沒去信，要有人問大會</h5>
+      <ul>
+        <li><b>對外公布的確切日期</b>（9 月初記者會哪天）——Leo 的問題，攸關台灣宣傳日程與素材選擇<a class="src" href="#doc-line-l1">LINE</a></li>
+        <li><b>放映格式</b>（9/4 拷貝）：清單寫明「請事先詢問」<a class="src" href="#doc-checklist-p1">素材清單</a></li>
+        <li>若對白本獲准延期，<b>報名表 Step 4 必填附件</b>如何處理<a class="src" href="#doc-form-s4">表單</a></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h5>團隊內部要對齊</h5>
+      <ul>
+        <li><b>Premiere 欄位</b>：推定 Asian Premiere，與 Fred 確認 TIFF 之後、BIFF 之前無其他亞洲放映<span class="chip bg">補充背景</span></li>
+        <li><b>四個授權決策</b>：宣傳片段給不給、媒體試看、影像圖書館、ACFM 線上放映——製片、行銷、Fred 對齊<a class="src" href="#doc-form-s1">表單</a></li>
+        <li><b>World Sales／韓國發行</b>欄位資料——向 Fred 要<a class="src" href="#doc-form-s2">表單</a></li>
+        <li><b>完成日期欄</b>怎麼填——片子還在後期，與 Vicki 對齊定義</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h5>等大會開線</h5>
+      <ul>
+        <li><b>來賓與演員行程</b>：林翰預告接下來很快會討論 PR 和演員行程——等大會啟動後，比照 TIFF 模式建檔追蹤<a class="src" href="#doc-line-l1">LINE</a></li>
+        <li>要取得 <b>Technical Specification Guideline</b> 附件（在 BIFF 原信附件裡，目前資料夾沒有）<a class="src" href="#doc-email-e1">✉1</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="roles">
+  <h2><span class="no">05</span>角色分工</h2>
+  <p class="sub">依 LINE 討論與信件現況整理。林翰原話：「未來其他的部份再請你們分擔一些責任」——報名表以外的分工還會再調整。<a class="src" href="#doc-line-l1">出處：LINE 紀錄</a></p>
+  <div class="tblwrap">
+    <table>
+      <thead><tr><th>誰</th><th>角色</th><th>現在手上的事</th></tr></thead>
+      <tbody>
+        <tr class="key"><td>張林翰</td><td><span class="chip owner producer">製片</span> Bering Pictures</td><td>與 Sujin 的主線聯絡；<b>電影基本資訊填表</b>（線上報名表）；爭取 screener 延期<a class="src" href="#doc-email-e3">✉3</a></td></tr>
+        <tr><td>Clifford Miu</td><td><span class="chip owner producer">製片</span> Bering Pictures</td><td>cc 在大會主線上，支援製片事務<a class="src" href="#doc-email-e3">✉3</a></td></tr>
+        <tr><td>Anli Lin</td><td><span class="chip owner marketing">行銷</span></td><td>8/11 前劇照 3–5 張＋宣傳片段的<b>選圖與交付</b>（可選擇少給）<a class="src" href="#doc-line-l1">LINE</a></td></tr>
+        <tr><td>Leo Wang 王豪</td><td><span class="chip owner marketing">行銷</span></td><td><b>台灣宣傳日程</b>；追大會對外公布日<a class="src" href="#doc-line-l1">LINE</a></td></tr>
+        <tr><td>Vicki</td><td><span class="chip owner pr">後期製片</span></td><td>定剪 screener、對白本、DCP——林翰判斷「釜山大部分的壓力」所在<a class="src" href="#doc-line-l1">LINE</a></td></tr>
+        <tr><td>Fred Tsui</td><td><span class="chip owner director">國際窗口</span></td><td>大會邀請的第一收件人（信經他轉入製片線）；World Sales 欄位資料待他確認<a class="src" href="#doc-email-e1">✉1</a><a class="src" href="#doc-email-e2">✉2</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="contacts">
+  <h2><span class="no">06</span>聯絡窗口速查</h2>
+  <p class="sub">點 Email 會直接複製到剪貼簿。給大會的信一律 cc filma@biff.kr（Sujin 原信的共同收件）。</p>
+  <div class="tblwrap">
+    <table class="contact">
+      <thead><tr><th>窗口</th><th>身分</th><th>聯絡方式</th></tr></thead>
+      <tbody>
+        <tr class="key"><td>Sujin Kim 김수진</td><td>BIFF Program Team（海外作品管理）·<b>大會主窗口</b></td><td><a href="mailto:filmguest@biff.kr">filmguest@biff.kr</a> · +82-51-709-2130<br><small>3F BIFF HILL, Busan Cinema Center, 120 Suyeonggangbyeon-daero, Haeundae-gu, Busan</small></td></tr>
+        <tr><td>filma</td><td>Program Team 共同收件</td><td><a href="mailto:filma@biff.kr">filma@biff.kr</a></td></tr>
+        <tr><td>張林翰</td><td>製片 · 團隊主聯絡人</td><td><a href="mailto:linhan@beringpictures.com">linhan@beringpictures.com</a> · [US] +1 917-254-7576</td></tr>
+        <tr><td>Clifford Miu</td><td>製片</td><td><a href="mailto:clifford@beringpictures.com">clifford@beringpictures.com</a></td></tr>
+        <tr><td>Anli Lin</td><td>行銷</td><td><a href="mailto:angelicaaa.lin@gmail.com">angelicaaa.lin@gmail.com</a></td></tr>
+        <tr><td>Leo Wang 王豪</td><td>行銷</td><td><a href="mailto:leo.wh95@gmail.com">leo.wh95@gmail.com</a></td></tr>
+        <tr><td>Fred Tsui</td><td>國際窗口</td><td><a href="mailto:fred.moebius@gmail.com">fred.moebius@gmail.com</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="docs">
+  <h2><span class="no">07</span>原文文件</h2>
+  <p class="sub">大會信件、素材清單與報名表範本照錄（英文原文），LINE 討論照錄（中文）。指南各處的「出處」小標籤點了會跳到這裡的對應段落並短暫變色。用上方搜尋框可直接搜原文。</p>
+
+  <details class="doc" id="doc-email">
+    <summary>與 BIFF 信件往來<span class="docmeta">EMAIL.docx · 3 封</span><span class="arrow">›</span></summary>
+    <div class="body">
+      <div class="docpage" id="doc-email-e1">
+        <div class="pgno">✉ 1 · 2026/7/30 14:33 · Sujin Kim（BIFF）→ Fred Tsui（首封資料需求信）</div>
+        <p>Warmest greetings on behalf of the 31st Busan International Film Festival! This is <b>Sujin Kim from the Program Team</b>. It is a great honor to have <b>Happily Ever After</b> as part of our official selection this year. <b>I'll be your main point of contact</b> for collecting and managing all relevant materials.</p>
+        <p>As for the first step, we kindly request the followings. <b>We would greatly appreciate it if you could share the materials by August 3rd. Please let me know in advance in case you require more time.</b></p>
+        <p><b>1. Online Registration Form</b> — Please fill in the Online Registration Form for materials required for our promotional activities. The information and data submitted in the form will serve as a basis for various publications. It is very important that they are in accordance with the <b>Materials Check-up List (attached)</b> and guidelines on the form.</p>
+        <ul>
+          <li>Link: https://guest.biff.kr/submission/selection/main_eng.asp?film_number=178539307526181 · <b>Access code: 1167</b></li>
+          <li>Sample: https://guest.biff.kr/submission/selection/sample/sample01_eng.html</li>
+          <li>This form is optimized for the most recent version of Chrome; the form must be completed by the appropriate applicant only; report any technical problems to filmguest@biff.kr</li>
+        </ul>
+        <p><b>2. Subtitling materials</b> — For Korean subtitling, (1) <b>a finalized screener with burnt-in English subtitles</b> and (2) <b>dialogue lists in both English and the original language</b> are required. Please share the screener via an online platform of your choice; we prefer it to be downloadable with matching specs outlined in the attached <b>Technical Specification Guideline</b>.</p>
+        <p>Lastly, we would like to remind you of the <b>press embargo</b>. The full program will be announced <b>around early September during the press conference</b>. Please make sure to refrain from disclosing it in any publicity regarding this selection before our official announcement.</p>
+        <p><small>Sujin KIM 김수진 | Program Team 해외작품관리 · Busan International Film Festival · T. +82-51-709-2130 · E. filmguest@biff.kr · 31st BIFF (6–15 October 2026)</small></p>
+      </div>
+      <div class="docpage" id="doc-email-e2">
+        <div class="pgno">✉ 2 · 2026/7/30 14:36 · Fred Tsui → Sujin（轉手交接）</div>
+        <p>Dear Sujin — Our producer <b>Linhan Zhang</b> and/or his team will get back to you shortly. Best, Fred</p>
+      </div>
+      <div class="docpage" id="doc-email-e3">
+        <div class="pgno">✉ 3 · 2026/7/31 14:21 · Linhan → Sujin（回覆：期限目標與兩個問題；cc Clifford、Anli、Leo）</div>
+        <p>It's a pleasure to meet you and thank you for the invitation of our new movie. I am producer Linhan Zhang, and along with producer Clifford Miu, our heads of marketing Anli Lin and Leo Wang (both cc'd here), we will be talking to you about festival registration and subsequent travel arrangements.</p>
+        <p><b>We will give you most of the requested materials by Aug 11.</b> As we just wrapped the film three months ago and still doing post production, <b>can we possibly have a later deadline for the finalized screener + dialogue lists?</b> I assume this version must be the same timecodes as the final DCP (at least it needs to be picture locked). <b>Is that correct?</b></p>
+        <p><small>信件由 Anli 轉存於 2026/7/31。</small></p>
+      </div>
+    </div>
+  </details>
+
+  <details class="doc" id="doc-checklist">
+    <summary>Materials Check-up List<span class="docmeta">BIFF 信件附件 · 截圖存檔</span><span class="arrow">›</span></summary>
+    <div class="body">
+      <div class="docpage" id="doc-checklist-p1">
+        <div class="pgno">Materials Check-up List · For official selection of BUSAN International Film Festival</div>
+        <p>Please make sure that you provide the following materials by the due date.</p>
+        <p><b>Publicity Materials — August 11</b></p>
+        <ul>
+          <li>Registration Form ×1 — Individual online link will be provided</li>
+          <li>English synopsis ×1</li>
+          <li>Director's biography ×1 — more than 45 words</li>
+          <li>Director's filmography ×1</li>
+          <li>Director's photo ×1 — minimum 1 megabyte each, high resolution more than 300 dpi required</li>
+          <li>High quality images of the film ×3 to 5 — 同上規格</li>
+          <li>Promotional Video Clip ×1 — <b>Optional</b>. 1–2 minutes, 1920×1080 px, .MP4 or MOV; must be a clean version without subtitles. If it takes more than mentioned deadline, please inform us in advance.</li>
+        </ul>
+        <p><b>Subtitling Materials — August 11</b></p>
+        <ul>
+          <li>Final Version of Screener (Film File), English subtitle burnt in ×1 — <b>Must be identical to the exhibition print.</b> Please use a downloadable link like Vimeo, Google Drive, WeTransfer etc.</li>
+          <li>Dialogue list in English ×1</li>
+          <li>Dialogue list in the Original language ×1 — Compulsory for Chinese, Japanese, French, Italian, German, Spanish</li>
+        </ul>
+        <p><b>Screening Print — September 4</b></p>
+        <ul>
+          <li>Screening print w/ English subtitle ×1 — Regarding the screening format, <b>please inquire in advance</b></li>
+        </ul>
+        <p><small>截圖原檔：資料/S__100802584_0.jpg</small></p>
+      </div>
+    </div>
+  </details>
+
+  <details class="doc" id="doc-form">
+    <summary>線上報名表範本（五步驟）<span class="docmeta">資料/報名資料 · 5 份 PDF</span><span class="arrow">›</span></summary>
+    <div class="body">
+      <div class="docpage" id="doc-form-s1">
+        <div class="pgno">Step 1 · Film Info（規格重點摘錄）</div>
+        <ul>
+          <li>English Title / Original Title / Korean romanization — please write as pronounced, in ISO basic Latin alphabet</li>
+          <li>Date of Production (MM/YYYY) — please enter the date when the film has been completed</li>
+          <li>Language(s), Subtitled, Production Country (可加多國), Running Time, Category (Fiction / Documentary / Animation / Other)</li>
+          <li>AI Participation: None / Partial / Full — please check if the film includes scenes partially or entirely generated by artificial intelligence</li>
+          <li>Premiere: World / International / Asian / Korean / Not Applicable — Asian premieres are films screened for the first time in public in Asia</li>
+          <li>Festival(s) and screening(s) the film has been or will be screened before the 31st BIFF (6–15 October 2026)；Prizes or Funds (if applicable)</li>
+          <li><b>Short Synopsis: no more than 45 words</b>；Long Synopsis — Short and Long Synopsis should be in different length；both should be uploaded in the material, it will be mostly used</li>
+          <li>Director: Name（<b>Last Name and the first letter of First Name should be used in capital letters</b>）, Nationality, Gender, E-mail, Telephone</li>
+          <li>Director's Photo: no less than 300 dpi and higher than 1080×1440 pixels, in jpg format, max 10MB；copyright — please exclude the copyright symbol (©)</li>
+          <li><b>Biography: more than 45 words</b>；Filmography 逐年列；可 Add another director</li>
+          <li>Screening Format: Unencrypted DCP（最優先）/ Encrypted DCP / Film (35mm) / HDCAM / Other — if encrypted, send DKDM to the Print Coordinator of Busan IFF</li>
+          <li>2D/3D · Color/B&amp;W · 2K/4K · FPS — (DCP) 24fps or 25fps only, other frame rates will not be able to screen</li>
+          <li>DCP content: 3.5" HDD or case with USB interface and external power supply；MBR partition table；NTFS, EXT2 or EXT3；burnt-in subtitles are encouraged；XML subtitle font file under 640KB；5.1 sound channel recommended</li>
+          <li>Promotional video clip: upload file or download link + password — if not sent, BIFF will produce a 1–2 minute clip from the clean screener</li>
+          <li>Festival Preview Service Permission — preview service for restricted, pre-registered press members before the festival（agree / decline）</li>
+          <li>Festival Video Library Permission — during the festival, restricted venues only, no duplication or loaning；<b>after the festival the screener will be preserved at Cinematheque Busan for archival purpose only</b>（agree / decline）</li>
+          <li>ACFM Online Screening Permission — operated by Asian Contents &amp; Film Market, <b>6 to 31 October 2026</b>, exclusively for 2026 ACFM attendees / Market Badge holders（agree / decline）</li>
+          <li>Applicant and Agreement — the applicant is either the production company lending the film or a company empowered by the production company；abide by FIAPF regulations；<b>the applicant commits to refrain from withdrawing the film from the festival</b></li>
+        </ul>
+      </div>
+      <div class="docpage" id="doc-form-s2">
+        <div class="pgno">Step 2 · Credits（規格重點摘錄）</div>
+        <ul>
+          <li><b>The below information will be uploaded on the Busan International Film Festival Official Website</b></li>
+          <li>Cast: Name + Role；Credit: Director / Script / Production Design / Editor / Sound</li>
+          <li>Last Name and the first letter of First Name should be used in capital letters</li>
+          <li>Production Company / World Sales Company / Distribution Company for Korean Territory — 各含公司名、地址、聯絡人、E-mail、電話、傳真</li>
+        </ul>
+      </div>
+      <div class="docpage" id="doc-form-s3">
+        <div class="pgno">Step 3 · Print Info（規格重點摘錄）</div>
+        <ul>
+          <li>Print Owner — Contact Person 與 E-mail(Primary) 為必填</li>
+          <li>Print Sender / Print Address — <b>Required for physical shipping only</b>；可勾 Check if same as the print owner/sender 或 <b>To be determined</b></li>
+        </ul>
+      </div>
+      <div class="docpage" id="doc-form-s4">
+        <div class="pgno">Step 4 · Compulsory Attachment（規格重點摘錄）</div>
+        <ul>
+          <li>Main image #1 + Still images #2–#5 — the attached photos are intended for use in the publication, on the official website, and across the official social media accounts</li>
+          <li>jpg format；<b>the file name should contain only ISO basic Latin alphabet, with no special characters</b></li>
+          <li><b>Please do not include film posters or vertically oriented images</b>；aspect ratio of the main image may be slightly adjusted when displayed</li>
+          <li>No less than 300 dpi and higher than 2100×1050 pixels；maximum file size 10MB；more than 5 images or upload difficulty → contact the Program Team directly</li>
+          <li>If any image is copyrighted, kindly specify the copyright holder（this information will be displayed on the official website）；do not include the copyright symbol (©)</li>
+          <li>English dialogue list + Dialogue list in the original language — <b>both files are necessary documents for making Korean subtitles in BUSAN IFF</b>；original language list is required for Chinese, Japanese, French, Italian, German, Spanish</li>
+        </ul>
+      </div>
+      <div class="docpage" id="doc-form-s5">
+        <div class="pgno">Step 5 · Complete（規格重點摘錄）</div>
+        <ul>
+          <li>按 <b>Submit / Complete</b> 才完成註冊</li>
+          <li>All the information you have submitted will be used for Busan International Film Festival's publication, official website, and official social media accounts, so please make sure all data are accurate and up-to-date</li>
+          <li><b>Should there be any changes required, you must report the changes directly to Program Team</b></li>
+        </ul>
+      </div>
+    </div>
+  </details>
+
+  <details class="doc" id="doc-line">
+    <summary>團隊 LINE 討論<span class="docmeta">截圖存檔 · 4 則</span><span class="arrow">›</span></summary>
+    <div class="body">
+      <div class="docpage" id="doc-line-l1">
+        <div class="pgno">LINE · 下午 2:23–2:31（截圖未含日期，依內容推定 2026/7/30–7/31）</div>
+        <p><b>張林翰：</b>「@Anli.L @Leo Wang 王豪 釜山的邀請函也寄來了，隨到而至的是一堆資料表和素材的交付。我把你們 cc 進選片人的 email 中，估計接下來很快也會討論到 PR 和演員行程的問題。最近辛苦大家一些，我們目前不再有其他影展的申請」</p>
+        <p><b>張林翰：</b>（附 Materials Check-up List 截圖）「這個附件在 BIFF 的 email 裏有，我覺得釜山大部分的壓力是在後期製片 Vicki 那邊，我會去爭取更晚的正片小檔 deadline。PR 方面，我們就是要在 8月11號 之前給 3-5 張劇照以及一段影片片段（我們可以選擇不多給）」</p>
+        <p><b>張林翰：</b>「我會負責電影的基本資訊填表，未來其他的部份再請你們分擔一些責任」</p>
+        <p><b>Leo Wang 王豪：</b>「收收，釜山目前有預計何時會對外正式公布嗎？會攸關到我們的台灣宣傳日程跟素材選擇」</p>
+        <p><small>截圖原檔：資料/S__100802583_0.jpg、S__100802584_0.jpg</small></p>
+      </div>
+    </div>
+  </details>
+</section>
+
+<footer>
+  整理自 BIFF 大會來信（Sujin Kim，2026/7/30）與林翰回信（2026/7/31）、Materials Check-up List、線上報名表五步驟官方範本、製片與行銷團隊 LINE 討論。所有期限與規格以大會後續書面確認為準。製表 2026/7/31。
+</footer>
+
+</div>
+
+<div id="toast" role="status"></div>
+<script>
+/* ---------- horizontal-scroll tables: edge shadows + swipe hint ---------- */
+(function(){
+  var updates=[];
+  function init(){
+    document.querySelectorAll('.tblwrap').forEach(function(w){
+      if(w.parentElement && w.parentElement.classList.contains('tshell')) return;
+      var shell=document.createElement('div'); shell.className='tshell';
+      w.parentNode.insertBefore(shell,w); shell.appendChild(w);
+      var hint=null, dismissed=false;
+      function showHint(){
+        if(hint) return;
+        hint=document.createElement('span');
+        hint.className='scrollhint'; hint.textContent='← 滑動看更多';
+        shell.appendChild(hint);
+      }
+      function hideHint(){ if(hint){ hint.remove(); hint=null; } }
+      function update(){
+        var canScroll=w.scrollWidth>w.clientWidth+2;
+        var atStart=w.scrollLeft<4;
+        var atEnd=w.scrollLeft+w.clientWidth>=w.scrollWidth-4;
+        shell.classList.toggle('more-right',canScroll&&!atEnd);
+        shell.classList.toggle('more-left',canScroll&&!atStart);
+        if(canScroll && !dismissed){ showHint(); } else { hideHint(); }
+      }
+      w.addEventListener('scroll',function(){
+        if(w.scrollLeft>12) dismissed=true;
+        update();
+      },{passive:true});
+      if('IntersectionObserver' in window){
+        new IntersectionObserver(function(entries){
+          entries.forEach(function(en){
+            if(en.isIntersecting){ dismissed=false; update(); }
+            else{ hideHint(); }
+          });
+        },{threshold:0.25}).observe(shell);
+      }
+      updates.push(update);
+      update();
+    });
+  }
+  function refresh(){ updates.forEach(function(f){f()}) }
+  window.addEventListener('resize',refresh);
+  document.addEventListener('toggle',function(){ setTimeout(refresh,50) },true);
+  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',init); }
+  else{ init(); }
+  window.addEventListener('load',refresh);
+})();
+</script>
+<script>
+/* ---------- toast ---------- */
+var _toastT;
+function toast(msg){
+  var el=document.getElementById('toast');
+  el.textContent=msg; el.classList.add('on');
+  clearTimeout(_toastT); _toastT=setTimeout(function(){el.classList.remove('on')},2400);
+}
+
+/* ---------- email click = copy, not open ---------- */
+document.addEventListener('click',function(e){
+  var c=e.target.closest('[data-copy]');
+  if(c){
+    var v=c.getAttribute('data-copy');
+    function ok(){toast('已複製存取碼：'+v)}
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(v).then(ok,function(){fallbackCopy(v);ok()});
+    }else{ fallbackCopy(v); ok(); }
+    return;
+  }
+  var a=e.target.closest('a[href^="mailto:"]');
+  if(!a) return;
+  e.preventDefault();
+  var email=a.getAttribute('href').slice(7).split('?')[0];
+  function done(){toast('已複製 Email：'+email+'（到 Gmail 貼上即可）')}
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(email).then(done,function(){fallbackCopy(email);done()});
+  }else{ fallbackCopy(email); done(); }
+});
+function fallbackCopy(t){
+  var ta=document.createElement('textarea');
+  ta.value=t; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try{document.execCommand('copy')}catch(e){}
+  document.body.removeChild(ta);
+}
+
+/* ---------- anchor jumps open collapsed sections ---------- */
+function revealEl(el){
+  if(!el) return;
+  var p=el;
+  while(p){ if(p.tagName==='DETAILS') p.open=true; p=p.parentElement; }
+  el.scrollIntoView({block:'start'});
+  if(el.classList.contains('docpage')||el.closest('.doc')||el.tagName==='DETAILS'){
+    el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash');
+    setTimeout(function(){el.classList.remove('flash')},2000);
+  }
+}
+document.addEventListener('click',function(e){
+  var a=e.target.closest('a[href^="#"]');
+  if(!a) return;
+  var id=a.getAttribute('href').slice(1);
+  var el=document.getElementById(id);
+  if(!el) return;
+  e.preventDefault();
+  revealEl(el);
+  try{history.pushState(null,'','#'+id)}catch(err){}
+});
+window.addEventListener('load',function(){
+  if(location.hash) revealEl(document.getElementById(location.hash.slice(1)));
+});
+
+/* ---------- site-wide search ---------- */
+(function(){
+  var input=document.getElementById('q'), box=document.getElementById('results');
+  if(!input) return;
+  var idx=null;
+  function buildIndex(){
+    idx=[];
+    var sel='#timeline .tl .t, #materials td, #materials .note, .body p, .body li, .panel li, .callout, .contact td, .alert, .docpage p, .docpage li, #roles td, #form .note';
+    document.querySelectorAll(sel).forEach(function(el){
+      var t=el.textContent.replace(/\s+/g,' ').trim();
+      if(t.length>3) idx.push({el:el, text:t, low:t.toLowerCase()});
+    });
+  }
+  function labelFor(el){
+    var doc=el.closest('.doc');
+    if(doc){
+      var s=doc.querySelector('summary');
+      return '原文文件 · '+(s?s.childNodes[0].textContent.trim():'');
+    }
+    var parts=[], sec=el.closest('section');
+    if(sec){ var h=sec.querySelector('h2'); if(h) parts.push(h.textContent.replace(/^\s*\d+\s*/,'').trim()); }
+    var det=el.closest('details');
+    if(det){ var s2=det.querySelector('summary'); if(s2) parts.push(s2.textContent.replace(/›/g,'').replace(/\s+/g,' ').trim().slice(0,24)); }
+    return parts.join(' · ')||'指南';
+  }
+  function render(q){
+    if(!idx) buildIndex();
+    var ql=q.toLowerCase();
+    var hits=[];
+    for(var i=0;i<idx.length && hits.length<15;i++){
+      var pos=idx[i].low.indexOf(ql);
+      if(pos>-1) hits.push({item:idx[i],pos:pos});
+    }
+    box.innerHTML='';
+    if(!hits.length){
+      box.innerHTML='<div class="rescount">找不到「'+q.replace(/</g,'&lt;')+'」，換個關鍵字試試（可搜中文或英文原文）</div>';
+      box.classList.add('on'); return;
+    }
+    var cnt=document.createElement('div'); cnt.className='rescount';
+    cnt.textContent=hits.length+' 筆結果（點擊跳至該段）';
+    box.appendChild(cnt);
+    hits.forEach(function(h){
+      var b=document.createElement('button'); b.type='button'; b.className='res';
+      var w=document.createElement('div'); w.className='where'; w.textContent=labelFor(h.item.el);
+      var s=document.createElement('div');
+      var t=h.item.text, from=Math.max(0,h.pos-26), to=Math.min(t.length,h.pos+q.length+46);
+      if(from>0) s.appendChild(document.createTextNode('…'));
+      s.appendChild(document.createTextNode(t.slice(from,h.pos)));
+      var m=document.createElement('mark'); m.textContent=t.slice(h.pos,h.pos+q.length); s.appendChild(m);
+      s.appendChild(document.createTextNode(t.slice(h.pos+q.length,to)+(to<t.length?'…':'')));
+      b.appendChild(w); b.appendChild(s);
+      b.addEventListener('click',function(){ hide(); revealEl(h.item.el); h.item.el.classList.add('flash'); setTimeout(function(){h.item.el.classList.remove('flash')},2000); });
+      box.appendChild(b);
+    });
+    box.classList.add('on');
+  }
+  function hide(){ box.classList.remove('on'); }
+  var deb;
+  input.addEventListener('input',function(){
+    clearTimeout(deb);
+    var q=input.value.trim();
+    var isAscii=/^[\x00-\x7F]*$/.test(q);
+    if(!q || (isAscii && q.length<2)){ hide(); return; }
+    deb=setTimeout(function(){render(q)},120);
+  });
+  input.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){ hide(); input.blur(); }
+    if(e.key==='Enter'){ var f=box.querySelector('.res'); if(f) f.click(); }
+  });
+  document.addEventListener('click',function(e){
+    if(!e.target.closest('.searchwrap') && !e.target.closest('#results')) hide();
+  });
+})();
+
+(function(){
+  var btn=document.getElementById('menubtn'), nav=document.querySelector('nav');
+  if(!btn) return;
+  function set(open){
+    nav.classList.toggle('menu-open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+  }
+  btn.addEventListener('click',function(e){
+    e.stopPropagation();
+    set(!nav.classList.contains('menu-open'));
+  });
+  document.addEventListener('click',function(e){
+    if(e.target.closest('.navlinks a')){ set(false); return; }
+    if(!e.target.closest('nav')) set(false);
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') set(false);
+  });
+})();
+(function(){
+  var nav=document.querySelector('nav');
+  function syncNav(){
+    document.documentElement.style.setProperty('--navh', nav.offsetHeight+'px');
+  }
+  syncNav();
+  window.addEventListener('resize', syncNav);
+})();
+(function(){
+  var KEY='biff2026-checklist';
+  var saved={};
+  try{ saved=JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){}
+  document.querySelectorAll('li[data-k]').forEach(function(li){
+    var k=li.dataset.k, box=li.querySelector('input[type=checkbox]');
+    if(!box) return;
+    if(saved[k]){ box.checked=true; li.classList.add('done'); }
+    box.addEventListener('change',function(){
+      li.classList.toggle('done', box.checked);
+      saved[k]=box.checked;
+      try{ localStorage.setItem(KEY, JSON.stringify(saved)); }catch(e){}
+    });
+  });
+})();
+
+/* ---------- date-aware hero status ---------- */
+(function(){
+  var title=document.getElementById('status-title');
+  var copy=document.getElementById('status-copy');
+  var detail=document.getElementById('status-detail');
+  if(!title||!copy||!detail) return;
+  var now=new Date();
+  var askDue=new Date('2026-08-04T00:00:00+09:00');
+  var materialsDue=new Date('2026-08-12T00:00:00+09:00');
+  var printDue=new Date('2026-09-05T00:00:00+09:00');
+  var festStart=new Date('2026-10-06T00:00:00+09:00');
+  if(now<askDue){
+    title.textContent='目前進度：林翰已回信大會，等新期限確認；素材照 8/11 推進。';
+    copy.innerHTML='<ol><li>Sujin 信中希望 <b>8/3</b> 前交報名表與字幕素材，附件清單期限則寫 <b>8/11</b>——林翰 7/31 已回信以 8/11 為目標，並為定剪 screener＋對白本<b>爭取更晚期限</b>，等大會回覆</li>'
+      +'<li>線上報名表連結與存取碼已到手，<b>由林翰負責填</b>；其他部分後續再分工</li>'
+      +'<li>行銷 <b>8/11 前</b>備妥：劇照 3–5 張＋宣傳片段（可以選擇少給）</li>'
+      +'<li><b>9 月初大會記者會公布片單前，不得對外透露入選</b>（embargo）</li></ol>';
+  }else if(now<materialsDue){
+    title.textContent='目前進度：8/11 交付週。';
+    copy.innerHTML='<ol><li><b>報名表</b>五步驟填完送出（林翰）——Step 4 需劇照與對白本到位</li>'
+      +'<li><b>宣傳素材</b>交齊：大綱、簡歷、年表、導演照、劇照 3–5、宣傳片段（選）</li>'
+      +'<li><b>字幕素材</b>——除非已拿到大會書面延期，期限仍是 8/11</li>'
+      +'<li>embargo 持續：公布前不得對外透露入選</li></ol>';
+  }else if(now<printDue){
+    title.textContent='目前進度：8/11 素材應已交，下一關 9/4 放映拷貝。';
+    copy.innerHTML='<ol><li><b>9/4</b> 放映拷貝（燒英字）；放映格式要先詢問大會</li>'
+      +'<li>獲延期的 screener／對白本按新期限交付</li>'
+      +'<li><b>9 月初</b>記者會公布片單，之前 embargo 持續</li></ol>';
+  }else if(now<festStart){
+    title.textContent='目前進度：等／已過大會公布，宣傳期。';
+    copy.innerHTML='<ol><li>片單公布後，台灣宣傳日程與素材選擇即可啟動</li>'
+      +'<li>確認來賓與演員行程的討論線是否已由大會開啟</li></ol>';
+  }else{
+    title.textContent='目前進度：影展期間（10/6–15）或已結束。';
+    copy.innerHTML='<ol><li>現場事務以大會後續指示與來賓行程安排為準</li></ol>';
+  }
+  detail.textContent='大會期限未註明時區，保守以韓國時間計（快台灣 1 小時）。';
+})();
+</script>
+
+</body>
+</html>
