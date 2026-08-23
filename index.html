@@ -250,6 +250,7 @@ footer{margin-top:56px; padding-top:18px; border-top:1px solid var(--line); font
 .docpage:first-of-type{border-top:none}
 .pgno{font-size:11.5px; letter-spacing:.12em; color:var(--accent); font-weight:700; margin:4px 0 6px}
 .docpage p{margin:8px 0}
+.docpage a{overflow-wrap:anywhere; word-break:break-word}
 .docpage ul{margin:6px 0 10px; padding-left:20px}
 .docpage li{margin:3px 0}
 .docmeta{font-size:12.5px; color:var(--muted); font-weight:400; margin-left:auto; padding-right:10px}
@@ -346,8 +347,8 @@ a[href^="mailto:"]{cursor:copy}
   </div>
 
   <div class="alert" id="status-alert">
-    <b id="status-title">目前進度：<b>字幕素材新期限 8/25</b>——大會 8/18 確認：直接於 8/25 交最終定稿版（不必先交 8/19 版本），林翰已回覆接受，<b>原 8/19 期限取消</b>；舒華邀請函 8/14 已送達（回覆球在我方）；對外公布須等到 <b>9/1 16:00（韓國時間）</b>之後。</b><span id="status-copy">未決事項一律看 <a href="#asks">05 待確認清單</a>；誰負責看 <a href="#roles">06 角色分工</a>；行程與招待現況看 <a href="#operations">04 全團行程一覽</a>。</span><span class="srcrow"><a class="src" href="#doc-email-e25">出處：✉25</a><a class="src" href="#doc-invite-p1">邀請函</a><a class="src" href="#doc-email-e20">✉20</a><a class="src" href="#doc-email-e17">✉17</a></span>
-    <div class="small" id="status-detail">大會期限未註明時區，保守以韓國時間計（快台灣 1 小時）。</div>
+    <b id="status-title">目前進度：<b>字幕素材新期限 8/25</b>，大會 8/18 確認：直接於 8/25 交最終定稿版（不必先交 8/19 版本），林翰已回覆接受，<b>原 8/19 期限取消</b>；舒華邀請函 8/14 已送達（尚未回覆大會）；對外公布須等到 <b>9/1 16:00（韓國時間）</b>之後。</b><span id="status-copy">未決事項一律看 <a href="#asks">05 待確認清單</a>；誰負責看 <a href="#roles">06 角色分工</a>；行程與招待現況看 <a href="#operations">04 全團行程一覽</a>。</span><span class="srcrow"><a class="src" href="#doc-email-e25">出處：✉25</a><a class="src" href="#doc-invite-p1">邀請函</a><a class="src" href="#doc-email-e20">✉20</a><a class="src" href="#doc-email-e17">✉17</a></span>
+    <div class="small" id="status-detail"><span class="chip bg">補充背景</span> 大會期限未註明時區，保守以韓國時間計（快台灣 1 小時）。</div>
   </div>
 
   <div class="legend">
@@ -376,40 +377,40 @@ a[href^="mailto:"]{cursor:copy}
 
 <section id="timeline">
   <h2><span class="no">01</span>關鍵時程</h2>
-  <p class="sub">所有期限集中在這張表，照日期排。勾選進度只存在自己的裝置，不會同步給其他人。</p>
+  <p class="sub">照日期排。未決事項見<a href="#asks">05 待確認清單</a>。勾選進度只存在自己的裝置，不會同步給其他人。</p>
   <ul class="tl">
-    <li data-k="b1" class="done-fact"><span class="d">7/30（四）✓</span><span class="t"><label><input type="checkbox">收到 Sujin 資料需求信：報名表連結＋存取碼、字幕素材需求、embargo 提醒</label><a class="src" href="#doc-email-e1">出處：信件 ✉1</a></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
-    <li data-k="b2" class="done-fact"><span class="d">7/31（五）✓</span><span class="t"><label><input type="checkbox">林翰回信：多數素材以 8/11 為目標、為 screener＋對白本爭取延期、確認 timecode 標準</label><a class="src" href="#doc-email-e3">出處：信件 ✉3</a></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
-    <li data-k="b11" class="done-fact"><span class="d">8/3（一）✓</span><span class="t"><label><input type="checkbox">線上報名表填完送出（宣傳素材一併）：技術欄修正為 24fps SMPTE、劇照僅上傳 1 張、暫不自製宣傳片</label><a class="src" href="#doc-email-e7">出處：信件 ✉7</a><a class="src" href="#doc-email-e8">✉8</a></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
-    <li data-k="b12" class="done-fact"><span class="d">8/4（二）✓</span><span class="t"><label><input type="checkbox">Sujin 確認：字幕素材 <b>picture locked 即可</b>；來信列<b>五項複查</b>，回覆後關表</label><a class="src" href="#doc-email-e8">出處：信件 ✉8</a></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
-    <li data-k="b13" class="done-fact"><span class="d">8/5（三）✓</span><span class="t"><label><input type="checkbox">五項複查已回覆：95min／加密 DCP 正確、三項授權維持放棄、劇照順序 OK、Ko Chin CHEN <b>不加連字號</b>——等 Sujin 關表</label><a class="src" href="#doc-email-e9">出處：信件 ✉9</a><small>演職員名單同步縮減為導演與兩位製片，已告知大會：名單順序未定，其他人員之後再補。</small></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
-    <li data-k="b14" class="done-fact"><span class="d">8/5（三）✓</span><span class="t"><label><input type="checkbox">宣傳片定案：<b>不製作、不釋出</b>（8/19 檔案無最終聲音與調色，不搶先於行銷與銷售規劃）；未來若輸出片段再分享</label><a class="src" href="#doc-email-e9">出處：信件 ✉9</a></span><span class="owners"><span class="chip owner producer">製片</span><span class="chip owner marketing">行銷</span></span></li>
-    <li data-k="b16" class="done-fact"><span class="d">8/6（四）✓</span><span class="t"><label><input type="checkbox">大會回三問：記者會與放映場次均 <b>9 月初定案、定案立即通知</b>；宣傳片不給沒問題（日後要釋出須 9 月中前交）</label><a class="src" href="#doc-email-e10">出處：信件 ✉10</a></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
-    <li data-k="b17" class="done-fact"><span class="d">8/6（四）✓</span><span class="t"><label><input type="checkbox" checked><b>回覆完整職員表最終版</b>（10 人：導演／2 製片／攝影／美術／服裝／2 剪接／音效／配樂，比 8/4 表單只列 3 人更完整）——<b>等 Sujin 確認關表</b></label><a class="src" href="#doc-email-e11">出處：信件 ✉11</a><small>關表後再改動要直接聯絡 Program Team。</small></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
-    <li data-k="b19" class="done-fact"><span class="d">8/7（五）✓</span><span class="t"><label><input type="checkbox" checked>報名表後台補正三處：舒華姓名拿掉連字號（Shuhua Yeh）、版權公司加註「Splash Pictures, Inc」、補回大部分職員</label><a class="src" href="#doc-email-e12">出處：信件 ✉12</a><small>服裝設計 Karen YIP 因分類選單無此選項，暫未補回。</small></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
-    <li data-k="b20"><span class="d">8/8（六）✓</span><span class="t"><label><input type="checkbox" checked><b>已回覆確認 credits＋版權公司名稱</b>，並加提 Karen YIP 排序要求——等 Sujin 套用並關表</label><a class="src" href="#doc-email-e14">出處：信件 ✉14</a><small>細節見 <a href="#asks">05 待確認清單</a>。</small></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
-    <li data-k="b21" class="done-fact"><span class="d">8/10（一）✓</span><span class="t"><label><input type="checkbox" checked>Sujin 確認已依圖示套用 Karen YIP 服裝設計排序與「Splash Pictures, Inc」版權標註，<b>線上報名表已定案關閉</b></label><a class="src" href="#doc-email-e15">出處：信件 ✉15</a></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
-    <li data-k="b22" class="done-fact"><span class="d">8/10（一）✓</span><span class="t"><label><input type="checkbox">大會表示會盡最大可能配合<b>舒華</b>的檔期；官方邀請函將由大會同事另行寄出</label><a class="src" href="#doc-email-e15">出處：信件 ✉15</a></span><span class="owners"><span class="chip owner marketing">行銷</span><span class="chip owner producer">製片</span></span></li>
-    <li data-k="b23"><span class="d">8/10（一）</span><span class="t"><label><input type="checkbox">林翰回報字幕素材趕工中，並去信詢問 9/4 DCP 交付所需的 PEM 檔案／KDM，與是否需要 DKDM；大會回覆<b>通常偏好收到 DKDM</b>，此事現由大會放映組與 Clifford Miu 討論中</label><a class="src" href="#doc-email-e16">出處：信件 ✉16</a><a class="src" href="#doc-email-e17">✉17</a><small>待 Clifford 回報討論結果，細節見 <a href="#asks">05 待確認清單</a>。</small></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
-    <li data-k="b24" class="done-fact"><span class="d">8/11（二）✓</span><span class="t"><label><input type="checkbox" checked>林翰確認會找 Clifford 對齊 DCP 事宜，並向大會索取 <b>BIFF laurels</b>；大會回覆<b>影展沒有專屬桂冠圖示</b>，改附官方 logo</label><a class="src" href="#doc-email-e18">出處：信件 ✉18</a><a class="src" href="#doc-email-e19">✉19</a></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
-    <li data-k="b25" class="done-fact"><span class="d">8/12（三）✓</span><span class="t"><label><input type="checkbox" checked>大會通知<b>記者會定於 9/1</b>：當天公布完整片單，改版官網（www.biff.kr/eng）隨後上線、屆時會有本片專頁；並附上官方 logo 供宣傳使用</label><a class="src" href="#doc-email-e20">出處：信件 ✉20</a><small>大會同時重申：入選資訊在正式公布前須嚴格保密，如要對外發布請等到 9/1 16:00（韓國時間）之後。</small></span><span class="owners"><span class="chip owner marketing">行銷</span><span class="chip owner producer">製片</span></span></li>
-    <li data-k="b26" class="done-fact"><span class="d">8/12（三）✓</span><span class="t"><label><input type="checkbox" checked>導演姓名定案 <b>Feng-I Fiona ROAN</b>（大寫 I），大會已更新；大會另回覆<b>官網上線前無法提供預覽</b>（須先完成內部安全審查）</label><a class="src" href="#doc-email-e21">出處：信件 ✉21</a><a class="src" href="#doc-email-e22">✉22</a><a class="src" href="#doc-email-e23">✉23</a></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
-    <li data-k="b27" class="done-fact"><span class="d">8/14（五）✓</span><span class="t"><label><input type="checkbox">收到<b>葉舒華官方邀請函</b>（大會 Festival Director JUNG Hanseok 具名）：邀請她出席本片放映，大會提供<b>合作旅館 4 晚住宿</b></label><a class="src" href="#doc-invite-p1">出處：邀請函</a><small>是否接受與住宿以外條件見 <a href="#asks">05 待確認清單</a>。</small></span><span class="owners"><span class="chip owner marketing">行銷</span><span class="chip owner producer">製片</span></span></li>
-    <li data-k="b28" class="done-fact"><span class="d">8/17（一）✓</span><span class="t"><label><input type="checkbox" checked>林翰向大會提出字幕素材<b>兩種交付方案</b>（8/19 先交、8/25 再補定稿版／直接 8/25 交定稿版），請大會依實驗室作業選擇</label><a class="src" href="#doc-email-e24">出處：信件 ✉24</a><small>大會 8/18 已回覆，見下一項。</small></span><span class="owners"><span class="chip owner producer">製片</span><span class="chip owner pr">後期</span></span></li>
-    <li data-k="b29" class="done-fact"><span class="d">8/18（二）✓</span><span class="t"><label><input type="checkbox" checked>大會確認：字幕素材直接於 <b>8/25</b> 交最終定稿版（不必先交 8/19 版本），<b>原 8/19 期限取消</b>；林翰已回覆接受</label><a class="src" href="#doc-email-e25">出處：信件 ✉25</a></span><span class="owners"><span class="chip owner pr">後期</span></span></li>
-    <li data-k="b15"><span class="d">等通知（9 月初）</span><span class="t"><label><input type="checkbox">本片<b>放映場次</b>——大會 9 月初定案、承諾立即通知；場次出來與<b>舒華經紀人</b>談檔期</label><a class="src" href="#doc-email-e10">出處：信件 ✉10</a><small>林翰 8/6 追加提醒：怕經紀人先接洽其他通告，因此特別要求儘快通知（見 ✉11）。</small></span><span class="owners"><span class="chip owner marketing">行銷</span><span class="chip owner producer">製片</span></span></li>
-    <li data-k="b6" class="hot"><span class="d">8/25（二）</span><span class="t"><label><input type="checkbox"><b>字幕素材最終期限（嚴格）</b>：燒英字 screener＋英文/原文對白本最終定稿版，<b>畫面與聲音都要鎖定</b>（picture and audio-locked）</label><a class="src" href="#doc-email-e25">出處：信件 ✉25</a><small>原 8/11 → 8/3 延至 8/19 → 8/18 大會確認改為 8/25（取代 8/19，直接交最終定稿版，不分兩次交），大會說明 8/25 已超出官方最終期限，視同沒有逾期空間。與 8/19 那版的標準差異見<a href="#materials">03 素材清單</a>。</small></span><span class="owners"><span class="chip owner pr">後期</span></span></li>
-    <li data-k="b18"><span class="d">9 月中（條件）</span><span class="t"><label><input type="checkbox">宣傳片<b>若日後要釋出</b>，最遲此時交給大會（會上 BIFF 官方 YouTube 與影片專頁）；不釋出則免</label><a class="src" href="#doc-email-e10">出處：信件 ✉10</a></span><span class="owners"><span class="chip owner marketing">行銷</span></span></li>
-    <li data-k="b7"><span class="d">9/4（五）</span><span class="t"><label><input type="checkbox"><b>放映拷貝</b>（燒英字）交付；放映格式清單寫明「請事先詢問」</label><a class="src" href="#doc-checklist-p1">出處：素材清單</a><small>PEM／KDM／DKDM 討論進度見<a href="#asks">05 待確認清單</a>。</small></span><span class="owners"><span class="chip owner pr">後期</span></span></li>
-    <li data-k="b8" class="hot"><span class="d">9/1（二）</span><span class="t"><label><input type="checkbox">大會記者會公布全片單——<b>對外發布須等 9/1 16:00（韓國時間）之後</b>，在此之前入選資訊嚴格保密</label><a class="src" href="#doc-email-e20">出處：信件 ✉20</a><a class="src" href="#doc-email-e1">✉1</a><small>改版官網 www.biff.kr/eng 於記者會後不久上線，本片專頁屆時可查。</small></span><span class="owners"><span class="chip owner marketing">行銷</span></span></li>
-    <li data-k="b9"><span class="d">9/1 16:00 後</span><span class="t"><label><input type="checkbox">台灣宣傳日程與素材選擇啟動（以大會公布時點回推）</label><a class="src" href="#doc-email-e20">出處：信件 ✉20</a><a class="src" href="#doc-line-l1">LINE 紀錄</a></span><span class="owners"><span class="chip owner marketing">行銷</span></span></li>
-    <li data-k="b10"><span class="d">10/6 – 10/15</span><span class="t"><label><input type="checkbox">第 31 屆釜山影展；來賓與演員行程等大會開啟後續討論（林翰預告很快會談到）</label><a class="src" href="#doc-email-e1">出處：信件 ✉1</a><a class="src" href="#doc-line-l1">LINE</a></span><span class="owners"><span class="chip owner all">全員</span></span></li>
-  </ul>
+    <li data-date="2026-07-30" data-k="b1" class="done-fact"><span class="d">7/30（四）✓</span><span class="t"><label><input type="checkbox">收到 Sujin 資料需求信：報名表連結＋存取碼、字幕素材需求、embargo 提醒</label><a class="src" href="#doc-email-e1">出處：信件 ✉1</a></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
+    <li data-date="2026-07-31" data-k="b2" class="done-fact"><span class="d">7/31（五）✓</span><span class="t"><label><input type="checkbox">林翰回信：多數素材以 8/11 為目標、為 screener＋對白本爭取延期、確認 timecode 標準</label><a class="src" href="#doc-email-e3">出處：信件 ✉3</a></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
+    <li data-date="2026-08-03" data-k="b11" class="done-fact"><span class="d">8/3（一）✓</span><span class="t"><label><input type="checkbox">線上報名表填完送出（宣傳素材一併）：技術欄修正為 24fps SMPTE、劇照僅上傳 1 張、暫不自製宣傳片</label><a class="src" href="#doc-email-e7">出處：信件 ✉7</a><a class="src" href="#doc-email-e8">✉8</a></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
+    <li data-date="2026-08-04" data-k="b12" class="done-fact"><span class="d">8/4（二）✓</span><span class="t"><label><input type="checkbox">Sujin 確認：字幕素材 <b>picture locked 即可</b>；來信列<b>五項複查</b>，回覆後關表</label><a class="src" href="#doc-email-e8">出處：信件 ✉8</a></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
+    <li data-date="2026-08-05" data-k="b13" class="done-fact"><span class="d">8/5（三）✓</span><span class="t"><label><input type="checkbox">五項複查已回覆：95min／加密 DCP 正確、三項授權維持放棄、劇照順序 OK、Ko Chin CHEN <b>不加連字號</b>，等 Sujin 關表</label><a class="src" href="#doc-email-e9">出處：信件 ✉9</a><small>演職員名單同步縮減為導演與兩位製片，已告知大會：名單順序未定，其他人員之後再補。</small></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
+    <li data-date="2026-08-05" data-k="b14" class="done-fact"><span class="d">8/5（三）✓</span><span class="t"><label><input type="checkbox">宣傳片定案：<b>不製作、不釋出</b>（8/19 檔案無最終聲音與調色，不搶先於行銷與銷售規劃）；未來若輸出片段再分享</label><a class="src" href="#doc-email-e9">出處：信件 ✉9</a></span><span class="owners"><span class="chip owner producer">製片</span><span class="chip owner marketing">行銷</span></span></li>
+    <li data-date="2026-08-06" data-k="b16" class="done-fact"><span class="d">8/6（四）✓</span><span class="t"><label><input type="checkbox">大會回三問：記者會與放映場次均 <b>9 月初定案、定案立即通知</b>；宣傳片不給沒問題（日後要釋出須 9 月中前交）</label><a class="src" href="#doc-email-e10">出處：信件 ✉10</a></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
+    <li data-date="2026-08-06" data-k="b17" class="done-fact"><span class="d">8/6（四）✓</span><span class="t"><label><input type="checkbox" checked><b>回覆完整職員表最終版</b>（10 人：導演／2 製片／攝影／美術／服裝／2 剪接／音效／配樂，比 8/4 表單只列 3 人更完整），<b>等 Sujin 確認關表</b></label><a class="src" href="#doc-email-e11">出處：信件 ✉11</a><small>關表後再改動要直接聯絡 Program Team。</small></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
+    <li data-date="2026-08-06" data-k="b15"><span class="d">等通知（9 月初）</span><span class="t"><label><input type="checkbox">大會通知本片<b>放映場次</b></label><a class="src" href="#doc-email-e10">出處：信件 ✉10</a><small>見<a href="#asks">05 待確認清單</a>。</small></span><span class="owners"><span class="chip owner marketing">行銷</span><span class="chip owner producer">製片</span></span></li>
+    <li data-date="2026-08-07" data-k="b19" class="done-fact"><span class="d">8/7（五）✓</span><span class="t"><label><input type="checkbox" checked>報名表後台補正三處：舒華姓名拿掉連字號（Shuhua Yeh）、版權公司加註「Splash Pictures, Inc」、補回大部分職員</label><a class="src" href="#doc-email-e12">出處：信件 ✉12</a><small>服裝設計 Karen YIP 因分類選單無此選項，暫未補回。</small></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
+    <li data-date="2026-08-08" data-k="b20"><span class="d">8/8（六）✓</span><span class="t"><label><input type="checkbox" checked><b>已回覆確認 credits＋版權公司名稱</b>，並加提 Karen YIP 排序要求，等 Sujin 套用並關表</label><a class="src" href="#doc-email-e14">出處：信件 ✉14</a><small>細節見 <a href="#asks">05 待確認清單</a>。</small></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
+    <li data-date="2026-08-10" data-k="b21" class="done-fact"><span class="d">8/10（一）✓</span><span class="t"><label><input type="checkbox" checked>Sujin 確認已依圖示套用 Karen YIP 服裝設計排序與「Splash Pictures, Inc」版權標註，<b>線上報名表已定案關閉</b></label><a class="src" href="#doc-email-e15">出處：信件 ✉15</a></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
+    <li data-date="2026-08-10" data-k="b22" class="done-fact"><span class="d">8/10（一）✓</span><span class="t"><label><input type="checkbox">大會表示會盡最大可能配合<b>舒華</b>的檔期；官方邀請函將由大會同事另行寄出</label><a class="src" href="#doc-email-e15">出處：信件 ✉15</a></span><span class="owners"><span class="chip owner marketing">行銷</span><span class="chip owner producer">製片</span></span></li>
+    <li data-date="2026-08-10" data-k="b23"><span class="d">8/10（一）</span><span class="t"><label><input type="checkbox">林翰去信詢問 9/4 DCP 交付所需的 PEM 檔案／KDM 與 DKDM，大會當日回覆</label><a class="src" href="#doc-email-e16">出處：信件 ✉16</a><a class="src" href="#doc-email-e17">✉17</a><small>見<a href="#asks">05 待確認清單</a>。</small></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
+    <li data-date="2026-08-11" data-k="b24" class="done-fact"><span class="d">8/11（二）✓</span><span class="t"><label><input type="checkbox" checked>林翰確認會找 Clifford 對齊 DCP 事宜，並向大會索取 <b>BIFF laurels</b>；大會回覆<b>影展沒有專屬桂冠圖示</b>，改附官方 logo</label><a class="src" href="#doc-email-e18">出處：信件 ✉18</a><a class="src" href="#doc-email-e19">✉19</a></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
+    <li data-date="2026-08-12" data-k="b25" class="done-fact"><span class="d">8/12（三）✓</span><span class="t"><label><input type="checkbox" checked>大會通知<b>記者會定於 9/1</b>：當天公布完整片單，改版官網（www.biff.kr/eng）隨後上線、屆時會有本片專頁；並附上官方 logo 供宣傳使用</label><a class="src" href="#doc-email-e20">出處：信件 ✉20</a><small>大會同時重申：入選資訊在正式公布前須嚴格保密，如要對外發布請等到 9/1 16:00（韓國時間）之後。</small></span><span class="owners"><span class="chip owner marketing">行銷</span><span class="chip owner producer">製片</span></span></li>
+    <li data-date="2026-08-12" data-k="b26" class="done-fact"><span class="d">8/12（三）✓</span><span class="t"><label><input type="checkbox" checked>導演姓名定案 <b>Feng-I Fiona ROAN</b>（大寫 I），大會已更新；大會另回覆<b>官網上線前無法提供預覽</b>（須先完成內部安全審查）</label><a class="src" href="#doc-email-e21">出處：信件 ✉21</a><a class="src" href="#doc-email-e22">✉22</a><a class="src" href="#doc-email-e23">✉23</a></span><span class="owners"><span class="chip owner producer">製片</span></span></li>
+    <li data-date="2026-08-14" data-k="b27" class="done-fact"><span class="d">8/14（五）✓</span><span class="t"><label><input type="checkbox">收到<b>葉舒華官方邀請函</b>（大會 Festival Director JUNG Hanseok 具名）</label><a class="src" href="#doc-invite-p1">出處：邀請函</a><small>條件與回覆狀態見<a href="#asks">05 待確認清單</a>。</small></span><span class="owners"><span class="chip owner marketing">行銷</span><span class="chip owner producer">製片</span></span></li>
+    <li data-date="2026-08-17" data-k="b28" class="done-fact"><span class="d">8/17（一）✓</span><span class="t"><label><input type="checkbox" checked>林翰向大會提出字幕素材<b>兩種交付方案</b>（8/19 先交、8/25 再補定稿版／直接 8/25 交定稿版），請大會依實驗室作業選擇</label><a class="src" href="#doc-email-e24">出處：信件 ✉24</a><small>大會 8/18 已回覆。</small></span><span class="owners"><span class="chip owner producer">製片</span><span class="chip owner pr">後期</span></span></li>
+    <li data-date="2026-08-18" data-k="b29" class="done-fact"><span class="d">8/18（二）✓</span><span class="t"><label><input type="checkbox" checked>大會確認：字幕素材直接於 <b>8/25</b> 交最終定稿版（不必先交 8/19 版本），<b>原 8/19 期限取消</b>；林翰已回覆接受</label><a class="src" href="#doc-email-e25">出處：信件 ✉25</a></span><span class="owners"><span class="chip owner pr">後期</span></span></li>
+    <li data-date="2026-08-25" data-k="b6" class="hot"><span class="d">8/25（二）</span><span class="t"><label><input type="checkbox"><b>字幕素材最終期限（嚴格）</b>：燒英字 screener＋英文/原文對白本最終定稿版，<b>畫面與聲音都要鎖定</b>（picture and audio-locked）</label><a class="src" href="#doc-email-e25">出處：信件 ✉25</a><small>原 8/11 → 8/3 延至 8/19 → 8/18 大會確認改為 8/25（取代 8/19，直接交最終定稿版，不分兩次交），大會說明 8/25 已超出官方最終期限，視同沒有逾期空間。與 8/19 那版的標準差異見<a href="#materials">03 素材清單</a>。</small></span><span class="owners"><span class="chip owner pr">後期</span></span></li>
+    <li data-date="2026-09-01" data-k="b8" class="hot"><span class="d">9/1（二）</span><span class="t"><label><input type="checkbox">大會記者會公布全片單：<b>對外發布須等 9/1 16:00（韓國時間）之後</b>，在此之前入選資訊嚴格保密</label><a class="src" href="#doc-email-e20">出處：信件 ✉20</a><a class="src" href="#doc-email-e1">✉1</a><small>改版官網 www.biff.kr/eng 於記者會後不久上線，本片專頁屆時可查。</small></span><span class="owners"><span class="chip owner marketing">行銷</span></span></li>
+    <li data-date="2026-09-01" data-k="b9"><span class="d">9/1 16:00 後</span><span class="t"><label><input type="checkbox">台灣宣傳日程與素材選擇啟動（以大會公布時點回推）</label><a class="src" href="#doc-email-e20">出處：信件 ✉20</a><a class="src" href="#doc-line-l1">LINE 紀錄</a></span><span class="owners"><span class="chip owner marketing">行銷</span></span></li>
+    <li data-date="2026-09-04" data-k="b7"><span class="d">9/4（五）</span><span class="t"><label><input type="checkbox"><b>放映拷貝</b>（燒英字）交付；放映格式清單寫明「請事先詢問」</label><a class="src" href="#doc-checklist-p1">出處：素材清單</a><small>PEM／KDM／DKDM 討論進度見<a href="#asks">05 待確認清單</a>。</small></span><span class="owners"><span class="chip owner pr">後期</span></span></li>
+    <li data-date="2026-09-15" data-k="b18"><span class="d">9 月中（條件）</span><span class="t"><label><input type="checkbox">宣傳片<b>若日後要釋出</b>，最遲此時交給大會（會上 BIFF 官方 YouTube 與影片專頁）；不釋出則免</label><a class="src" href="#doc-email-e10">出處：信件 ✉10</a></span><span class="owners"><span class="chip owner marketing">行銷</span></span></li>
+    <li data-date="2026-10-06" data-k="b10"><span class="d">10/6 – 10/15</span><span class="t"><label><input type="checkbox">第 31 屆釜山影展；來賓與演員行程等大會開啟後續討論（林翰預告很快會談到）</label><a class="src" href="#doc-email-e1">出處：信件 ✉1</a><a class="src" href="#doc-line-l1">LINE</a></span><span class="owners"><span class="chip owner all">全員</span></span></li>
+</ul>
 </section>
 
 <section id="form">
   <h2><span class="no">02</span>線上報名表拆解</h2>
-  <p class="sub">五個步驟，林翰主填。表內資料會直接用於大會出版物、官網與官方社群——填進去的就是對外版本。</p>
+  <p class="sub">五個步驟，林翰主填。表內資料會直接用於大會出版物、官網與官方社群，填進去的就是對外版本。</p>
   <div class="callout"><b>狀態：8/3 已送出。</b>Sujin 已代修技術欄（24fps SMPTE，原誤選 InterOP）並記錄僅 1 張劇照；關表後再改動要直接聯絡 Program Team。（還缺什麼見<a href="#asks">待確認清單</a>）<a class="src" href="#doc-email-e7">出處：信件 ✉7</a><a class="src" href="#doc-email-e8">✉8</a></div>
 
   <div class="callout"><b>直接開啟：</b><a class="gobtn" href="https://guest.biff.kr/submission/selection/main_eng.asp?film_number=178539307526181" target="_blank" rel="noopener">開啟線上報名表（已含影片編號）</a><a class="gobtn" href="https://guest.biff.kr/submission/selection/sample/sample01_eng.html" target="_blank" rel="noopener">開啟官方範例</a>存取碼 <button type="button" class="copycode" data-copy="1167">1167（點擊複製）</button><a class="src" href="#doc-email-e1">出處：信件 ✉1</a></div>
@@ -423,10 +424,10 @@ a[href^="mailto:"]{cursor:copy}
         <li>英文片名、原文片名、<b>韓文用羅馬拼音</b>（照發音拼寫，ISO 基本拉丁字母）</li>
         <li>完成日期（月／年，指影片實際完成的時間）</li>
         <li>語言、字幕語言、製作國（可加多國）、片長、類別（劇情／紀錄／動畫／其他）</li>
-        <li><b>AI 參與</b>：無／部分／全部——有 AI 生成畫面就要勾</li>
+        <li><b>AI 參與</b>：無／部分／全部，有 AI 生成畫面就要勾</li>
         <li><b>Premiere 欄</b>：World / International / Asian / Korean 四選一<span class="chip doc">文件明載</span><small>已填 <b>Asian Premiere</b>（TIFF 9/17 世界首映在先），大會 8/4 複查表同列此項。<a class="src" href="#doc-email-e8">✉8</a></small></li>
-        <li>影展紀錄：BIFF 之前已放映或將放映的影展都要列——<b>要列 TIFF 2026</b>；得獎／補助如有也填</li>
-        <li><b>短版大綱：45 字（words）以內</b>；長版大綱另填——<b>兩者長度必須不同</b>，完全一樣會被要求重交</li>
+        <li>影展紀錄：BIFF 之前已放映或將放映的影展都要列，<b>要列 TIFF 2026</b>；得獎／補助如有也填</li>
+        <li><b>短版大綱：45 字（words）以內</b>；長版大綱另填，<b>兩者長度必須不同</b>，完全一樣會被要求重交</li>
       </ul>
       <h4>導演欄</h4>
       <ul>
@@ -438,18 +439,18 @@ a[href^="mailto:"]{cursor:copy}
       <h4>技術規格</h4>
       <ul>
         <li>放映格式：<b>無加密 DCP 最優先</b>；加密 DCP 要另寄 DKDM 給大會 Print Coordinator</li>
-        <li>2D/3D、彩色/黑白、2K/4K、FPS——<b>DCP 只收 24 或 25 fps</b>，其他格率無法放映</li>
+        <li>2D/3D、彩色/黑白、2K/4K、FPS：<b>DCP 只收 24 或 25 fps</b>，其他格率無法放映</li>
         <li>DCP 硬碟：3.5" HDD 或 USB 介面外接盒＋外接電源；MBR 分割表；NTFS／EXT2／EXT3</li>
         <li>字幕以燒入為佳；XML 字幕的字型檔須小於 640KB；聲音建議 5.1 聲道</li>
       </ul>
       <h4>四個授權決策（勾了就是同意）</h4>
       <ul>
-        <li><b>宣傳片段</b>：上傳或給連結＋密碼；<b>不給的話 BIFF 會自行從乾淨版 screener 剪 1–2 分鐘</b>——想控制對外露出什麼，就自己給<a class="src" href="#doc-line-l1">LINE</a></li>
+        <li><b>宣傳片段</b>：上傳或給連結＋密碼；<b>不給的話 BIFF 會自行從乾淨版 screener 剪 1–2 分鐘</b>，想控制對外露出什麼，就自己給<a class="src" href="#doc-line-l1">LINE</a></li>
         <li><b>Festival Preview Service</b>：影展開跑前，供事先登記核可的媒體受限試看全片（確切期間以正式表單原文為準）</li>
         <li><b>Festival Video Library</b>：影展期間限場內供專業人士看片、不得複製外借；<b>影展後 screener 永久存於釜山電影資料館（Cinematheque Busan）純典藏</b></li>
-        <li><b>ACFM 線上市場放映</b>：亞洲內容暨電影市場展 10/6–31 線上放映，僅限 2026 Market Badge 持有者——<b>牽涉銷售策略，勾之前先跟 Fred 對齊</b></li>
+        <li><b>ACFM 線上市場放映</b>：亞洲內容暨電影市場展 10/6–31 線上放映，僅限 2026 Market Badge 持有者，<b>牽涉銷售策略，勾之前先跟 Fred 對齊</b></li>
       </ul>
-      <p class="note"><b>已定案：</b>三項授權（媒體試看、影像圖書館、ACFM 線上放映）皆「放棄」——媒體或業界想看片，一律由公關與銷售代理個案處理。宣傳片 8/5 定案<b>不製作、不釋出</b>（原表單勾選由 BIFF 製作，8/5 去信改為不製作）。<a class="src" href="#doc-email-e8">出處：信件 ✉8</a><a class="src" href="#doc-email-e9">✉9</a></p>
+      <p class="note"><b>已定案：</b>三項授權（媒體試看、影像圖書館、ACFM 線上放映）皆「放棄」，媒體或業界想看片，一律由公關與銷售代理個案處理。宣傳片 8/5 定案<b>不製作、不釋出</b>（原表單勾選由 BIFF 製作，8/5 去信改為不製作）。<a class="src" href="#doc-email-e8">出處：信件 ✉8</a><a class="src" href="#doc-email-e9">✉9</a></p>
       <h4>申請人與同意條款</h4>
       <ul>
         <li>申請人資料（姓名、身分、公司、地址、Email、電話）；申請人＝出品公司或其書面授權的公司</li>
@@ -467,7 +468,7 @@ a[href^="mailto:"]{cursor:copy}
         <li>主創：導演、編劇、美術、剪接、聲音（下拉選單）</li>
         <li>姓名拼寫同 Step 1：<b>姓氏全大寫、名字首字母大寫</b></li>
         <li>出品公司：公司名、地址、聯絡人、Email、電話、傳真</li>
-        <li><b>World Sales 公司</b>與<b>韓國發行商</b>欄位——資料要向 Fred 確認，見<a href="#asks">待確認</a></li>
+        <li><b>World Sales 公司</b>與<b>韓國發行商</b>欄位：資料要向 Fred 確認，見<a href="#asks">待確認</a></li>
       </ul>
       <p class="note"><b>現況（8/10）：</b>演職員名單、Karen YIP 服裝設計排序與版權標註「Splash Pictures, Inc」均已由大會套用，大會並表示<b>即將關閉線上報名表</b>；姓名定案：Ko Chin CHEN、Shuhua Yeh 均<b>不加連字號</b>。<a class="src" href="#doc-email-e12">出處：信件 ✉12</a><a class="src" href="#doc-email-e15">✉15</a></p>
     </div>
@@ -480,7 +481,7 @@ a[href^="mailto:"]{cursor:copy}
         <li><b>Print Owner（拷貝權利方）必填</b>：公司、地址、聯絡人、Email</li>
         <li>Print Sender／Print Address：<b>只有實體運送才必填</b>；可勾「同上」或「To be determined」先過關</li>
       </ul>
-      <p class="note"><b>建議：</b>正式拷貝是數位交付還是實體寄送，等後期與大會確認規格後再定；此步先填 Owner、其餘勾 TBD，之後再回報 Program Team 更新。<a class="src" href="#doc-form-s3">表單原文</a></p>
+      <p class="note"><b>建議</b><span class="chip bg">補充背景</span>：正式拷貝是數位交付還是實體寄送，等後期與大會確認規格後再定；此步先填 Owner、其餘勾 TBD，之後再回報 Program Team 更新。<a class="src" href="#doc-form-s3">表單原文</a></p>
     </div>
   </details>
 
@@ -496,7 +497,7 @@ a[href^="mailto:"]{cursor:copy}
       </ul>
       <h4>對白本</h4>
       <ul>
-        <li><b>英文對白本＋原文（中文）對白本，兩份都必附</b>——大會做韓文字幕的依據；中文片屬於原文對白本的強制名單</li>
+        <li><b>英文對白本＋原文（中文）對白本，兩份都必附</b>，大會做韓文字幕的依據；中文片屬於原文對白本的強制名單</li>
       </ul>
       <p class="note"><b>已解（8/3）：</b>表單已順利送出；字幕素材（screener＋對白本）另走<b>期限交付</b>，見<a href="#timeline">01 關鍵時程</a>，不卡表單。<a class="src" href="#doc-email-e7">出處：信件 ✉7</a></p>
     </div>
@@ -507,7 +508,7 @@ a[href^="mailto:"]{cursor:copy}
     <div class="body">
       <ul>
         <li>按 <b>Submit/Complete</b> 才算完成註冊</li>
-        <li>送出的資料用於大會出版物、官網、官方社群——<b>送出前全員最後校一次對外文字</b></li>
+        <li>送出的資料用於大會出版物、官網、官方社群，<b>送出前全員最後校一次對外文字</b></li>
         <li>送出後任何變動，必須直接回報 Program Team</li>
       </ul>
       <p><a class="src" href="#doc-form-s5">表單原文</a></p>
@@ -522,7 +523,7 @@ a[href^="mailto:"]{cursor:copy}
     <table>
       <thead><tr><th>項目</th><th>數量</th><th>期限</th><th>備註</th></tr></thead>
       <tbody>
-        <tr class="grp"><td colspan="4">宣傳素材 Publicity Materials —— 8/11（已於 8/3 隨表交齊）</td></tr>
+        <tr class="grp"><td colspan="4">宣傳素材 Publicity Materials：8/11（已於 8/3 隨表交齊）</td></tr>
         <tr><td>線上報名表</td><td class="num">1</td><td class="num">8/3 ✓</td><td><b>已送出</b>；等五項複查回覆後關表，見<a href="#form">報名表拆解</a></td></tr>
         <tr><td>英文大綱</td><td class="num">1</td><td class="num">8/11</td><td>報名表另分短版（45 字內）與長版，兩者長度須不同</td></tr>
         <tr><td>導演簡歷</td><td class="num">1</td><td class="num">8/11</td><td><b>45 字（words）以上</b></td></tr>
@@ -530,73 +531,73 @@ a[href^="mailto:"]{cursor:copy}
         <tr><td>導演照</td><td class="num">1</td><td class="num">8/11</td><td>清單：每張至少 1MB、300dpi 以上；表單另要求高於 1080×1440 像素、jpg</td></tr>
         <tr><td>劇照（高解析）</td><td class="num">3–5</td><td class="num">8/3 ✓</td><td><b>實際僅提供 1 張，大會接受</b>（暫不追加；若之後要補，需告知上傳時間）</td></tr>
         <tr><td>宣傳片段</td><td class="num">—</td><td class="num">定案</td><td><b>不製作、不釋出</b>，大會已確認 OK；<b>若日後要釋出，9 月中前交大會</b>（上官方 YouTube＋影片頁）</td></tr>
-        <tr class="grp"><td colspan="4">字幕素材 Subtitling Materials —— 8/25（大會 8/18 確認，嚴格）</td></tr>
+        <tr class="grp"><td colspan="4">字幕素材 Subtitling Materials：8/25（大會 8/18 確認，嚴格）</td></tr>
         <tr class="key"><td>定剪 screener（燒英字）</td><td class="num">1</td><td class="num">8/25 *</td><td><b>畫面與聲音都要鎖定</b>（picture and audio-locked）；用可下載連結交付（Vimeo／Google Drive／WeTransfer）</td></tr>
         <tr><td>對白本（英文）</td><td class="num">1</td><td class="num">8/25 *</td><td rowspan="2">兩份都是大會做韓文字幕的必要文件；中文片必交原文版</td></tr>
         <tr><td>對白本（原文中文）</td><td class="num">1</td><td class="num">8/25 *</td></tr>
-        <tr class="grp"><td colspan="4">放映拷貝 Screening Print —— 9/4</td></tr>
+        <tr class="grp"><td colspan="4">放映拷貝 Screening Print：9/4</td></tr>
         <tr><td>放映拷貝（燒英字）</td><td class="num">1</td><td class="num">9/4</td><td>放映格式「請事先詢問」；DCP 規格見<a href="#form">報名表 Step 1</a></td></tr>
       </tbody>
     </table>
   </div>
-  <p class="note"><b>* 8/25 大會已確認（嚴格期限）：</b>原 8/11 → 8/3 核准延至 8/19 → 8/18 大會再確認直接於 8/25 交最終定稿版（取代 8/19，不分兩次交）；韓文字幕約需一個月；大會說明 8/25 已超出官方最終期限——視同沒有逾期空間。交件標準同步提高為畫面與聲音都鎖定，8/19 那版可接受的音樂未定不再適用；調色大會未提。<a class="src" href="#doc-email-e6">出處：信件 ✉6</a><a class="src" href="#doc-email-e25">✉25</a></p>
-  <p class="note"><b>規格數字有兩套：</b>清單寫「每張至少 1MB、300dpi」，表單寫導演照高於 1080×1440、劇照高於 2100×1050——<b>兩套都滿足最保險</b>。（Technical Specification Guideline 附件尚未到手，列在<a href="#asks">待確認清單</a>）<a class="src" href="#doc-email-e1">✉1</a></p>
+  <p class="note"><b>* 8/25 大會已確認（嚴格期限）：</b>原 8/11 → 8/3 核准延至 8/19 → 8/18 大會再確認直接於 8/25 交最終定稿版（取代 8/19，不分兩次交）；韓文字幕約需一個月；大會說明 8/25 已超出官方最終期限，視同沒有逾期空間。交件標準同步提高為畫面與聲音都鎖定，8/19 那版可接受的音樂未定不再適用；調色大會未提。<a class="src" href="#doc-email-e6">出處：信件 ✉6</a><a class="src" href="#doc-email-e25">✉25</a></p>
+  <p class="note"><b>規格數字有兩套：</b>清單寫「每張至少 1MB、300dpi」，表單寫導演照高於 1080×1440、劇照高於 2100×1050，<b>兩套都滿足最保險</b><span class="chip bg">補充背景</span>。（Technical Specification Guideline 附件尚未到手，列在<a href="#asks">待確認清單</a>）<a class="src" href="#doc-email-e1">✉1</a></p>
 </section>
 
 <section id="operations">
   <h2><span class="no">04</span>全團行程一覽</h2>
-  <p class="sub">放映場次 9 月初定案，來賓與招待線除舒華邀請函外尚未開啟，資訊還不足以排出 TIFF 頁那種日期矩陣，先以直式列表整理現況；「未載」＝目前沒有任何書面資料。</p>
+  <p class="sub">放映場次 9 月初定案，來賓與招待除舒華邀請函外尚未開啟，資訊還不足以排出 TIFF 頁那種日期矩陣，先以直式列表整理現況；「未載」＝目前沒有任何書面資料。</p>
 
   <h4 style="margin:4px 0 8px; font-size:15px">人員與行程狀態</h4>
   <div class="tblwrap">
     <table>
       <thead><tr><th>人員／組別</th><th>目前書面事實</th><th>下一個觸發點</th></tr></thead>
       <tbody>
-        <tr><td><b>阮鳳儀</b><br><small>導演</small></td><td>出席與招待均未載——大會尚未開來賓線</td><td>來賓線開啟（林翰預告「估計很快會討論到 PR 和演員行程」）<a class="src" href="#doc-line-l1">LINE</a></td></tr>
+        <tr><td><b>阮鳳儀</b><br><small>導演</small></td><td>出席與招待均未載，大會尚未開始處理來賓事務</td><td>大會開始處理來賓事務（林翰預告「估計很快會討論到 PR 和演員行程」）<a class="src" href="#doc-line-l1">LINE</a></td></tr>
         <tr><td><b>葉舒華</b><br><small>演員</small></td><td>大會 8/14 正式邀請函已到：邀請出席本片放映、含合作旅館 4 晚住宿；出席與回覆均未定</td><td><b>回覆大會是否接受</b>與<b>9 月初場次定案 → 立即與經紀人談檔期</b>，追蹤在<a href="#asks">待確認清單</a><a class="src" href="#doc-invite-p1">邀請函</a><a class="src" href="#doc-email-e15">✉15</a></td></tr>
-        <tr><td><b>其他卡司</b></td><td>未載</td><td>來賓線開啟後確認出席名單</td></tr>
-        <tr><td><b>林翰、Clifford</b><br><small>製片</small></td><td>出席未載；林翰為大會信件窗口</td><td>來賓線開啟後確認證件與住宿</td></tr>
+        <tr><td><b>其他卡司</b></td><td>未載</td><td>大會開始處理來賓事務後確認出席名單</td></tr>
+        <tr><td><b>林翰、Clifford</b><br><small>製片</small></td><td>出席未載；林翰為大會信件窗口</td><td>大會開始處理來賓事務後確認證件與住宿</td></tr>
         <tr><td><b>Anli、Leo</b><br><small>行銷／公關</small></td><td>出席未載</td><td>9/1 大會公布片單、16:00（韓國時間）解禁 → 台灣宣傳日程啟動（見<a href="#timeline">時程</a>）</td></tr>
         <tr><td><b>藝人隨行團隊</b></td><td>未載</td><td>舒華出席確認後彙整名單</td></tr>
       </tbody>
     </table>
   </div>
 
-  <p class="note"><b>招待與費用：</b>目前唯一有書面的招待是<b>舒華一人的合作旅館 4 晚住宿</b>（8/14 邀請函）；機票、證件、口譯、接送，以及其他所有人員的條件<b>大會均未提</b>——不要拿 TIFF 的條件推算 BIFF（兩個影展制度不同）。<a class="src" href="#doc-invite-p1">出處：邀請函</a></p>
+  <p class="note"><b>招待與費用：</b>除了舒華那 4 晚住宿，機票、證件、口譯、接送，以及其他所有人員的條件<b>大會均未提</b>。<span class="chip bg">補充背景</span>不要拿 TIFF 的條件推算 BIFF（兩個影展制度不同）。<a class="src" href="#doc-invite-p1">出處：邀請函</a></p>
 </section>
 
 <section id="asks">
   <h2><span class="no">05</span>待確認清單</h2>
-  <p class="sub">記者會日期 8/12 已定案（9/1），舒華邀請函 8/14 已送達，字幕素材方案 8/18 已定案為 8/25 交最終定稿版，三件都不再是未決事項；線上報名表 8/10 大會表示即將關閉（過程見原文文件 ✉8–✉15）。現在球分三處：<b>大會</b>（放映場次）、<b>Clifford／大會放映組</b>（DKDM 是否需要，討論中）、<b>我方</b>（舒華要不要接受邀請）——我方下一個硬期限是 <b>8/25 字幕素材</b>，見<a href="#timeline">01 關鍵時程</a>。</p>
+  <p class="sub">記者會日期 8/12 已定案（9/1），舒華邀請函 8/14 已送達，字幕素材方案 8/18 已定案為 8/25 交最終定稿版，三件都不再是未決事項；線上報名表 8/10 大會表示即將關閉（過程見原文文件 ✉8–✉15）。現在分三處：<b>大會</b>（放映場次）、<b>Clifford／大會放映組</b>（DKDM 是否需要，討論中）、<b>我方</b>（舒華要不要接受邀請）。我方下一個硬期限是 <b>8/25 字幕素材</b>，見<a href="#timeline">01 關鍵時程</a>。</p>
 
   <div class="grid2">
     <div class="panel">
       <h5>等大會通知</h5>
       <ul>
-        <li><b>本片放映場次</b>（9 月初）——定案立即通知；出來就與舒華經紀人談檔期<a class="src" href="#doc-email-e10">✉10</a></li>
+        <li><b>本片放映場次</b>（9 月初）：定案立即通知，出來就與舒華經紀人談檔期<span class="chip ask">已去信詢問</span><a class="src" href="#doc-email-e10">✉10</a><small>林翰 8/6 已特別要求儘快通知，理由是怕經紀人先接洽其他通告<a class="src" href="#doc-email-e11">✉11</a></small></li>
       </ul>
     </div>
     <div class="panel">
-      <h5>球在我方——舒華邀請函</h5>
+      <h5>我方要決定：舒華邀請函</h5>
       <ul>
-        <li><b>要不要接受這份邀請</b>：8/14 邀請函邀舒華出席本片放映、提供合作旅館 4 晚住宿；<b>信中未載回覆期限、回覆窗口與住宿日期</b>，只寫「如需進一步細節請聯絡我們」——放映場次未定前無法定檔期<a class="src" href="#doc-invite-p1">邀請函</a></li>
-        <li><b>4 晚住宿以外的條件</b>：機票、額外夜數、隨行團隊名額、證件、接送、口譯，邀請函與大會歷次來信<b>均未提</b>——要接受邀請前應向大會問明<a class="src" href="#doc-invite-p1">邀請函</a></li>
+        <li><b>要不要接受這份邀請</b>：8/14 邀請函邀舒華出席本片放映、提供合作旅館 4 晚住宿；<b>信中未載回覆期限、回覆窗口與住宿日期</b>，只寫「如需進一步細節請聯絡我們」，放映場次未定前無法定檔期<a class="src" href="#doc-invite-p1">邀請函</a></li>
+        <li><b>4 晚住宿以外的條件</b>：機票、額外夜數、隨行團隊名額、證件、接送、口譯，邀請函與大會歷次來信<b>均未提</b>，要接受邀請前應向大會問明<a class="src" href="#doc-invite-p1">邀請函</a></li>
       </ul>
     </div>
     <div class="panel">
-      <h5>團隊內部要對齊——球在 Clifford</h5>
+      <h5>團隊內部要對齊：Clifford 負責</h5>
       <ul>
-        <li><b>DKDM 是否需要</b>：林翰 8/10 問大會，若韓文字幕顯示於 DCP 檔案之外是否還需要 DKDM；Sujin 回覆大會<b>通常偏好收到 DKDM</b>，但此事目前由大會放映組與 <b>Clifford Miu</b> 討論中；林翰 8/11 回覆確認會去找 Clifford 對齊——待 Clifford 回報結果<a class="src" href="#doc-email-e16">✉16</a><a class="src" href="#doc-email-e17">✉17</a><a class="src" href="#doc-email-e18">✉18</a></li>
-        <li><b>PEM 檔案／screening KDM</b>：林翰已去信要求大會在 9/4 DCP 交付前提供 PEM 檔案（供實驗室測試）與正式放映用 KDM——尚未收到大會確認<a class="src" href="#doc-email-e16">✉16</a></li>
-        <li>要取得 <b>Technical Specification Guideline</b> 附件（在 BIFF 原信附件裡，目前資料夾沒有）——8/25 交 screener 前後期要用<a class="src" href="#doc-email-e1">✉1</a></li>
-        <li><b>看片申請動線</b>：已告知大會「媒體／業界想看片找公關與銷售代理個案處理」——公關與 Fred 要知道自己是窗口<a class="src" href="#doc-email-e9">✉9</a></li>
+        <li><b>DKDM 是否需要</b>：林翰 8/10 問大會，若韓文字幕顯示於 DCP 檔案之外是否還需要 DKDM；Sujin 回覆大會<b>通常偏好收到 DKDM</b>，但此事目前由大會放映組與 <b>Clifford Miu</b> 討論中；林翰 8/11 回覆確認會去找 Clifford 對齊，待 Clifford 回報結果<a class="src" href="#doc-email-e16">✉16</a><a class="src" href="#doc-email-e17">✉17</a><a class="src" href="#doc-email-e18">✉18</a></li>
+        <li><b>PEM 檔案／screening KDM</b>：林翰已去信要求大會在 9/4 DCP 交付前提供 PEM 檔案（供實驗室測試）與正式放映用 KDM，尚未收到大會確認<span class="chip ask">已去信詢問</span><a class="src" href="#doc-email-e16">✉16</a></li>
+        <li>要取得 <b>Technical Specification Guideline</b> 附件（在 BIFF 原信附件裡，目前資料夾沒有），8/25 交 screener 前後期要用<a class="src" href="#doc-email-e1">✉1</a></li>
+        <li><b>看片申請動線</b>：已告知大會「媒體／業界想看片找公關與銷售代理個案處理」，公關與 Fred 要知道自己是窗口<a class="src" href="#doc-email-e9">✉9</a></li>
         <li><b>World Sales 公司與韓國發行商</b>欄位資料：向 Fred 確認後回報 Program Team 更新<a class="src" href="#doc-form-s2">表單 Step 2</a></li>
       </ul>
     </div>
     <div class="panel">
-      <h5>等大會開線</h5>
+      <h5>等大會開始處理來賓事務</h5>
       <ul>
-        <li><b>來賓與演員行程</b>：放映場次確定後啟動舒華檔期討論；其餘來賓事務等大會開線<a class="src" href="#doc-email-e9">✉9</a><a class="src" href="#doc-line-l1">LINE</a></li>
+        <li><b>來賓與演員行程</b>：放映場次確定後啟動舒華檔期討論；其餘來賓事務等大會開始處理<a class="src" href="#doc-email-e9">✉9</a><a class="src" href="#doc-line-l1">LINE</a></li>
       </ul>
     </div>
   </div>
@@ -604,16 +605,16 @@ a[href^="mailto:"]{cursor:copy}
 
 <section id="roles">
   <h2><span class="no">06</span>角色分工</h2>
-  <p class="sub">依 LINE 討論與信件現況整理。林翰原話：「未來其他的部份再請你們分擔一些責任」——報名表以外的分工還會再調整。<a class="src" href="#doc-line-l1">出處：LINE 紀錄</a></p>
+  <p class="sub">依 LINE 討論與信件現況整理。林翰原話：「未來其他的部份再請你們分擔一些責任」，報名表以外的分工還會再調整。<a class="src" href="#doc-line-l1">出處：LINE 紀錄</a></p>
   <div class="tblwrap">
     <table>
       <thead><tr><th>誰</th><th>角色</th><th>現在手上的事</th></tr></thead>
       <tbody>
-        <tr class="key"><td>張林翰</td><td><span class="chip owner producer">製片</span> Bering Pictures</td><td>與 Sujin 的主線聯絡；<b>電影基本資訊填表</b>（線上報名表）；爭取 screener 延期；<b>舒華邀請函的回覆與條件確認</b>，見<a href="#asks">05 待確認清單</a><a class="src" href="#doc-email-e3">✉3</a></td></tr>
-        <tr><td>Clifford Miu</td><td><span class="chip owner producer">製片</span> Bering Pictures</td><td>cc 在大會主線上；<b>DKDM 是否需要</b>與大會放映組討論中，見<a href="#asks">05 待確認清單</a><a class="src" href="#doc-email-e17">✉17</a></td></tr>
+        <tr class="key"><td>張林翰</td><td><span class="chip owner producer">製片</span> Bering Pictures</td><td>與 Sujin 的信件往來；<b>電影基本資訊填表</b>（線上報名表）；爭取 screener 延期；<b>舒華邀請函的回覆與條件確認</b>，見<a href="#asks">05 待確認清單</a><a class="src" href="#doc-email-e3">✉3</a></td></tr>
+        <tr><td>Clifford Miu</td><td><span class="chip owner producer">製片</span> Bering Pictures</td><td>列於大會信件的副本收件人；<b>DKDM 是否需要</b>與大會放映組討論中，見<a href="#asks">05 待確認清單</a><a class="src" href="#doc-email-e17">✉17</a></td></tr>
         <tr><td>Anli Lin</td><td><span class="chip owner marketing">行銷</span></td><td>8/11 前劇照 3–5 張＋宣傳片段的<b>選圖與交付</b>（可選擇少給）<a class="src" href="#doc-line-l1">LINE</a></td></tr>
         <tr><td>Leo Wang 王豪</td><td><span class="chip owner marketing">行銷</span></td><td><b>台灣宣傳日程</b>（大會公布日已定 9/1，16:00 韓國時間解禁）<a class="src" href="#doc-line-l1">LINE</a><a class="src" href="#doc-email-e20">✉20</a></td></tr>
-        <tr><td>Vicki</td><td><span class="chip owner pr">後期製片</span></td><td>定剪 screener、對白本、DCP——林翰判斷「釜山大部分的壓力」所在<a class="src" href="#doc-line-l1">LINE</a></td></tr>
+        <tr><td>Vicki</td><td><span class="chip owner pr">後期製片</span></td><td>定剪 screener、對白本、DCP，林翰判斷「釜山大部分的壓力」所在<a class="src" href="#doc-line-l1">LINE</a></td></tr>
         <tr><td>Fred Tsui</td><td><span class="chip owner director">國際窗口</span></td><td>大會邀請的第一收件人（信經他轉入製片線）；World Sales 欄位資料待他確認<a class="src" href="#doc-email-e1">✉1</a><a class="src" href="#doc-email-e2">✉2</a></td></tr>
       </tbody>
     </table>
@@ -641,7 +642,7 @@ a[href^="mailto:"]{cursor:copy}
 
 <section id="docs">
   <h2><span class="no">08</span>原文文件</h2>
-  <p class="sub">大會信件、邀請函、素材清單與報名表範本照錄（英文原文），LINE 討論照錄（中文）。指南各處的「出處」小標籤點了會跳到這裡的對應段落並短暫變色。用上方搜尋框可直接搜原文。</p>
+  <p class="sub">大會信件、邀請函、素材清單與報名表範本照錄（英文原文），LINE 討論照錄（中文）。指南各處的「出處」小標籤點了會跳到對應段落。上方搜尋框可直接搜原文。</p>
 
   <details class="doc" id="doc-email">
     <summary>與 BIFF 信件往來<span class="docmeta">EMAIL.docx＋EMAIL2.docx＋轉寄信 · 23 封</span><span class="arrow">›</span></summary>
@@ -975,7 +976,7 @@ a[href^="mailto:"]{cursor:copy}
 </section>
 
 <footer>
-  整理自與 BIFF 大會往來信件 ✉1–✉25（Sujin Kim，2026/7/30–8/18）、葉舒華官方邀請函（Festival Director JUNG Hanseok，2026/8/14）、Materials Check-up List、線上報名表五步驟官方範本、製片與行銷團隊 LINE 討論。所有期限與規格以大會後續書面確認為準。製表 2026/7/31，更新 2026/8/18。
+  整理自與 BIFF 大會往來信件 ✉1–✉25（Sujin Kim，2026/7/30–8/18）、葉舒華官方邀請函（Festival Director JUNG Hanseok，2026/8/14）、Materials Check-up List、線上報名表五步驟官方範本、製片與行銷團隊 LINE 討論。所有期限與規格以大會後續書面確認為準。製表 2026/7/31，內容截至 2026/8/18。
 </footer>
 
 </div>
@@ -1212,15 +1213,14 @@ window.addEventListener('load',function(){
 /* ---------- date-aware hero status ---------- */
 (function(){
   var title=document.getElementById('status-title');
-  var copy=document.getElementById('status-copy');
-  var detail=document.getElementById('status-detail');
-  if(!title||!copy||!detail) return;
+  if(!title) return;
   var now=new Date();
   var subDue=new Date('2026-08-26T00:00:00+09:00');
   var printDue=new Date('2026-09-05T00:00:00+09:00');
   var festStart=new Date('2026-10-06T00:00:00+09:00');
+  /* 正本是 HTML 裡的 #status-title；8/25 之前不覆蓋，過期後才由此接手 */
   if(now<subDue){
-    title.textContent='目前進度：字幕素材新期限 8/25——大會 8/18 確認直接交最終定稿版，原 8/19 期限取消；舒華邀請函 8/14 已送達（回覆球在我方）；對外公布須等到 9/1 16:00（韓國時間）之後。';
+    /* 不動 */
   }else if(now<printDue){
     title.textContent='目前進度：8/25 字幕素材應已交，下一關 9/1 記者會（16:00 KST 後才可對外）與 9/4 放映拷貝。';
   }else if(now<festStart){
@@ -1228,9 +1228,6 @@ window.addEventListener('load',function(){
   }else{
     title.textContent='目前進度：影展期間（10/6–15）或已結束。';
   }
-  /* 未決事項只住 05 待確認清單，這裡只給一句指路，不再條列（工作準則：一個事實一個地方） */
-  copy.innerHTML='未決事項一律看 <a href="#asks">05 待確認清單</a>；誰負責看 <a href="#roles">06 角色分工</a>；行程與招待現況看 <a href="#operations">04 全團行程一覽</a>。';
-  detail.textContent='大會期限未註明時區，保守以韓國時間計（快台灣 1 小時）。';
 })();
 </script>
 
