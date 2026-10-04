@@ -33,7 +33,7 @@ html{scroll-behavior:smooth}
 body{
   margin:0; background:var(--paper); color:var(--ink);
   font-family:var(--sans); line-height:1.7; font-size:16px;
-  -webkit-font-smoothing:antialiased;
+  -webkit-font-smoothing:antialiased; overflow-wrap:break-word;
 }
 .wrap{max-width:900px; margin:0 auto; padding:0 20px 80px}
 
@@ -61,6 +61,12 @@ h1{font-size:clamp(34px,6vw,52px); line-height:1.15; margin:0 0 6px; font-weight
 .alert ol,.alert ul{margin:6px 0 8px; padding-left:22px}
 .alert li{margin:3px 0}
 .alert .srcrow{display:block; margin-top:6px}
+.status-groups{color:var(--ink)}
+.status-groups h4{margin:12px 0 2px; font-size:14px; font-weight:800; color:var(--urgent)}
+.status-groups h4:first-child{margin-top:4px}
+.status-groups ul{margin:0 0 4px; padding-left:20px}
+.status-groups li{margin:2px 0; font-size:15px; line-height:1.6}
+.status-groups b{color:var(--ink)}
 .alert .small{font-size:13.5px; line-height:1.65; color:var(--muted); margin-top:4px}
 
 /* ---------- nav ---------- */
@@ -109,8 +115,8 @@ nav a:hover,nav a:focus-visible{color:var(--accent); border-bottom-color:var(--a
 /* ---------- legend ---------- */
 .legend{display:flex; flex-wrap:wrap; gap:8px 16px; margin:14px 0 0; font-size:13.5px; color:var(--muted); align-items:center}
 .chip{
-  display:inline-block; padding:1px 9px; border-radius:99px; font-size:12px; font-weight:700;
-  vertical-align:1px; white-space:nowrap;
+  display:inline-block; padding:1px 9px; border-radius:11px; font-size:12px; font-weight:700;
+  vertical-align:1px; max-width:100%;
 }
 .chip.doc{background:var(--ok-soft); color:var(--ok)}
 .chip.ask{background:var(--wait-soft); color:var(--wait)}
@@ -220,8 +226,8 @@ details[open] summary .arrow{transform:rotate(90deg)}
 .callout{
   background:var(--accent-soft); border-radius:8px; padding:10px 14px; font-size:14px; margin:12px 0 4px;
 }
-.grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:10px 0}
-@media (max-width:640px){ .grid2{grid-template-columns:1fr} }
+.grid2{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:14px; margin:10px 0}
+@media (max-width:640px){ .grid2{grid-template-columns:minmax(0,1fr)} }
 .panel{border:1px solid var(--line); border-radius:8px; padding:12px 16px; background:var(--paper)}
 .panel h5{margin:0 0 8px; font-size:15px}
 .panel ul{margin:0; padding-left:18px; font-size:14.5px; line-height:1.65}
@@ -347,7 +353,44 @@ a[href^="mailto:"]{cursor:copy}
   </div>
 
   <div class="alert" id="status-alert">
-    <b id="status-title">目前進度：三場放映的時刻與場地均已確定，資訊保密至 <b>9/11 17:00（韓國時間）</b>前不對外公開；韓文片名維持大會原譯，已定案。我方 9/9 提出的三項調整大會同日全數同意：<b>導演的 10/6–8 兩晚住宿轉給 Kent Tsai</b>、經紀人的兩晚轉給另一位團員、舒華原經濟艙機票轉給經紀人（首爾釜山來回）；6 位卡司主創都核發 Festival Badge。<b>開幕典禮每片限 5 人持邀請函進場</b>，6 人要選 5 人。兩場 Q&amp;A 名單已確認（10/7 場 6 人、10/8 場 2 人），補助票兩場合計 20 張，另有 12 張已於 9/16 決定全數併入 10/7 場，兩場合計 <b>10/7 場 18 張、10/8 場 2 張</b>。大會 9/10 [URGENT] 催覆兩份名單：<b>戶外舞台見面會出席者、開幕典禮邀請函 5 人，期限 9/10 24:00（韓國）＝23:00（台灣）</b>，本信箱沒有我方回覆的轉寄。記者聯訪大會 9/10 答覆為僅媒體出席的閉門活動，待我方確認導演與舒華意願。大會 9/11 追加 <b>Festival Badge 登記期限 9/14（一）</b>；Anli 9/12 提供 6 人證件信箱與照片，並選定舒華經紀人機票採<b>我方先購票、影展後核銷</b>。大會 9/12 回覆：<b>Festival Badge 登記已完成</b>，核銷需備電子機票、發票／收據、銀行帳戶資訊三項文件；Anli 同日提供 <b>Kent Tsai 與替補團員 Lisa Ho 的護照全名</b>，並詢問能否提前於 <b>10/5</b> 入住。大會 9/14 回覆：10/5 前後滿房、無法加訂該晚，<b>Lisa 10/5 須自理住宿</b>；旅館名稱仍在協調，9 月底前才能給。大會 9/15 說明活動用車政策：<b>僅在指定合作旅館上下客</b>，僅舒華與 Kent Tsai 例外（兩人住合作旅館）。Anli 9/16 提供全團航班總表；<b>舒華本人航班（含同行人數與行李）、陳璇與 Anli 本人電子機票、林翰回程電子機票仍待補齊</b>。記者聯訪大會 9/15 詳覆：記者會訂 <b>10/7、BIFF Hill</b>，於戶外見面會前或見面會後、GV 前兩個時段擇一，長 30–40 分鐘，確切時間尚未定案；舒華、陳璇、Kent Tsai、導演均可出席，<b>林翰與 Clifford 是否出席待我方決定</b>；訪問組同日並答覆<b>開幕典禮第 6 席邀請非該組權責，需另洽 Program Coordinator 或 Guest Service</b>。大會 9/16 19:22（台灣 18:22）Program Team 的 Soobeen 主動回信兩事：<b>開幕典禮願提供 6 位全數邀請函</b>（與前一日訪問組「非該組權責」的說法不一致，待我方向其確認是否定案）；並說明<b>機場旅館用車一輛約載 3 位、視行李件數可能降為 2 位，車輛數有限未必涵蓋全員</b>，詢問是否有演員自行租車。大會 9/21 21:52（台灣，韓國 22:52）訂出機場旅館用車分組時刻表並確認多數團員入住 <b>PALATIUM HAEUNDAE BY SONO FELICE</b>；同信確認<b>原核給 Kent Tsai 的房間再轉給舒華經紀人</b>，Anli 9/22 01:49（台灣，韓國 02:49）追問能否讓經紀人與舒華提前於 10/5 入住，並提出<b>原核給 Lisa 的房間已改用於舒華保全</b>；Kent Tsai 與 Lisa 本人的住宿現況未載，見<a href="#asks">05 待確認清單</a>。大會 Jieun Hong 9/22 15:28（台灣，韓國 16:28）確認用車配置：<b>Paradise Hotel（舒華）與 Palatium Hotel（其餘團員）各配 1 輛用車、每輛限乘 3 人</b>，並就見面會與 GV 間的自由時間請我方逐位選定回旅館或就近步行；Anli 同日 22:06（台灣，韓國 23:06）回覆<b>六位嘉賓確認全程觀看 10/7 首映</b>，並提出加派 Palatium 用車等四項請求。Anli 同日 21:40（台灣，韓國 22:40）另回覆記者聯訪窗口：<b>六位卡司主創（含林翰、Clifford）確認出席記者會</b>，盼排在見面會之後，並代 CUBE 提出五張通行證需求，均待大會回覆，見<a href="#asks">05 待確認清單</a>。大會 Soobeen 9/23 22:08（台灣，韓國 23:08）回覆：<b>舒華與經紀人 10/5 加住一晚改由我方透過旅行社自理（Paradise Hotel Busan）</b>，經紀人房型確認改為雙床房、Lisa 原房型維持雙人房並改配舒華保全 <b>Taejun Lee</b>；並說明<b>開幕典禮專用車（1 輛至 Paradise Hotel、2 輛至 Palatium Hotel，與 10/7 CGV 場用車不同批）</b>與 Access Pass 隨行人員（陳璇－Fiona Li、Kent Tsai－Lisa Ho、舒華－化妝師待補），確認<b>六位嘉賓典禮後直接返旅館、不留下觀看開幕片</b>；Kent Tsai 本人住宿現況仍未載，見<a href="#asks">05 待確認清單</a>。大會 Jieun Hong 9/30 12:39（台灣，韓國 13:39）排定 <b>10/7 動線</b>：15:20–16:00 記者會、16:50–17:35 使用 CGV 休息室、17:35–18:05 GV；CGV 休息室難以容納 18 人，Anli 同日追問隨行人員會合點與休息室容量，見<a href="#asks">05 待確認清單</a>。大會 10/1 至 10/3 的往來把 10/7 當天排定：<b>14:30–14:50 戶外舞台見面會（Fiona Roan、舒華、陳璇、Kent Tsai 四位上台），15:20–16:00 記者會（BIFF Hill 1F，六位卡司主創全部出席），16:30 起搭 2 輛官方車前往 CGV，17:35–18:05 GV</b>；官方照片與影片影展閉幕後才提供；<b>開幕典禮 6 張邀請函大會 9/28 已確認，額外 10 席不給</b>；用車載客人數大會各窗口說法不同，見<a href="#asks">05 待確認清單</a>。</b><span id="status-copy">未決事項一律看 <a href="#asks">05 待確認清單</a>；誰負責看 <a href="#roles">06 角色分工</a>；行程與招待現況看 <a href="#operations">04 全團行程一覽</a>。</span><span class="srcrow"><a class="src" href="#doc-email-e25">出處：✉25</a><a class="src" href="#doc-invite-p1">邀請函</a><a class="src" href="#doc-email-e20">✉20</a><a class="src" href="#doc-email-e17">✉17</a><a class="src" href="#doc-email-e34">✉34</a><a class="src" href="#doc-email-e36">✉36</a><a class="src" href="#doc-email-e37">✉37</a><a class="src" href="#doc-email-e39">✉39</a><a class="src" href="#doc-email-e40">✉40</a><a class="src" href="#doc-email-e41">✉41</a><a class="src" href="#doc-email-e42">✉42</a><a class="src" href="#doc-email-e43">✉43</a><a class="src" href="#doc-email-e44">✉44</a><a class="src" href="#doc-email-e45">✉45</a><a class="src" href="#doc-email-e46">✉46</a><a class="src" href="#doc-email-e47">✉47</a><a class="src" href="#doc-email-e48">✉48</a><a class="src" href="#doc-email-e49">✉49</a><a class="src" href="#doc-email-e50">✉50</a><a class="src" href="#doc-email-e51">✉51</a><a class="src" href="#doc-email-e52">✉52</a><a class="src" href="#doc-email-e53">✉53</a><a class="src" href="#doc-email-e54">✉54</a><a class="src" href="#doc-email-e55">✉55</a></span>
+    <b id="status-title">目前進度（大會來信截至 10/3）</b>
+    <div class="status-groups" id="status-groups">
+      <h4>10/7 首映日（已排定，韓國時間）</h4>
+      <ul>
+        <li><b>14:30–14:50</b> 戶外舞台見面會：Fiona Roan、舒華、陳璇、Kent Tsai 四位上台</li>
+        <li><b>15:20–16:00</b> 記者會，BIFF Hill 1F，六位卡司主創全部出席</li>
+        <li><b>16:30</b> 搭 2 輛官方車前往 CGV</li>
+        <li><b>17:35–18:05</b> GV</li>
+        <li>官方照片與影片影展閉幕後才提供</li>
+      </ul>
+      <h4>放映、Q&amp;A 與票券</h4>
+      <ul>
+        <li>三場放映的時刻與場地均已確定，見<a href="#timeline">01 關鍵時程</a>；韓文片名維持大會原譯</li>
+        <li>Q&amp;A 名單：10/7 場 6 人、10/8 場 2 人</li>
+        <li>補助票：<b>10/7 場 18 張、10/8 場 2 張</b>（9/16 定案）</li>
+      </ul>
+      <h4>開幕典禮</h4>
+      <ul>
+        <li><b>6 張邀請函</b>大會 9/28 確認；額外 10 席不給</li>
+        <li>典禮專用車：1 輛至 Paradise Hotel、2 輛至 Palatium Hotel，與 10/7 CGV 場用車不同批</li>
+        <li>六位嘉賓典禮後直接返旅館，不留下觀看開幕片</li>
+      </ul>
+      <h4>住宿</h4>
+      <ul>
+        <li>多數團員住 <b>PALATIUM HAEUNDAE BY SONO FELICE</b></li>
+        <li>舒華與經紀人 10/5 那一晚由我方透過旅行社訂 Paradise Hotel Busan</li>
+        <li>原核給 Kent Tsai 的房間轉給舒華經紀人（雙床房）；原核給 Lisa 的房間改配舒華保全 Taejun Lee</li>
+        <li>Kent Tsai 與 Lisa 本人的住宿：見<a href="#asks">05 待確認清單</a></li>
+      </ul>
+      <h4>交通與證件</h4>
+      <ul>
+        <li>舒華與經紀人改搭 KTX，10/5 抵釜山</li>
+        <li>官方車只在指定合作旅館上下客，用車載客人數見<a href="#asks">05 待確認清單</a></li>
+        <li>舒華經紀人首爾釜山來回經濟艙：我方先購票、影展後核銷</li>
+        <li>6 位卡司主創的 <b>Festival Badge 登記已完成</b>（9/12）</li>
+      </ul>
+    </div>
+    <span id="status-copy">未決事項一律看 <a href="#asks">05 待確認清單</a>；誰負責看 <a href="#roles">06 角色分工</a>；行程與招待現況看 <a href="#operations">04 全團行程一覽</a>。</span><span class="srcrow"><a class="src" href="#doc-email-e25">出處：✉25</a><a class="src" href="#doc-invite-p1">邀請函</a><a class="src" href="#doc-email-e20">✉20</a><a class="src" href="#doc-email-e17">✉17</a><a class="src" href="#doc-email-e34">✉34</a><a class="src" href="#doc-email-e36">✉36</a><a class="src" href="#doc-email-e37">✉37</a><a class="src" href="#doc-email-e39">✉39</a><a class="src" href="#doc-email-e40">✉40</a><a class="src" href="#doc-email-e41">✉41</a><a class="src" href="#doc-email-e42">✉42</a><a class="src" href="#doc-email-e43">✉43</a><a class="src" href="#doc-email-e44">✉44</a><a class="src" href="#doc-email-e45">✉45</a><a class="src" href="#doc-email-e46">✉46</a><a class="src" href="#doc-email-e47">✉47</a><a class="src" href="#doc-email-e48">✉48</a><a class="src" href="#doc-email-e49">✉49</a><a class="src" href="#doc-email-e50">✉50</a><a class="src" href="#doc-email-e51">✉51</a><a class="src" href="#doc-email-e52">✉52</a><a class="src" href="#doc-email-e53">✉53</a><a class="src" href="#doc-email-e54">✉54</a><a class="src" href="#doc-email-e55">✉55</a></span>
     <div class="small" id="status-detail"><span class="chip bg">補充背景</span> 大會期限未註明時區，保守以韓國時間計（快台灣 1 小時）。</div>
   </div>
 
@@ -369,6 +412,7 @@ a[href^="mailto:"]{cursor:copy}
     <a href="#asks">待確認</a>
     <a href="#roles">分工</a>
     <a href="#contacts">窗口</a>
+    <a href="#handbook">大會手冊</a>
     <a href="#docs">原文文件</a>
   </div>
   <div class="searchwrap"><input id="q" type="search" placeholder="搜尋指南＋原文文件…" aria-label="全站搜尋"></div>
@@ -455,6 +499,7 @@ a[href^="mailto:"]{cursor:copy}
     <li data-date="2026-10-02" data-k="b83" data-overview="none" class="done-fact"><span class="d">10/2（五）✓</span><span class="t"><label><input type="checkbox" checked>大會 Jieun Hong 寄出 10/7 與 10/8 GV Notice（舒華另有一份）：記者會後 <b>6 位嘉賓一起去 CGV，2 輛車各最多 4 人，最多 2 位工作人員同車</b>；CGV 回旅館 Paradise 1 輛、Palatium 2 輛；搭車者到各旅館 BIFF 服務台；<b>如需修改須在 GV 前 48 小時通知</b></label><a class="src" href="#doc-email-e54">出處：信件 ✉54</a><a class="src" href="#doc-email-e51">✉51</a><small>台灣 12:48 與 15:26，韓國 13:48 與 16:26。Anli 10/1 18:49（韓國）追問的 10/8 場接送時間、候場室、回程交通，信文沒有逐項答覆，可能在 GV Notice 附件內，附件未讀。</small></span><span class="owners"><span class="chip owner marketing">行銷</span></span></li>
     <li data-date="2026-10-03" data-k="b84" data-overview="none" class="done-fact"><span class="d">10/3（六）✓</span><span class="t"><label><input type="checkbox" checked>Anli 回覆訪問組：<b>確認 10/7 15:20–16:00 記者會</b>，感謝座位依要求修改，稱呼一律用「Shuhua」，列出休息室必要人員 8 位與兩段用車乘客，請求先收集媒體問題由主持人宣讀，並希望避開政治、宗教與高度私人話題；大會 Hokyung 回覆：稱呼照辦、<b>休息室確定有插座</b>、問題無法限縮，但可預先告知避談主題由主持人開場提醒；步行路線 PDF 另寄</label><a class="src" href="#doc-email-e50">出處：信件 ✉50</a><small>大會台灣 18:10 與 18:19（韓國 19:10、19:19）。步行路線 PDF 附件未讀。見<a href="#asks">05 待確認清單</a>。</small></span><span class="owners"><span class="chip owner marketing">行銷</span><span class="chip owner producer">製片</span></span></li>
     <li data-date="2026-10-03" data-k="b85" data-overview="none" class="done-fact"><span class="d">10/3（六）✓</span><span class="t"><label><input type="checkbox" checked>Anli 向亞洲之星主辦方提供 5 位來賓旅館（Palatium Haeundae by Sono Felice）、入退房日與飲食資料；主辦方回覆會照此安排</label><a class="src" href="#doc-email-e55">出處：信件 ✉55</a><small>Anli 寄出為韓國 00:40（台灣 10/2 23:40），主辦方回覆為台灣 07:00（韓國 08:00）。陳璇對蝦與蟹過敏、不吃辣。</small></span><span class="owners"><span class="chip owner marketing">行銷</span></span></li>
+    <li data-date="2026-10-05" data-k="b86"><span class="d">10/5（一）</span><span class="t"><label><input type="checkbox">證件櫃台開放 15:00–20:00（電影殿堂 BIFF Hill 1 樓），可領 Festival Badge；各日時間見<a href="#hb-badge">大會手冊</a></label><a class="src" href="#doc-handbook">出處：大會手冊</a></span><span class="owners"><span class="chip owner all">全員</span></span></li>
     <li data-date="2026-10-06" data-k="b10"><span class="d">10/6 – 10/15</span><span class="t"><label><input type="checkbox">第 31 屆釜山影展會期</label><a class="src" href="#doc-email-e1">出處：信件 ✉1</a><a class="src" href="#doc-line-l1">LINE</a></span><span class="owners"><span class="chip owner all">全員</span></span></li>
     <li data-date="2026-10-06" data-k="b37"><span class="d">10/6（二）</span><span class="t"><label><input type="checkbox"><b>開幕典禮</b>，舒華走紅毯、導演同行；典禮後<b>六位嘉賓直接返回旅館，不留下觀看開幕片</b></label><a class="src" href="#doc-email-e32">出處：信件 ✉32</a><a class="src" href="#doc-email-e33">✉33</a><a class="src" href="#doc-email-e47">✉47</a><a class="src" href="#doc-email-e49">✉49</a><small>大會 9/9：每片限 5 位持邀請函者進場，6 人要選 5 人；演員隨行每位演員 1 張通行證、只能到等候區；我方攝影師與錄影師不得在典禮拍攝，大會會提供官方照片。5 人名單見<a href="#asks">05 待確認清單</a>。大會 Soobeen 9/23 22:08（台灣，韓國 23:08）另確認：典禮專用車 1 輛至 Paradise Hotel（舒華）、2 輛至 Palatium Hotel（其餘團員），與 10/7 CGV 場用車是不同批；Access Pass 隨行人員確認陳璇－Fiona Li、Kent Tsai－Lisa Ho、舒華－化妝師（姓名待補），詳見<a href="#asks">05 待確認清單</a>。</small></span><span class="owners"><span class="chip owner marketing">行銷</span><span class="chip owner producer">製片</span></span></li>
     <li data-date="2026-10-07" data-k="b38" class="hot"><span class="d">10/7（三）</span><span class="t"><label><input type="checkbox"><b>本片首映與映後 Q&amp;A</b>，中文口譯由大會安排</label><a class="src" href="#doc-email-e33">出處：信件 ✉33</a><a class="src" href="#doc-email-e42">✉42</a><small>大會 9/1 正式排片確認：16:00，C6（CGV Centum City 6），一般放映＋映後 Q&amp;A。資訊保密至 9/11 17:00（韓國時間）。</small></span><span class="owners"><span class="chip owner marketing">行銷</span><span class="chip owner producer">製片</span></span></li>
@@ -720,8 +765,278 @@ a[href^="mailto:"]{cursor:copy}
   </div>
 </section>
 
+<section id="handbook">
+  <h2><span class="no">08</span>大會來賓手冊</h2>
+  <p class="sub">大會 10/1 寄來的 Mobile Guest Hand-Book（行動版來賓手冊）全文中譯，對象是 Festival Badge 持有者。手冊網址：<a href="https://biff2026.craft.me/rgbEDIzCmkZHKL" target="_blank" rel="noopener">biff2026.craft.me/rgbEDIzCmkZHKL</a>；大會客服專線 <b>1666-9177</b>。本區依 10/4 擷取的版本，大會會持續更新手冊，現場以手冊網站為準。<span class="chip doc">文件明載</span><a class="src" href="#doc-email-e53">✉53</a><a class="src" href="#doc-handbook">手冊原文</a></p>
+
+  <details id="hb-badge" open>
+    <summary>證件櫃台 Badge Desk：領證與補發<span class="arrow">›</span></summary>
+    <div class="body">
+      <p>地點：<b>電影殿堂（Busan Cinema Center）BIFF Hill 1 樓</b>。領取證件、補發證件都在這裡。</p>
+      <div class="tblwrap"><table>
+        <thead><tr><th>日期</th><th>開放時間</th></tr></thead>
+        <tbody>
+          <tr><td>10/5（一）</td><td>15:00–20:00</td></tr>
+          <tr><td>10/6（二）開幕典禮</td><td>09:00–15:00</td></tr>
+          <tr><td>10/7（三）至 10/11（日）</td><td>08:00–20:00</td></tr>
+          <tr><td>10/12（一）至 10/14（三）</td><td>09:00–19:00</td></tr>
+          <tr><td>10/15（四）閉幕典禮</td><td>09:00–15:00</td></tr>
+        </tbody>
+      </table></div>
+      <ul>
+        <li>證件遺失可補發，費用 10,000–20,000 韓元，依證件種類不同，各證件背面有寫。</li>
+      </ul>
+    </div>
+  </details>
+
+  <details id="hb-tickets">
+    <summary>訂票、取票與入場<span class="arrow">›</span></summary>
+    <div class="body">
+      <ul>
+        <li>可在現場 BIFF 售票處（BIFF Ticket Box）或線上訂票，有空位才訂得到。每人每日可訂張數依證件種類而定（手冊此處沒有附張數表）。</li>
+        <li><b>訂票期間：</b>10/6（二）至 10/15（四）。</li>
+        <li><b>訂票時段：</b>放映前一天開放，訂到該場開演為止。10/6 至 10/14 每天<b>韓國時間 08:30</b> 開放隔天場次。</li>
+        <li><b>線上訂票：</b>24 小時開放，10/6 08:30 開賣。網址 <a href="https://gticket.biff.kr/ticket/main_e.asp" target="_blank" rel="noopener">gticket.biff.kr</a>。</li>
+      </ul>
+      <h4>線上訂票步驟</h4>
+      <ol>
+        <li>進入來賓線上訂票頁，用大會以 Email 寄來的帳號密碼登入。</li>
+        <li>點頁面上方「Reserve」。</li>
+        <li>選日期，或輸入場次代碼。</li>
+        <li>選片。</li>
+        <li>按「Next」選座位。</li>
+        <li>按「Make Payment」完成訂票。</li>
+      </ol>
+      <h4>查看、取紙本票、退票</h4>
+      <ul>
+        <li>登入後點上方「Review/Cancel」可看已訂場次；入場時點開該場出示手機票。</li>
+        <li>要紙本票，到各影城的 BIFF 售票處領。</li>
+        <li>退票：「Review/Cancel」→「Details」→ 勾選要退的票 →「Cancel」。</li>
+      </ul>
+      <h4>訂票規定</h4>
+      <ul>
+        <li>同一時段只能訂一張票（張數上限依證件種類）。</li>
+        <li>不得代訂，有空位才能訂。</li>
+        <li>入場要同時出示票與證件，<b>截圖或自行列印的票不收</b>。</li>
+        <li>所有場次準時開演，開演後 15 分鐘才到，座位不保證，票也不退。</li>
+        <li>開演前 30 分鐘以前退票不收手續費；紙本票要拿回現場 BIFF 售票處退。</li>
+        <li>大會請持證者依行程訂票與退票，不要訂了不到。</li>
+      </ul>
+      <h4>候補排隊</h4>
+      <p>沒有票、持<b>紅、藍、黃色證件</b>的人可在影廳前排候補；有空位時，候補者在開演後 15 分鐘內入場。沒有空位就進不去。</p>
+      <h4>BIFF 售票處位置與營業時間</h4>
+      <div class="tblwrap"><table>
+        <thead><tr><th>地點</th><th>期間</th><th>開始</th><th>結束</th></tr></thead>
+        <tbody>
+          <tr><td>電影殿堂 BIFF 戶外售票處（BIFF Outdoor Ticket Box）</td><td>10/6–10/15</td><td>8:30</td><td>20:30</td></tr>
+          <tr><td>電影殿堂 Cine Mountain 6 樓</td><td>10/7–10/15</td><td>8:30</td><td rowspan="6">當天最後一場開演後 15 分鐘</td></tr>
+          <tr><td>CGV Centum City 7 樓</td><td rowspan="4">10/7–10/14</td><td rowspan="5">當天第一場開演前 30 分鐘</td></tr>
+          <tr><td>LOTTE CINEMA Centum City 8 樓</td></tr>
+          <tr><td>韓國電影振興委員會（Korean Film Council）2 樓</td></tr>
+          <tr><td>釜山社區媒體中心（Busan Community Media Center）1 樓</td></tr>
+          <tr><td>Sohyang Theatre Woori Bank Hall</td><td>10/8–10/14</td></tr>
+          <tr><td>MEGABOX 釜山劇場 4 樓</td><td>10/8–10/11</td><td>9:30</td><td>20:00</td></tr>
+          <tr><td>BEXCO 第二展覽館（Exhibition Center 2）</td><td>10/10–10/13</td><td>9:00</td><td>19:00（10/13 為 18:00）</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </details>
+
+  <details id="hb-schedule">
+    <summary>放映時刻表<span class="arrow">›</span></summary>
+    <div class="body">
+      <ul>
+        <li>依單元查：<a href="https://www.biff.kr/eng/html/schedule/section.asp?sc_idx=428" target="_blank" rel="noopener">biff.kr 時刻表（By Section）</a></li>
+        <li>依影廳查：<a href="https://www.biff.kr/eng/html/schedule/theater.asp?s_theater=BT&amp;s_idx=110" target="_blank" rel="noopener">biff.kr 時刻表（By Theater）</a></li>
+        <li>依日期查：<a href="https://www.biff.kr/eng/html/schedule/date.asp?day1=6" target="_blank" rel="noopener">biff.kr 時刻表（By Date）</a></li>
+      </ul>
+    </div>
+  </details>
+
+  <details id="hb-shuttle">
+    <summary>來賓接駁車 Guest Shuttle<span class="arrow">›</span></summary>
+    <div class="body">
+      <p>往返海雲台的來賓飯店與 Centum City 的電影殿堂。即時班次看接駁車網頁 <a href="https://guest.biff.kr/shuttle/?stop=cinema" target="_blank" rel="noopener">guest.biff.kr/shuttle</a>（右上角切換語言，有時刻表、站點位置、路線說明四個分頁）。</p>
+      <ul>
+        <li><b>營運日：</b>10/7 至 10/12；<b>10/13 停駛</b>。BEXCO 站只在 10/10 至 10/12 停靠。</li>
+        <li><b>班距：</b>每 12 分鐘一班；午間 12:00–14:00 每 20 分鐘一班。車輛為最多載 9 人的廂型車。</li>
+        <li><b>電影殿堂站位置：</b>BIFF 戶外停車場旁，KNN 大樓對面。</li>
+        <li>停靠飯店的順序會依路況調整；網頁另註明交通狀況可能讓發車延誤 5–10 分鐘。</li>
+        <li><b>可搭乘：</b>所有證件持有者，<b>CINEPHILE 證件除外</b>。市場證件（Market Badge）持有者市場接駁車與來賓接駁車都能搭。</li>
+      </ul>
+      <div class="tblwrap"><table>
+        <thead><tr><th>方向</th><th>首班</th><th>末班</th></tr></thead>
+        <tbody>
+          <tr><td>Paradise Hotel Busan → 電影殿堂</td><td>9:00</td><td>19:00</td></tr>
+          <tr><td>電影殿堂 → Paradise Hotel Busan</td><td>10:00</td><td>19:00</td></tr>
+        </tbody>
+      </table></div>
+      <h4>路線</h4>
+      <ul>
+        <li>往電影殿堂：Paradise Hotel Busan → Felix by STX Hotel &amp; Suite → Shilla Stay Haeundae → BEXCO（10/10–10/12）→ 電影殿堂</li>
+        <li>往飯店：電影殿堂 → BEXCO（10/10–10/12）→ Felix by STX Hotel &amp; Suite → Shilla Stay Haeundae → Paradise Hotel Busan</li>
+        <li>路線圖上的停靠站不含本團多數人住的 PALATIUM HAEUNDAE BY SONO FELICE。</li>
+      </ul>
+    </div>
+  </details>
+
+  <details id="hb-lounge">
+    <summary>來賓休息室 Guest Lounge<span class="arrow">›</span></summary>
+    <div class="body">
+      <p>地點：<b>電影殿堂 Double Cone 3 樓</b>。名稱為 Guest Lounge &amp; Business Hub，提供商務會談空間與 Nespresso 咖啡。</p>
+      <div class="tblwrap"><table>
+        <thead><tr><th>日期</th><th>開放時間</th></tr></thead>
+        <tbody>
+          <tr><td>10/7–10/11</td><td>09:00–20:00</td></tr>
+          <tr><td>10/12–10/14</td><td>09:00–19:00</td></tr>
+          <tr><td>10/6 開幕、10/15 閉幕</td><td>不開放</td></tr>
+        </tbody>
+      </table></div>
+      <ul><li>所有證件持有者都能進入，CINEPHILE 證件除外。</li></ul>
+    </div>
+  </details>
+
+  <details id="hb-desks">
+    <summary>服務台 Information Desk：機場、影城、飯店<span class="arrow">›</span></summary>
+    <div class="body">
+      <h4>機場</h4>
+      <div class="tblwrap"><table>
+        <thead><tr><th>地點</th><th>位置</th><th>日期</th><th>時間</th></tr></thead>
+        <tbody>
+          <tr><td>仁川機場第一航廈</td><td>1 樓，2–3 號門之間，13 號櫃台</td><td rowspan="3">10/5–10/10</td><td rowspan="3">8:00–22:00</td></tr>
+          <tr><td>金海機場國際線航廈</td><td>1 樓，3–4 號門之間，1 號櫃台</td></tr>
+          <tr><td>金海機場國內線航廈</td><td>1 樓，2–3 號門之間，2 號櫃台</td></tr>
+        </tbody>
+      </table></div>
+      <p>仁川的位置手冊有兩種寫法：上表（手冊的時間表圖片）寫 2–3 號門之間 13 號櫃台，同一頁文字與航廈平面圖寫第一航廈 1 樓 <b>MICE Concierge Desk 24 號</b>（12–13 號門之間）。</p>
+      <h4>影城</h4>
+      <p>提供放映與活動異動、取消的資訊，以及大眾運輸、場館消防設施位置、失物招領。</p>
+      <div class="tblwrap"><table>
+        <thead><tr><th>場館</th><th>日期</th><th>時間</th></tr></thead>
+        <tbody>
+          <tr><td>電影殿堂 BIFF Hill 路口</td><td>10/6–10/15</td><td>9:00–20:30</td></tr>
+          <tr><td>電影殿堂 Dure 廣場（Dure Square）</td><td>10/7–10/14</td><td>9:00–20:00</td></tr>
+          <tr><td>電影殿堂 Cine Mountain 1 樓</td><td>10/7–10/14</td><td rowspan="7">當天第一場開演前 30 分鐘至最後一場開演後 15 分鐘</td></tr>
+          <tr><td>電影殿堂 Cine Mountain 6 樓</td><td>10/7–10/15</td></tr>
+          <tr><td>CGV Centum City 7 樓</td><td rowspan="4">10/7–10/14</td></tr>
+          <tr><td>LOTTE CINEMA Centum City 8 樓</td></tr>
+          <tr><td>韓國電影振興委員會 2 樓</td></tr>
+          <tr><td>釜山社區媒體中心 1 樓</td></tr>
+          <tr><td>Sohyang Theatre Woori Bank Hall</td><td>10/8–10/14</td></tr>
+          <tr><td>MEGABOX 釜山劇場 4 樓</td><td>10/8–10/11</td><td>9:30–20:00</td></tr>
+        </tbody>
+      </table></div>
+      <h4>飯店</h4>
+      <p>設在飯店內，協助入住、退房與影展相關詢問。</p>
+      <div class="tblwrap"><table>
+        <thead><tr><th>飯店</th><th>位置</th><th>日期</th><th>時間</th></tr></thead>
+        <tbody>
+          <tr><td>Paradise Hotel Busan</td><td>主館大廳</td><td rowspan="4">10/6–10/15</td><td rowspan="4">8:30–19:30</td></tr>
+          <tr><td>Shilla Stay Haeundae</td><td>2 樓大廳</td></tr>
+          <tr><td>Felix by STX Hotel &amp; Suite</td><td>5 樓餐廳</td></tr>
+          <tr><td>PALATIUM by SONO FELICE</td><td>3 樓大廳</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </details>
+
+  <details id="hb-transport">
+    <summary>抵達與交通：機場、釜山站到會場<span class="arrow">›</span></summary>
+    <div class="body">
+      <h4>金海國際機場（PUS）→ 海雲台飯店</h4>
+      <p>金海機場在釜山市內，分國際線與國內線兩個航廈，從金浦飛來的班機停國內線，其餘停國際線。開車到影展主會場約 50 分鐘。</p>
+      <ol>
+        <li><b>計程車（手冊建議）：</b>到海雲台飯店約 60 分鐘、35,000 韓元，依路況變動。也可搭模範計程車（Deluxe Taxi），約 50,000 韓元。</li>
+        <li><b>地鐵：</b>搭釜山金海輕軌到沙上站（Sasang），轉 2 號線到海雲台站，約 65 分鐘；交通卡 2,300 韓元，一次性 QR 票 3,300 韓元（QR 票用現金買）。釜山地鐵資訊：<a href="https://www.humetro.busan.kr/english/main.do" target="_blank" rel="noopener">humetro.busan.kr</a></li>
+        <li><b>機場巴士 Limousine 1 號線：</b>金海機場 ↔ 海雲台／機張，單程 9,500 韓元，每 60 分鐘一班（07:10–21:40）。機場上車在售票機買票；機場以外的站上車，用 Bustago App 預約或上車刷信用卡／簽帳卡，不收現金、不適用轉乘優惠。</li>
+      </ol>
+      <h4>釜山站 → 影展會場</h4>
+      <p>以下以 Centum City 站為終點：步行 5 分鐘到 CGV 與 LOTTE CINEMA Centum City，10 分鐘到電影殿堂。</p>
+      <ol>
+        <li><b>計程車：</b>約 45 分鐘、23,000 韓元，依路況變動。</li>
+        <li><b>地鐵：</b>1 號線到西面站（Seomyeon），轉 2 號線到 Centum City 站，約 40 分鐘；刷卡 1,800 韓元，一次性 QR 票 1,900 韓元（QR 票用現金買）。</li>
+        <li><b>市區公車：</b>上車付現或刷交通卡；現金票價比刷卡貴，付現沒有轉乘優惠。下車按牆上紅色按鈕、從後門下。在 Centum City 下車後步行 5–10 分鐘到會場。<b>公車只能帶 20 吋以下的登機箱。</b>
+          <ul>
+            <li>1001（快速）：釜山 KTX 站 – Centum City／BEXCO，2,200 韓元</li>
+            <li>5-1：Centum City／BEXCO – 新世界百貨 – 釜山 KTX 站 – 南浦 BIFF 廣場，1,700 韓元</li>
+            <li>40：Centum City／BEXCO – 新世界百貨 – 釜山 KTX 站，1,700 韓元</li>
+            <li>1003（快速）：海雲台海水浴場 – 釜山 KTX 站 – 南浦 BIFF 廣場，2,200 韓元</li>
+          </ul>
+        </li>
+      </ol>
+      <h4>仁川國際機場（ICN）</h4>
+      <ul>
+        <li>韓國最大的國際機場，到首爾車程約 1 小時，到釜山約 5 小時。</li>
+        <li>第一、第二航廈之間有兩種轉乘：免費接駁巴士（路線見<a href="https://www.airport.kr/ap_en/1517/subview.do" target="_blank" rel="noopener">仁川機場網站</a>），或機場快線 AREX 約 6 分鐘。AREX 票價手冊兩處寫法不同：韓國基本資訊頁寫約 1,650 韓元，服務台頁寫約 1,050 韓元。</li>
+      </ul>
+      <h4>金浦國際機場（GMP）</h4>
+      <p>以首爾國內線為主的第二大機場。抵達後直接前往登機門即可，需要協助就立即聯絡工作人員。</p>
+    </div>
+  </details>
+
+  <details id="hb-korea">
+    <summary>韓國基本資訊<span class="arrow">›</span></summary>
+    <div class="body">
+      <ul>
+        <li><b>時區：</b>韓國標準時間 UTC+9，無日光節約時間。</li>
+        <li><b>貨幣：</b>韓元（KRW，₩）。手冊寫 1 美元約 1,500 韓元，匯率每天變動，大額交易前先查。</li>
+        <li><b>付款：</b>以刷卡為主，Visa、Mastercard、Amex 普遍可用。路邊攤、傳統市場、實體交通卡儲值要現金，手冊建議身上帶 30,000–50,000 韓元。</li>
+        <li><b>電壓：</b>220V、60Hz。轉接頭可向飯店櫃台借或買，機場、零售店、大型免稅店、便利商店也有賣。</li>
+        <li><b>天氣：</b>10 月釜山白天高溫約 21–23°C，夜間降到約 13–15°C；港都早晚有海風。</li>
+        <li><b>公共 Wi-Fi：</b>公共場所與大眾運輸上多有免費 Wi-Fi，說明見<a href="https://www.busan.go.kr/eng/bswifi" target="_blank" rel="noopener">釜山市政府網站</a>。</li>
+        <li><b>不收小費：</b>服務費與稅已含在標價內。</li>
+        <li><b>脫鞋：</b>部分餐廳（尤其坐地墊的）進門要脫鞋，門口有鞋架或鞋櫃。</li>
+        <li><b>餐具：</b>多數餐廳的湯匙筷子放在桌緣下方的小抽屜，自己拿。</li>
+        <li><b>手冊列的釜山景點：</b>海雲台海水浴場、甘川洞文化村、札嘎其市場（Jagalchi，韓國最大海鮮市場，可現挑現切生魚片）、海東龍宮寺（建在海岸岩石上的佛寺）、廣安里海水浴場（夜間可看廣安大橋燈光）。</li>
+        <li>外國人服務、匯率、銀行、電話網路、退稅等資訊：<a href="https://english.visitseoul.net/Before-You-Go" target="_blank" rel="noopener">首爾觀光旅客指南</a>、<a href="https://www.busan.go.kr/eng/forecenter" target="_blank" rel="noopener">釜山市外國人服務</a>。</li>
+      </ul>
+    </div>
+  </details>
+
+  <details id="hb-apps">
+    <summary>手冊建議下載的 App<span class="arrow">›</span></summary>
+    <div class="body">
+      <h4>地圖</h4>
+      <ul>
+        <li><b>NAVER Map</b>（<a href="https://play.google.com/store/search?q=%EB%84%A4%EC%9D%B4%EB%B2%84%EC%A7%80%EB%8F%84&amp;c=apps" target="_blank" rel="noopener">Google Play</a>／<a href="https://apps.apple.com/kr/app/%EB%84%A4%EC%9D%B4%EB%B2%84%EC%A7%80%EB%8F%84-%EC%9E%A5%EC%86%8C%EC%9D%98-%EB%B0%9C%EA%B2%AC%EA%B3%BC-%EC%98%88%EC%95%BD-%EB%82%B4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98/id311867728" target="_blank" rel="noopener">App Store</a>）：點個人頭像 → 齒輪 →「Language Setting」→ 選語言；搜尋目的地後選路線。</li>
+        <li><b>KakaoMap</b>（<a href="https://play.google.com/store/search?q=%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%A7%B5&amp;c=apps" target="_blank" rel="noopener">Google Play</a>）：點「More」→「Language」→ 齒輪 → 選 English。</li>
+      </ul>
+      <h4>叫車</h4>
+      <ul>
+        <li><b>Kakao T</b>（<a href="https://play.google.com/store/search?q=%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%83%9D%EC%8B%9C&amp;c=apps" target="_blank" rel="noopener">Google Play</a>／<a href="https://apps.apple.com/kr/app/%EC%B9%B4%EC%B9%B4%EC%98%A4-t-%ED%83%9D%EC%8B%9C-%EC%84%B8%EC%B0%A8-%EC%A3%BC%EC%B0%A8-%EB%B0%94%EC%9D%B4%ED%81%AC-%ED%95%AD%EA%B3%B5-%ED%80%B5/id981110422" target="_blank" rel="noopener">App Store</a>）：韓國用 Kakao T 叫車的人遠多於 Uber。步驟：「My Info」→ 語言設定 → 輸入目的地（例：Paradise Hotel）→ 選「General Request」→ 標定上車點 → 確認路線、車種、付款方式後叫車。</li>
+        <li>車種：Blue 立即派車，加收 1,000 韓元；General Request 叫附近的計程車，一般費率；Book Black 高級車，費率較高。</li>
+      </ul>
+      <h4>地鐵</h4>
+      <ul>
+        <li><b>Kakao Metro</b>（<a href="https://play.google.com/store/search?q=%EC%B9%B4%EC%B9%B4%EC%98%A4%EC%A7%80%ED%95%98%EC%B2%A0&amp;c=apps" target="_blank" rel="noopener">Google Play</a>／<a href="https://apps.apple.com/kr/app/%EC%B9%B4%EC%B9%B4%EC%98%A4%EC%A7%80%ED%95%98%EC%B2%A0/id1095533900" target="_blank" rel="noopener">App Store</a>）：釜山有 6 條地鐵線，主要會搭 1 號線與 2 號線。城市選 Busan → 設定改語言 → 在路線圖上直接點車站（英文搜尋可能還不完整）→ 設起訖站 → 看路線與發車、抵達時間，可開提醒通知。</li>
+      </ul>
+      <h4>外送</h4>
+      <ul>
+        <li><b>Baemin（外送的民族）</b>（<a href="https://play.google.com/store/search?q=Baemin&amp;c=apps" target="_blank" rel="noopener">Google Play</a>／<a href="https://apps.apple.com/kr/app/%EB%B0%B0%EB%8B%AC%EC%9D%98%EB%AF%BC%EC%A1%B1-%EB%B0%B0%EB%8B%AC%ED%8C%81-%EB%AC%B4%EB%A3%8C-%EB%B0%B0%EB%AF%BC%ED%81%B4%EB%9F%BD/id378084485" target="_blank" rel="noopener">App Store</a>）：搜尋或瀏覽 → 看店家資訊選店 → 點餐前先看最低訂購金額與預估送達時間 → 選外送方式、加入購物車、確認後按 Order → 付款選「Other Payment Methods」，其中「Credit/Debit Card」可用國外卡 → 下單後看預估送達時間。</li>
+      </ul>
+      <h4>餐廳訂位</h4>
+      <ul>
+        <li><b>Catch Table Global</b>（<a href="https://play.google.com/store/search?q=Catch%20Table%20Global&amp;c=apps" target="_blank" rel="noopener">Google Play</a>／<a href="https://apps.apple.com/kr/app/catchtable-book-restaurants/id1639046576" target="_blank" rel="noopener">App Store</a>／<a href="https://www.catchtable.net/" target="_blank" rel="noopener">網頁版</a>）：先登入 → 搜尋餐廳 → 點日曆選日期時間（日期下方可看目前候位組數）→ 讀餐廳注意事項並勾選同意 → 確認訂位資訊、填手機號碼後送出。手冊另附一篇使用教學：<a href="https://koreaeasytrip.com/complete-guide-to-using-catch-table-global-for-restaurant-reservations-in-seoul/" target="_blank" rel="noopener">Catch Table Guide</a>。</li>
+      </ul>
+    </div>
+  </details>
+
+  <details id="hb-links">
+    <summary>每日影展消息、便利地圖與官方連結<span class="arrow">›</span></summary>
+    <div class="body">
+      <ul>
+        <li><b>每日影展消息（Daily Festival News）：</b>大會每天更新。10/4 擷取時寫的是 10/6 的活動，下一項為開幕典禮。<a href="https://www.biff.kr/eng/html/event/event.asp?event_idx=list" target="_blank" rel="noopener">當日活動</a>、<a href="https://www.biff.kr/eng/html/schedule/date.asp?day1=6" target="_blank" rel="noopener">當日放映</a>；最新內容看<a href="https://biff2026.craft.me/rgbEDIzCmkZHKL/b/B3A1B91B-E335-458A-9473-81B7AE1AD00A/Daily-Festival-News-" target="_blank" rel="noopener">手冊的每日消息頁</a>。</li>
+        <li><b>釜山便利地圖（Busan Convenience Map）：</b><a href="https://www.google.com/maps/d/u/0/edit?mid=1658r8jQSfsD7yHAe4nkC0WaJv-T32p4&amp;ll=35.17326055802755%2C129.1324170923812&amp;z=16" target="_blank" rel="noopener">Google 我的地圖</a>，以 Centum City 一帶為中心。</li>
+        <li>官方預告片：<a href="https://youtu.be/V2Pcaj580dI" target="_blank" rel="noopener">BIFF2026 Coming This October</a></li>
+        <li>官方網站：<a href="https://www.biff.kr/eng/" target="_blank" rel="noopener">BIFF</a>、<a href="https://www.acfm.kr/eng/default.asp" target="_blank" rel="noopener">亞洲內容暨電影市場 ACFM</a>、<a href="https://forum.biff.kr/eng/" target="_blank" rel="noopener">Forum BIFF</a>、<a href="https://community.biff.kr/kor/addon/10000001/page.asp?page_num=50172" target="_blank" rel="noopener">Community BIFF</a></li>
+        <li>社群：<a href="https://www.facebook.com/busanfilmfest/" target="_blank" rel="noopener">Facebook</a>、<a href="https://www.instagram.com/busanfilmfest/" target="_blank" rel="noopener">Instagram @busanfilmfest</a>、<a href="https://letterboxd.com/busanfilmfest/" target="_blank" rel="noopener">Letterboxd</a>、<a href="https://twitter.com/busanfilmfest" target="_blank" rel="noopener">X @busanfilmfest</a></li>
+      </ul>
+    </div>
+  </details>
+</section>
+
 <section id="docs">
-  <h2><span class="no">08</span>原文文件</h2>
+  <h2><span class="no">09</span>原文文件</h2>
   <p class="sub">大會信件、邀請函、素材清單與報名表範本照錄（英文原文），LINE 討論照錄（中文）。指南各處的「出處」小標籤點了會跳到對應段落。上方搜尋框可直接搜原文。</p>
 
   <details class="doc" id="doc-email">
@@ -6076,10 +6391,453 @@ a[href^="mailto:"]{cursor:copy}
       </div>
     </div>
   </details>
+  <details class="doc" id="doc-handbook">
+    <summary>BIFF Mobile Guest Hand-Book（大會來賓手冊）<span class="docmeta">biff2026.craft.me · 2026-10-04 擷取 · 由原始資料自動產生</span><span class="arrow">›</span></summary>
+    <div class="body">
+      <div class="docpage" id="doc-handbook-p1">
+        <div class="pgno">手冊首頁 · A warm welcome from BIFF</div>
+        <p>A warm welcome from BIFF</p>
+        <p>Welcome! We prepared a guide to the full festival experience and your journey through South Korea. For more information, you are always welcome to contact us through: [BIFF call center] 1666-9177</p>
+      </div>
+      <div class="docpage" id="doc-handbook-p2">
+        <div class="pgno">Daily Festival News</div>
+        <p>Daily Festival News </p>
+        <p>Upcoming EVENT (October 6)</p>
+        <p>Today's Festival Event👉🏻Check Out!</p>
+        <p>Today's Film Schedule👉🏻Check Out! </p>
+        <p>Coming up NEXT: Opening Ceremony</p>
+        <p>⁂Festival News will be updated every day!</p>
+      </div>
+      <div class="docpage" id="doc-handbook-p3">
+        <div class="pgno">手冊首頁 · [BIFF 2026]</div>
+        <p>[BIFF 2026]</p>
+      </div>
+      <div class="docpage" id="doc-handbook-p4">
+        <div class="pgno">🇰🇷 Welcome to KOREA (Essential information for tourists)</div>
+        <p>🇰🇷 Welcome to KOREA (Essential information for tourists)</p>
+        <p>[Basic Information]</p>
+        <p>1.KOREA STANDARD TIME (KST)</p>
+        <p> Korea is 9 hours ahead of Greenwich Mean Time (UTC/GMT+09:00, No DST).</p>
+        <p>2.Currency</p>
+        <p>▪️Korean money is called "WON" (KRW, ₩)</p>
+        <p>▪️Currently, one U.S. dollar is roughly equivalent to 1,500 won. Please note that exchange rates fluctuate daily; it is recommended to check current rates before making any large transactions.</p>
+        <p>▪️Card-First Culture: South Korea is a highly cashless society. Major global credit cards (Visa, Mastercard, Amex) are widely accepted.</p>
+        <p>▪️When Cash is Needed: It is still useful to carry a small amount of cash (e.g., ₩30,000 to ₩50,000). You will need cash for street food vendors, traditional markets, and to top up physical public transportation cards</p>
+        <p>▪️Banknotes</p>
+        <p><small>[圖片：won-surcoreano-billetes.jpg]</small></p>
+        <p>3.Electricity</p>
+        <p>▪️The standard voltage in Korea is 220 volts at a frequency of 60 Hertz. You may need to bring a travel adapter for your electric devices or ask to borrow or purchase one from your hotel’s front desk. You can also find them at the airport, retail stores, major duty-free shops, and convenience stores.</p>
+        <p>4.Weather </p>
+        <p>▪️October in Busan offers mild, comfortable autumn weather with average daytime highs around 21°C to 23°C (70–73°F) and cooler nights dropping to about 13°C to 15°C (55–59°F).</p>
+        <p>As a port city, you might experience refreshing sea breezes, particularly in the morning and evening.</p>
+        <p>5.About Busan</p>
+        <p>▪️Busan is South Korea's bustling second-largest city and its primary maritime gateway, famous for its dynamic blend of stunning coastal landscapes, majestic mountains, and rich cultural heritage. Located on the southeastern tip of the Korean Peninsula, it offers a laid-back, vibrant coastal lifestyle paired with world-class dining and entertainment.ust-See Attractions</p>
+        <p>• Haeundae Beach: Korea's most famous stretch of sand, lined with luxury skyscrapers, upscale restaurants, and vibrant nightlife.</p>
+        <p>• Gamcheon Culture Village: A former refugee settlement turned into a vibrant mountainside art village, famous for its colorful terraced houses and winding alleys.</p>
+        <p>• Jagalchi Market: South Korea's largest seafood market, where you can pick your own fresh catch and have it sliced sashimi-style on the spot.</p>
+        <p>• Haedong Yonggungsa Temple: A rare and breathtaking Buddhist temple built directly on the rocky coastline overlooking the ocean.</p>
+        <p>• Gwangalli Beach: Offers stunning views of the Gwangan Bridge, which lights up in spectacular LED displays at night.</p>
+        <p>6.Public WIFI▪️You can easily find free Wi-Fi services available at public places or on public Transportation. Go to Service Information</p>
+        <p>[Culture]</p>
+        <p>7.No tips</p>
+        <p>South Korea has a strictly no-tipping culture. Service charges and taxes are completely built into the upfront price.</p>
+        <p>8.Shoes Removal </p>
+        <p>▪️Removing shoes indoors is a deeply rooted tradition in South Korea. Some restaurants (especially those requiring you to sit on floor mats or cushions) may require shoe removal at the door. Look for designated shoe shelves or lockers when you enter.</p>
+        <p>9.Where is my spoon? </p>
+        <p>▪️Most of the restaurants have self-serve drawers for utensils. Look beneath the edge of the table! You will find a small drawer handle.</p>
+        <p>If you’re interested in these, or want to find more information about Foreigner services, Exchange rate, banks, Phones &amp; Internet, Tax refund, etc., Check out and explore the websites below!</p>
+        <p>General Visitor Guide</p>
+        <p>Helpful Information from Busan city</p>
+        <p>✈️ AIRPORT Information Desk</p>
+        <p><small>[圖片：공항 인포데스크  표.png]</small></p>
+        <p>📌Gimhae International Airport(PUS)</p>
+        <p>Gimhae International Airport is located in Busan, and has two terminals-International and Domestic. Flights from Gimpo arrive at the domestic terminal and all other flights at the international terminal. The airport is approximately 50 minutes away by car, from the main venue of BIFF.</p>
+        <p>BIFF Information Desks can be found on the 1st floor of each of the terminals.</p>
+        <p>For International : 1F, Gate between 3 &amp;4, Desk #1</p>
+        <p><small>[圖片：국제선 청사 안내데스크.jpg]</small></p>
+        <p><small>[圖片：스크린샷 2026-09-11 134839.png]</small></p>
+        <p>For Domestic : 1F, Gate between 2&amp;3, Desk #2</p>
+        <p><small>[圖片：국내선 청사 안내데스크.jpg]</small></p>
+        <p><small>[圖片：김해공항 국내선 2&amp;게이트 사이 사진.png]</small></p>
+        <p>📌Incheon  International Airport(ICN)</p>
+        <p>Incheon International Airport is the largest international airport in Korea where the most international flights land. This airport is about an hour drive away from the capital city, Seoul, and about five hours away from Busan.</p>
+        <p>The location of BIFF Information Desk at Incheon International Airport is as follows:</p>
+        <p>Terminal 1 :  MICE Concierge Desk #24</p>
+        <p>(Gate between 12 and 13), 1st floor</p>
+        <p><small>[圖片：1.png]</small></p>
+        <p>Transfer Between Terminal 1 &amp; Terminal 2</p>
+        <p>There are two ways to transfer from Terminal 1 to Terminal 2 in Incheon International Airport—Shuttle Bus &amp; AREX.  Please refer to the description below:</p>
+        <p>① Free Shuttle Bus: A free shuttle bus runs between Terminal 1 &amp; 2, at a free cost.</p>
+        <p><a href="https://www.airport.kr/ap_en/1517/subview.do" target="_blank" rel="noopener">Airport Shuttle Bus</a></p>
+        <p>👆🏻[View T2 → T1 → AICC Bus Route]</p>
+        <p>② Airport Railroad Express (AREX): The ride takes approximately 6 minutes between Terminal 1 and Terminal 2, and costs around KRW 1,650.</p>
+        <p><small>[圖片：AREX.jpg]</small></p>
+        <p>📌Gimpo International Airport(GMP)</p>
+        <p>Gimpo International/Domestic Airport is Korea’s secondary airport that mostly handles domestic flights to and from Seoul. Once you arrive at Gimpo International Airport, you can just go straight to the designated gate. If you need further assistance, please contact your staff right away.</p>
+        <p>Gimhae  International Airport(PUS) </p>
+        <p>Transportation options from the Airport </p>
+        <p>Airport→ Hotels in Haeundae</p>
+        <p>Gimhae International Airport located in Busan city is 50 minutes driving distance from/to the main venue of BIFF. There are 3 ways to get to your hotel in Haeundae.</p>
+        <p>① Taxi (*Recommended)</p>
+        <p>You may take a taxi from Gimhae International airport to your hotel in Haeundae. It takes approximately 60 minutes with a fee of 35,000 KRW. Travel time and fare may change depending on traffic conditions.</p>
+        <p>*You may also take the Deluxe Taxi, which costs about 50,000 KRW.</p>
+        <p>② Metro (Subway)</p>
+        <p>To reach Haeundae Station, take the Busan Gimhae Line to Sasang Station and transfer to Line 2. The journey takes approximately 65 minutes and costs 2,300 KRW with a transportation card or 3,300 KRW with a disposable QR ticket, which can be purchased with cash.</p>
+        <p><small>[圖片：7.png]</small></p>
+        <p>For more information about Busan Metro, please visit this website: https://www.humetro.busan.kr/english/main.do</p>
+        <p>③ Gimhae International Limousine (Bus)</p>
+        <p>Airport Limousine 1 Route: Gimhae International Airport ↔ Haeundae/GijangThe general fare is 9,500 KRW per ride and the bus operates every 60 minutes (07:10 - 21:40)</p>
+        <p>※ For airport boarding, tickets can be issued via a kiosk machine.</p>
+        <p>※ For boarding outside the airport, passengers can either reserve via the Bustago app or pay by credit/debit card on board (free transit not applicable and cash payment is not accepted).</p>
+        <p>Busan Station → BIFF Venues</p>
+        <p>Transportation options from Busan Station</p>
+        <p>The guidelines below are based on transportation to Centum City station, which is a 5-minutes walk from CGV and Lotte Cinema Centum City, and a 10-minutes walk from Busan Cinema Center.</p>
+        <p>① Taxi</p>
+        <p>You may take a taxi from Busan Station to BIFF venues in Centum City. It takes approximately 45 minutes with a fee of 23,000 KRW. Travel time and fare may change depending on traffic conditions.</p>
+        <p>② Metro(subway)</p>
+        <p>You may take the subway Line 1 to Seomyeon station, and transfer to Line 2, to get to Centum City station. The ride takes approximately 40 minutes, and costs 1,800 KRW by card, 1,900 KRW by disposable QR ticket, which can be purchased with cash.</p>
+        <p><small>[圖片：9.png]</small></p>
+        <p>③ Local Bus</p>
+        <p>There is also a bus that takes you directly from Busan Station to Centum City. Below are the detailed steps of taking the bus from Busan Station to the BIFF Venue. Bus fare can be paid in cash or by transportation card upon boarding the bus. But please note that cash fare is higher than card fare, and discount is not applied upon transfer.</p>
+        <p>Main local buses on the following routes:</p>
+        <p>🚍 #1001 (Express)Route: Busan KTX Station - Centum City / BEXCO 🏷️2,200 KRW</p>
+        <p>🚍 #5-1 Route: Centum City / BEXCO – Shinsegae Department Store – Busan KTX Train Station – Nampo BIFF Square 🏷️1,700 KRW</p>
+        <p>🚍 #40 Route: Centum City / BEXCO - Shinsegae Department Store - Busan KTX Train Station 🏷️1,700 KRW</p>
+        <p>🚍 #1003 (Express) Route: Haeundae Beach – Busan KTX Train Station – Nampo BIFF Square 🏷️2,200 KRW</p>
+        <p>If you wish to get off, push the red button on the wall and use the back door to get off. </p>
+        <p>When you get off at the Centum City, you can walk to the BIFF venue in 5-10 minutes. </p>
+        <p>※ Only carry-on luggage under 20 inches is permitted on the bus.</p>
+      </div>
+      <div class="docpage" id="doc-handbook-p5">
+        <div class="pgno">ℹ️ Info Desks</div>
+        <p>ℹ️ Info Desks</p>
+        <p>BIFF Information Desks can be found at the Airports, official hotels, and screening venues!</p>
+        <p>The operation hours of BIFF Information Desks of each airport are as follows:</p>
+        <p>Locations/Operation Period</p>
+        <p>✈️ Desk: Airports</p>
+        <p><small>[圖片：Airport Information Desk.png]</small></p>
+        <p>Airport Desks Details</p>
+        <p>📌Gimhae International Airport(PUS)</p>
+        <p>Gimhae International Airport is located in Busan, and has two terminals-International and Domestic. Flights from Gimpo arrive at the domestic terminal and all other flights at the international terminal. The airport is approximately 50 minutes away by car, from the main venue of BIFF.</p>
+        <p>BIFF Information Desks can be found on the 1st floor of each of the terminals.</p>
+        <p>For International : 1F, Gate between 3 &amp;4, Desk #1</p>
+        <p><small>[圖片：국제선 청사 안내데스크.jpg]</small></p>
+        <p><small>[圖片：김해공항 국제선 3&amp;4게이트 사이 사진.png]</small></p>
+        <p>For Domestic : 1F, Gate between 2&amp;3, Desk #2</p>
+        <p><small>[圖片：국내선 청사 안내데스크.jpg]</small></p>
+        <p><small>[圖片：김해공항 국내선 2&amp;게이트 사이 사진.png]</small></p>
+        <p>📌Incheon  International Airport(ICN)</p>
+        <p>Incheon International Airport is the largest international airport in Korea where the most international flights land. This airport is about an hour drive away from the capital city, Seoul, and about five hours away from Busan.</p>
+        <p>The location of BIFF Information Desk at Incheon International Airport is as follows:</p>
+        <p>Terminal 1 :  MICE Concierge Desk #24</p>
+        <p>(Gate between 12 and 13), 1st floor</p>
+        <p><small>[圖片：1.png]</small></p>
+        <p>Transfer Between Terminal 1 &amp; Terminal 2</p>
+        <p>There are two ways to transfer from Terminal 1 to Terminal 2 in Incheon International Airport—Shuttle Bus &amp; AREX.  Please refer to the description below:</p>
+        <p>① Free Shuttle Bus: A free shuttle bus runs between Terminal 1 &amp; 2, at a free cost.</p>
+        <p><a href="https://www.airport.kr/ap_en/1517/subview.do" target="_blank" rel="noopener">Airport Shuttle Bus</a></p>
+        <p>👆🏻[View T2 → T1 → AICC Bus Route]</p>
+        <p>② Airport Railroad Express (AREX): The ride takes approximately 6 minutes between Terminal 1 and Terminal 2, and costs around KRW 1,050.</p>
+        <p><small>[圖片：AREX.jpg]</small></p>
+        <p>📌Gimpo International Airport(GMP)</p>
+        <p>Gimpo International/Domestic Airport is Korea’s secondary airport that mostly handles domestic flights to and from Seoul. Once you arrive at Gimpo International Airport, you can just go straight to the designated gate. If you need further assistance, please contact your staff right away.</p>
+        <p>📽️Desk: Theaters</p>
+        <p>We provide information on changes and cancellations of film festival screenings and events, as well as details regarding public transportation, the location of fire safety facilities, and lost and found services within the venues.</p>
+        <p><small>[圖片：Theater Information Desk.png]</small></p>
+        <p>🏨 Desk: Hotels</p>
+        <p>Located in the hotel. Assistance is available for check-in/check-out and film festival inquiries.</p>
+        <p><small>[圖片：Hotel Information Desk.png]</small></p>
+      </div>
+      <div class="docpage" id="doc-handbook-p6">
+        <div class="pgno">🚏To Haeundae</div>
+        <p>🚏To Haeundae</p>
+        <p>Gimhae International Airport (PUS) </p>
+        <p>Transportation options: Airport → Haeundae Hotels</p>
+        <p>Airport→ Hotels in Haeundae</p>
+        <p>Gimhae International Airport located in Busan city is 50 minutes driving distance from/to the main venue of BIFF. There are 3 ways to get to your hotel in Haeundae.</p>
+        <p>① Taxi (*Recommended)</p>
+        <p>You may take a taxi from Gimhae International airport to your hotel in Haeundae. It takes approximately 60 minutes with a fee of 35,000 KRW. Travel time and fare may change depending on traffic conditions.</p>
+        <p>*You may also take the Deluxe Taxi, which costs about 50,000 KRW.</p>
+        <p>② Metro (Subway)</p>
+        <p>To reach Haeundae Station, take the Busan Gimhae Line to Sasang Station and transfer to Line 2. The journey takes approximately 65 minutes and costs 2,300 KRW with a transportation card or 3,300 KRW with a disposable QR ticket, which can be purchased with cash.</p>
+        <p><small>[圖片：7.png]</small></p>
+        <p>For more information about Busan Metro, please visit this website: https://www.humetro.busan.kr/english/main.do</p>
+        <p>③ Gimhae International Limousine (Bus)</p>
+        <p>Airport Limousine 1 Route: Gimhae International Airport ↔ Haeundae/GijangThe general fare is 9,500 KRW per ride and the bus operates every 60 minutes (07:10 - 21:40)</p>
+        <p>※ For airport boarding, tickets can be issued via a kiosk machine.</p>
+        <p>※ For boarding outside the airport, passengers can either reserve via the Bustago app or pay by credit/debit card on board (free transit not applicable and cash payment is not accepted).</p>
+        <p>Busan Station </p>
+        <p>Transportation options: Busan Station→ BIFF Venues</p>
+        <p>The guidelines below are based on transportation to Centum City station, which is a 5-minutes walk from CGV and Lotte Cinema Centum City, and a 10-minutes walk from Busan Cinema Center.</p>
+        <p>① Taxi</p>
+        <p>You may take a taxi from Busan Station to BIFF venues in Centum City. It takes approximately 45 minutes with a fee of 23,000 KRW. Travel time and fare may change depending on traffic conditions.</p>
+        <p>② Metro(subway)</p>
+        <p>You may take the subway Line 1 to Seomyeon station, and transfer to Line 2, to get to Centum City station. The ride takes approximately 40 minutes, and costs 1,800 KRW by card, 1,900 KRW by disposable QR ticket, which can be purchased with cash.</p>
+        <p><small>[圖片：9.png]</small></p>
+        <p>③ Local Bus</p>
+        <p>There is also a bus that takes you directly from Busan Station to Centum City. Below are the detailed steps of taking the bus from Busan Station to the BIFF Venue. Bus fare can be paid in cash or by transportation card upon boarding the bus. But please note that cash fare is higher than card fare, and discount is not applied upon transfer.</p>
+        <p>Main local buses on the following routes:</p>
+        <p>🚍 #1001 (Express)Route: Busan KTX Station - Centum City / BEXCO 🏷️2,200 KRW</p>
+        <p>🚍 #5-1 Route: Centum City / BEXCO – Shinsegae Department Store – Busan KTX Train Station – Nampo BIFF Square 🏷️1,700 KRW</p>
+        <p>🚍 #40 Route: Centum City / BEXCO - Shinsegae Department Store - Busan KTX Train Station 🏷️1,700 KRW</p>
+        <p>🚍 #1003 (Express) Route: Haeundae Beach – Busan KTX Train Station – Nampo BIFF Square 🏷️2,200 KRW</p>
+        <p>If you wish to get off, push the red button on the wall and use the back door to get off. </p>
+        <p>When you get off at the Centum City, you can walk to the BIFF venue in 5-10 minutes. </p>
+        <p>※ Only carry-on luggage under 20 inches is permitted on the bus.</p>
+      </div>
+      <div class="docpage" id="doc-handbook-p7">
+        <div class="pgno">🎟️Receiving Tickets</div>
+        <p>🎟️Receiving Tickets</p>
+        <p>Book Tickets in Advance</p>
+        <p>Ticket reservation is available on-site at the BIFF Ticket Box &amp; online website.</p>
+        <p>You may book tickets, depending on seat availability.</p>
+        <p>Daily ticket limits are as below based on badge types.</p>
+        <p>&lt;Reservation Period&gt;</p>
+        <p>💡Oct. 6 (Tue) - Oct. 15th (Thu)💡    <br>       </p>
+        <p>&lt;Reservation Hours&gt; </p>
+        <p>Open from the day before, until the screening starts </p>
+        <p>※ Reservation for the next day’s screenings opens at 8:30AM(KST) everyday from October 6 to October 14.</p>
+        <p>🏷️On-site reservation: BIFF Ticket Box</p>
+        <p><small>[圖片：BIFF Ticket Box.png]</small></p>
+        <p>🏷️Online reservation: Website</p>
+        <p>How do I book tickets?</p>
+        <p>🗓️Date&amp;Time: 24-hour (Open for sales on Oct 6 at 8:30 AM)<br></p>
+        <p>Ticket Online Reservation</p>
+        <p>1.  Access the guest online reservation page.</p>
+        <p>Log-in with your ID and password sent to you via email.</p>
+        <p>Click the “Reserve” tab at the top of the page.</p>
+        <p>Select the date or enter the screening code number.</p>
+        <p>Choose the film you wish to watch.</p>
+        <p>Click the “Next” button and select your seat</p>
+        <p>Click “Make Payment” to complete your reservation.<br></p>
+        <p>View Reservation List</p>
+        <p>Login with your ID&amp;PW.</p>
+        <p>Click the “Review/Cancel” tab at the top of the page.</p>
+        <p>View the list of the screenings you reserved.</p>
+        <p>Upon entrance, click on the screening and show your mobile ticket.</p>
+        <p>To receive paper tickets, visit the BIFF Ticket Box of each theater.</p>
+        <p>To cancel your reservation, click the “Review/Cancel” ▶ “Details” ▶ Select the ticket to cancel ▶ “Cancel” .</p>
+        <p>Please be sure to check the Reservation Policy below, for your information.</p>
+        <p>※ Reservation Policy ※</p>
+        <p>Only one ticket can be reserved within the same time slot. (Maximum # of tickets differ upon badge type.)</p>
+        <p>Ticket reservation by proxy is prohibited and tickets can only be reserved upon availability.</p>
+        <p>Badge holders must show one’s ticket and badge upon entrance. (Screenshots/home-printed tickets prohibited)</p>
+        <p>All screenings are due to start on time. If you arrive later than 15 minutes past the scheduled screening time, your seat cannot be guaranteed and the ticket will not be refunded.</p>
+        <p>You may cancel your ticket without any fee until 30 minutes before the screening. Paper tickets are to be returned on-site at the BIFF Ticket Box.</p>
+        <p>No-shows are highly discouraged. Please reserve/cancel tickets based on your schedule, for the festival’s audience.</p>
+        <p>🚦Wait Line</p>
+        <p>Non-ticket holders with RED, BLUE, or YELLOW colored badges may queue in front of the theater to be added to the wait-list. When seats become available, those on the wait-list will be allowed to enter within 15 minutes. Please note that being on the wait-list does not guarantee admission if no seats are available.</p>
+      </div>
+      <div class="docpage" id="doc-handbook-p8">
+        <div class="pgno">🕐 Screening Schedule</div>
+        <p>🕐 Screening Schedule</p>
+        <p>You can access the Full-Screening Schedule here!</p>
+        <p>[By Section]👇🏻</p>
+        <p><a href="https://www.biff.kr/eng/html/schedule/section.asp?sc_idx=428" target="_blank" rel="noopener">31st BIFF 6-15 October, 2026</a></p>
+        <p>[By Theater] 👇🏻</p>
+        <p><a href="https://www.biff.kr/eng/html/schedule/theater.asp?s_theater=BT&amp;s_idx=110" target="_blank" rel="noopener">31st BIFF 6-15 October, 2026</a></p>
+        <p>[By Date] 👇🏻</p>
+        <p><a href="https://www.biff.kr/eng/html/schedule/date.asp?day1=6" target="_blank" rel="noopener">31st BIFF 6-15 October, 2026</a></p>
+      </div>
+      <div class="docpage" id="doc-handbook-p9">
+        <div class="pgno">🪪 Badge Desk</div>
+        <p>🪪 Badge Desk</p>
+        <p>You may pick up or re-issue your badge at the Badge Desk.</p>
+        <p>Location: 1F at BIFF Hill, Busan Cinema Center.</p>
+        <p>&lt;Badge Desk Operation Hours&gt;</p>
+        <p>Date ｜ Opening Hours ｜ Oct 5 (Monday) ｜ 15:00 - 20:00 ｜ Oct 6 (Tuesday) Opening Ceremony ｜ 09:00 - 15:00 ｜ Oct 7 (Wednesday) - Oct 11 (Sunday) ｜ 08:00 - 20:00 ｜ Oct 12 (Monday) - Oct 14 (Wednesday) ｜ 09:00 - 19:00 ｜ Oct 15 (Thursday) Closing Ceremony ｜ 09:00 - 15:00</p>
+        <p>※ Please refer to the back of your badge. The re-issuance fee varies depending on the type of badge.</p>
+        <p>The operation hours for BIFF Badge Desks are as below. If you lose your badge, a new badge can be issued with a fee of 10,000 - 20,000 KRW.</p>
+      </div>
+      <div class="docpage" id="doc-handbook-p10">
+        <div class="pgno">☕️ Guest Lounge</div>
+        <p>☕️ Guest Lounge</p>
+        <p>Guest Lounge offers a business meeting space alongside exceptional coffee. Experience a special coffee moment with Nespresso throughout the Busan International Film Festival.</p>
+        <p>&lt;Guest Lounge Operation Hours&gt;</p>
+        <p>Location: 3F, Double Cone, Busan Cinema Center</p>
+        <p>Guest Lounge &amp; Business Hub * Closed on Oct 6 and Oct 15 (Opening · Closing Ceremony) ｜ 09:00 - 20:00  / 09:00 - 19:00 ｜ DATE ｜ TIME ｜ INFORMATION ｜ Oct 7 - Oct 11 / Oct 12 - Oct 14</p>
+        <p>※ All badge holders can access Guest Lounge (except for  CINEPHILE badge holders).</p>
+      </div>
+      <div class="docpage" id="doc-handbook-p11">
+        <div class="pgno">🚌Guest Shuttle</div>
+        <p>🚌Guest Shuttle</p>
+        <p>Guest Shuttle 👈Tap Here!</p>
+        <p>To ensure smooth transportation for festival guests, a shuttle service will be provided between guest hotels in Haeundae and the Busan Cinema Center in Centum city. The Guest shuttle runs from October 7th to October 12th and it will only stop at BEXCO from October 10 to October 12(No service on October 13).</p>
+        <p>Language Setting is in the top right.</p>
+        <p><small>[圖片：Guest Shuttle App Language setting.png]</small></p>
+        <p><small>[圖片：Guest Shuttle App ENGLISH.png]</small></p>
+        <p>🕘Timetable</p>
+        <p><small>[圖片：Guest Shuttle Timetable.png]</small></p>
+        <p>🔁Route</p>
+        <p><small>[圖片：게스트 셔틀 노선_영문.png]</small></p>
+        <p>·Guest Shuttles run every 12 minutes, and every 20 minutes during the lunch period (12:00 ~ 14:00).<br>·Guest Shuttles will only stop at BEXCO from October 10 to October 12(No service on October 13). <br>·Vans accommodating up to 9 passengers will be in operation. <br>·The Busan Cinema Center shuttle stop is located next to the BIFF Outdoor Parking Lot, opposite the KNN Building. <br>·The order in which shuttles stop at hotels may vary depending on road conditions. <br>·All badge holders, except CINEPHILE badge holders, are eligible to use the Guest Shuttle service</p>
+        <p>※ Market badge holders can use both Market Shuttles and Guest Shuttles.</p>
+      </div>
+      <div class="docpage" id="doc-handbook-p12">
+        <div class="pgno">手冊首頁 · [📱Downloads]</div>
+        <p>[📱Downloads]<br>Essential Apps In Korea</p>
+        <p><a href="https://docs.craft.do/editor/d/d4a54e3d-68db-ef32-2961-987e901cced2/abf7a347-23f0-fd71-b9ba-3db6f6655cac/b/50ABEC08-3218-4802-A0DF-5B421576BE1D/%F0%9F%97%BA%EF%B8%8F-Maps-Transport?s=Kz1DFW6y6NZqypmM8yMKaT6T3SQwrh8rtcQGchztX3P7" target="_blank" rel="noopener">🗺️ Maps &amp; Transport</a></p>
+        <p><a href="https://docs.craft.do/editor/d/d4a54e3d-68db-ef32-2961-987e901cced2/abf7a347-23f0-fd71-b9ba-3db6f6655cac/b/9FA5B808-491B-47C9-9A15-D1B8ED4CD023/%F0%9F%8D%B4Dining-Delivery?s=Kz1DFW6y6NZqypmM8yMKaT6T3SQwrh8rtcQGchztX3P7" target="_blank" rel="noopener">🍴Dining &amp; Delivery</a></p>
+        <p>[Busan Convenience Map]</p>
+        <p>Tap the square on the top right to view full size!</p>
+        <p><a href="https://www.google.com/maps/d/u/0/edit?mid=1658r8jQSfsD7yHAe4nkC0WaJv-T32p4&amp;ll=35.17326055802755%2C129.1324170923812&amp;z=16" target="_blank" rel="noopener">Busan 하연 - Google My Maps</a></p>
+        <p>🎞️ Official Trailer &amp; Quick Links</p>
+        <p><a href="https://youtu.be/V2Pcaj580dI" target="_blank" rel="noopener">BIFF2026 Coming This October</a></p>
+        <p><a href="https://www.biff.kr/eng/" target="_blank" rel="noopener">Busan International Film Festival 6-15 October, 2026</a></p>
+        <p><a href="https://www.acfm.kr/eng/default.asp" target="_blank" rel="noopener">Asian Contents &amp; Film Market 20-23 September, 2025</a></p>
+        <p><a href="https://forum.biff.kr/eng/" target="_blank" rel="noopener">Forum BIFF</a></p>
+        <p><a href="https://community.biff.kr/kor/addon/10000001/page.asp?page_num=50172" target="_blank" rel="noopener">Community BIFF</a></p>
+        <p><a href="https://www.facebook.com/busanfilmfest/" target="_blank" rel="noopener">부산국제영화제 Busan International Film Festival (BIFF)</a></p>
+        <p><a href="https://www.instagram.com/busanfilmfest/" target="_blank" rel="noopener">부산국제영화제 BIFF (@busanfilmfest) • Instagram profile</a></p>
+        <p><a href="https://letterboxd.com/busanfilmfest/" target="_blank" rel="noopener">Busan International Film Festival’s HQ profile on Letterboxd</a></p>
+        <p><a href="https://twitter.com/busanfilmfest" target="_blank" rel="noopener">부산국제영화제 BIFF (@busanfilmfest) on X</a></p>
+        <p>Tap and Hold here, you can leave comments or reactions!! </p>
+        <p>Appendix.</p>
+      </div>
+      <div class="docpage" id="doc-handbook-p13">
+        <div class="pgno">How to use：Catch Table Global</div>
+        <p>How to use</p>
+        <p>Catch Table Global</p>
+        <p>Search the name of the restaurant you would like to visit.</p>
+        <p><small>[圖片：IMG_9866.heic]</small></p>
+        <p>Tap the date you want in the calendar at the bottom. (You can check the current number of the waiting parties as well.)</p>
+        <p><small>[圖片：IMG_9867.heic]</small></p>
+        <p>Confirm the date, time and the party size.</p>
+        <p><small>[圖片：IMG_9868.heic]</small></p>
+        <p>Please check the boxes after reviewing the restaurant notes, then click Next.</p>
+        <p><small>[圖片：IMG_9870.heic]</small></p>
+        <p>Double check the reservation information and and put your phone number.</p>
+        <p><small>[圖片：IMG_9871.heic]</small></p>
+      </div>
+      <div class="docpage" id="doc-handbook-p14">
+        <div class="pgno">How to use：Baemin</div>
+        <p>How to use</p>
+        <p>Baemin</p>
+        <p>Search or browse what you would like to try.</p>
+        <p><small>[圖片：IMG_1255.heic]</small></p>
+        <p>Check the basic information and pick the restaurant you want.</p>
+        <p><small>[圖片：IMG_1256.heic]</small></p>
+        <p>Before you pick the menu, check the minimum order price, estimated delivery time.</p>
+        <p><small>[圖片：IMG_1257.heic]</small></p>
+        <p>Select a delivery option, add items to your cart, review your order, and click the Order button.</p>
+        <p><small>[圖片：IMG_1258.jpeg]</small></p>
+        <p><small>[圖片：IMG_1259.jpeg]</small></p>
+        <p>Select 'Other Payment Methods' to choose from various payment options.</p>
+        <p><small>[圖片：IMG_1262.heic]</small></p>
+        <p>If you select 'Credit/Debit Card', an option to use international cards is also available.</p>
+        <p><small>[圖片：IMG_1261.heic]</small></p>
+        <p>Once your order is complete, check the estimated delivery time. Bon appétit!</p>
+        <p><small>[圖片：IMG_1276.jpeg]</small></p>
+      </div>
+      <div class="docpage" id="doc-handbook-p15">
+        <div class="pgno">How to use：NAVER MAPS</div>
+        <p>How to use</p>
+        <p>NAVER MAPS</p>
+        <p>Tap the profile icon.</p>
+        <p><small>[圖片：IMG_8902.heic]</small></p>
+        <p>Tap the gear icon.</p>
+        <p><small>[圖片：IMG_8907.heic]</small></p>
+        <p>Select ‘Language Setting’.</p>
+        <p><small>[圖片：IMG_8904.heic]</small></p>
+        <p>Select your preferred language.</p>
+        <p><small>[圖片：IMG_8905.heic]</small></p>
+        <p>search and pick your destination.</p>
+        <p><small>[圖片：IMG_8908.jpeg]</small></p>
+        <p>Check the available route and pick the best one for you.</p>
+        <p><small>[圖片：IMG_8909.jpeg]</small></p>
+        <p>KakaoMap</p>
+        <p>Tap ‘More’.</p>
+        <p><small>[圖片：IMG_8895.heic]</small></p>
+        <p>Go to ‘Language’.</p>
+        <p><small>[圖片：IMG_8897.heic]</small></p>
+        <p>Tap the gear icon.</p>
+        <p><small>[圖片：IMG_8906.heic]</small></p>
+        <p>Choose English.</p>
+      </div>
+      <div class="docpage" id="doc-handbook-p16">
+        <div class="pgno">How to use：Kakao T</div>
+        <p>How to use</p>
+        <p>In Korea, Kakao T is used much more widely than Uber.</p>
+        <p>Kakao T</p>
+        <p>Tap ‘My Info’</p>
+        <p><small>[圖片：IMG_8856.jpeg]</small></p>
+        <p>Language Settings</p>
+        <p><small>[圖片：IMG_8857.jpeg]</small></p>
+        <p>Choose your language preference.</p>
+        <p><small>[圖片：IMG_8858.jpeg]</small></p>
+        <p>Insert your destination</p>
+        <p><small>[圖片：IMG_8859.jpeg]</small></p>
+        <p>Find and select your destination (ex: Paradise Hotel)</p>
+        <p><small>[圖片：IMG_8860.jpeg]</small></p>
+        <p>Select "General Request".</p>
+        <p><small>[圖片：IMG_8861.jpeg]</small></p>
+        <p>Pin-point your pickup location.</p>
+        <p><small>[圖片：IMG_8862.png]</small></p>
+        <p>Check your travel route, ride option, payment method, and request!</p>
+        <p><small>[圖片：IMG_8863.jpeg]</small></p>
+        <p>[Other ride options]</p>
+        <p>Blue- Instantly assigned taxi, additional 1,000 KRW</p>
+        <p>General Request - The taxi around you, normal rate</p>
+        <p>Book Black - Premium ride, more expensive rate</p>
+      </div>
+      <div class="docpage" id="doc-handbook-p17">
+        <div class="pgno">How to use：Kakao Metro</div>
+        <p>How to use</p>
+        <p>How to use?</p>
+        <p>There are 6 subway lines running through Busan, and Line 1 and Line 2 will be your main routes for getting around the city.</p>
+        <p>Kakao Metro</p>
+        <p>Select City to Busan and tap settings.</p>
+        <p><small>[圖片：IMG_8911.heic]</small></p>
+        <p>Change the language to your preference.</p>
+        <p><small>[圖片：IMG_8912.heic]</small></p>
+        <p>Tap the Station on the start screen</p>
+        <p>(Note: English search may not be fully supported yet. Please find and tap your station directly on the map screen.)</p>
+        <p><small>[圖片：IMG_8913.heic]</small></p>
+        <p>Set your starting point and destination.</p>
+        <p><small>[圖片：IMG_8914.heic]</small></p>
+        <p><small>[圖片：IMG_8915.heic]</small></p>
+        <p>Check your travel route, departure &amp; arrival time.</p>
+        <p>(Tip: Turn on alarms to get notifications!)</p>
+        <p><small>[圖片：IMG_8917.heic]</small></p>
+      </div>
+      <div class="docpage" id="doc-handbook-p18">
+        <div class="pgno">How to use：Catch Table Global</div>
+        <p>How to use</p>
+        <p>Catch Table Global</p>
+        <p>Log in first. </p>
+        <p><small>[圖片：IMG_9875.png]</small></p>
+        <p>Search the restaurant you would like to visit.</p>
+        <p><small>[圖片：IMG_9866.heic]</small></p>
+        <p>Tap the calendar.<br>(Also you can check the current wait time below the dates!)</p>
+        <p><small>[圖片：IMG_9867.heic]</small></p>
+        <p>Select the date &amp; time you would like to visit.</p>
+        <p><small>[圖片：IMG_9868.heic]</small></p>
+        <p>Read the restaurant's notes and agree to the T&amp;Cs.</p>
+        <p><small>[圖片：IMG_9870.heic]</small></p>
+        <p>Double check the reservation information, put your mobile number and checkout.</p>
+        <p><small>[圖片：IMG_9871.heic]</small></p>
+        <p>Baemin</p>
+      </div>
+      <div class="docpage" id="doc-handbook-p19">
+        <div class="pgno">🗺️ Maps &amp; Transport</div>
+        <p>🗺️ Maps &amp; Transport</p>
+        <p>Smart routes. Seamless travel. <br>Every app you need!</p>
+        <p>How to use? ｜ How to use?  ｜ How to use? ｜ Kakao T / Google Play / Apple Store ｜ Metro ｜ Kakao Metro / Google Play / Apple Store ｜ Maps ｜  ｜ NAVER MAPS / ‣Google Play / ‣App Store / KakaoMap / ‣Google Play / ‣App Store ｜ Taxi ｜ </p>
+      </div>
+      <div class="docpage" id="doc-handbook-p20">
+        <div class="pgno">🍴Dining &amp; Delivery</div>
+        <p>🍴Dining &amp; Delivery</p>
+        <p>From local eats to doorsteps. <br>Apps for your craving!</p>
+        <p>How to use? ｜ Baemin / ‣Google Play / ‣Apple Store ｜ Food Delivery ｜ How to use? ｜ Dining Reservation ｜  ｜ Catch Table Global / ‣Google Play  / ‣App Store  / ‣web </p>
+        <p>If you're a foodie and want to explore more Korean restaurants with learning more how to use Catch Table Global, check this out! 👉 Catch Table Guide</p>
+      </div>
+      <p><small>原始資料快照：資料/大會來賓手冊_craft_2026-10-04.json（447 個區塊）；手冊內的表格圖片另存於 資料/大會來賓手冊_圖片_2026-10-04/。</small></p>
+    </div>
+  </details>
 </section>
 
 <footer>
-  整理自與 BIFF 大會往來信件 ✉1–✉55（Sujin Kim、Soobeen BAE、PARK Sun Young、Hokyung (Leah) Moon、Jieun Hong、Hyemi Choi，以及亞洲之星頒獎典禮主辦方的 Ahra Ko，2026/7/30–10/3）、葉舒華官方邀請函（Festival Director JUNG Hanseok，2026/8/14）、Materials Check-up List、線上報名表五步驟官方範本、製片與行銷團隊 LINE 討論。所有期限與規格以大會後續書面確認為準。製表 2026/7/31，內容截至 2026/10/3。
+  整理自與 BIFF 大會往來信件 ✉1–✉55（Sujin Kim、Soobeen BAE、PARK Sun Young、Hokyung (Leah) Moon、Jieun Hong、Hyemi Choi，以及亞洲之星頒獎典禮主辦方的 Ahra Ko，2026/7/30–10/3）、葉舒華官方邀請函（Festival Director JUNG Hanseok，2026/8/14）、Materials Check-up List、線上報名表五步驟官方範本、大會行動版來賓手冊（biff2026.craft.me，2026/10/4 擷取）、製片與行銷團隊 LINE 討論。所有期限與規格以大會後續書面確認為準。製表 2026/7/31，內容截至 2026/10/4。
 </footer>
 
 </div>
@@ -6203,7 +6961,7 @@ window.addEventListener('load',function(){
   var idx=null;
   function buildIndex(){
     idx=[];
-    var sel='#timeline .tl .t, #materials td, #materials .note, .body p, .body li, .panel li, .callout, .contact td, .alert, .docpage p, .docpage li, #roles td, #form .note';
+    var sel='#timeline .tl .t, #materials td, #materials .note, .body p, .body li, .panel li, .callout, .contact td, .alert, .docpage p, .docpage li, #roles td, #form .note, #handbook td';
     document.querySelectorAll(sel).forEach(function(el){
       var t=el.textContent.replace(/\s+/g,' ').trim();
       if(t.length>3) idx.push({el:el, text:t, low:t.toLowerCase()});
